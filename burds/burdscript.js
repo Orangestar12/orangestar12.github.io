@@ -1,5 +1,4 @@
-
-var go = false, lose = false, birdSpeed = 0, burd = document.getElementById('burd'), score = 0;
+var go = false, lose = false, birdSpeed = 0, burd = document.getElementById('burd'), score = 0, hs = localstorage['burd.highscore'];
 
 function randomInt(low, high){return Math.floor(Math.random() * (high - low + 1)) + low;}
 
@@ -54,6 +53,7 @@ function update(){
             lose = true;
             birdSpeed = -(2*15);
             //console.log("Burd was stopped, position " + burd.style.top + "; speed " + birdSpeed + ";");
+            localstorage['burd.highscore'] = hs;
         }
         if( //score condition
             (parseInt(document.getElementsByClassName('pipe')[0].style.left) == 16)
@@ -61,7 +61,11 @@ function update(){
           )
         {
             score++;
-            document.getElementById('score').getElementsByTagName('span')[0].innerHTML = score;
+            document.getElementById('score').innerHTML = score;
+            if(hs < score){
+                hs=score;
+                document.getElementById('hs').innerHTML = hs;
+            }
         }
         movePipes();
     }
@@ -89,7 +93,7 @@ function start(){
     score = 0;
     document.getElementById('score').getElementsByTagName('span')[0].innerHTML = score;
 }
-setInterval(update,33.33); //This is ~about~ 30fps
+setInterval(update, 33.33); //This is ~about~ 30fps
 
 document.getElementsByTagName('body')[0].onclick = function(e){
     //console.log(e);
