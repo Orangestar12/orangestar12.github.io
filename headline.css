@@ -49,7 +49,7 @@ body{
 
 #container{
     position:relative;
-    background: rgba(255,255,255,0.9);
+    background:rgba(255,255,255,0.55);
     margin-right:25%;
     padding:15px;
     padding-bottom:55px;
