@@ -89,7 +89,7 @@ function start(){
     score = 0;
     document.getElementById('score').getElementsByTagName('span')[0].innerHTML = score;
 }
-setInterval(update,25);
+setInterval(update,33.33); //This is ~about~ 30fps
 
 document.getElementsByTagName('body')[0].onclick = function(e){
     //console.log(e);
