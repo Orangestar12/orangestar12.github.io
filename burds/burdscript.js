@@ -20,8 +20,8 @@ function resetPipes(){
 function movePipes(){
         for(i=0; i < document.getElementsByClassName('pipe').length; i++)
         {
-            document.getElementsByClassName('pipe')[i].style.left = parseInt(document.getElementsByClassName('pipe')[i].style.left) - 2 + 'px';
-            document.getElementsByClassName('pipeeven')[i].style.left = parseInt(document.getElementsByClassName('pipeeven')[i].style.left) - 2 + 'px';
+            document.getElementsByClassName('pipe')[i].style.left = parseInt(document.getElementsByClassName('pipe')[i].style.left) - 8 + 'px';
+            document.getElementsByClassName('pipeeven')[i].style.left = parseInt(document.getElementsByClassName('pipeeven')[i].style.left) - 8 + 'px';
         }
         if(parseInt(document.getElementsByClassName('pipe')[0].style.left) <= -64){newPipe();}
         if(parseInt(document.getElementsByClassName('pipeeven')[0].style.left) <= -64){newEvenPipe();}
@@ -40,14 +40,14 @@ function newEvenPipe(){
 
 function update(){
     if(go == true){
-        birdSpeed += 1.5;
+        birdSpeed += 1;
         burd.style.top = (parseInt(burd.style.top) + birdSpeed) + "px";
         if( //lose condition
             (parseInt(burd.style.top) > 580 || parseInt(burd.style.top) < 0) //burd hits boundary
-            || ((parseInt(document.getElementsByClassName('pipe')[0].style.left) < 144) && (parseInt(document.getElementsByClassName('pipe')[0].style.left) > 80) && (parseInt(document.getElementsByClassName('pipe')[0].style.height) > parseInt(burd.style.top))) //burd hits odd top pipe
-            || ((parseInt(document.getElementsByClassName('pipe')[1].style.left) < 144) && (parseInt(document.getElementsByClassName('pipe')[1].style.left) > 80) && (640 - parseInt(document.getElementsByClassName('pipe')[1].style.height) < parseInt(burd.style.top))) //burd hits odd bottom pipe
-            || ((parseInt(document.getElementsByClassName('pipeeven')[0].style.left) < 144) && (parseInt(document.getElementsByClassName('pipeeven')[0].style.left) > 80) && (parseInt(document.getElementsByClassName('pipeeven')[0].style.height) > parseInt(burd.style.top))) //burd hits even top pipe
-            || ((parseInt(document.getElementsByClassName('pipeeven')[1].style.left) < 144) && (parseInt(document.getElementsByClassName('pipeeven')[1].style.left) > 80) && (640 - parseInt(document.getElementsByClassName('pipeeven')[1].style.height) < parseInt(burd.style.top))) //burd hits even bottom pipe
+            || ((parseInt(document.getElementsByClassName('pipe')[0].style.left) < 144) && (parseInt(document.getElementsByClassName('pipe')[0].style.left) > 16) && (parseInt(document.getElementsByClassName('pipe')[0].style.height) > parseInt(burd.style.top))) //burd hits odd top pipe
+            || ((parseInt(document.getElementsByClassName('pipe')[1].style.left) < 144) && (parseInt(document.getElementsByClassName('pipe')[1].style.left) > 16) && (640 - parseInt(document.getElementsByClassName('pipe')[1].style.height) < parseInt(burd.style.top) + 64)) //burd hits odd bottom pipe
+            || ((parseInt(document.getElementsByClassName('pipeeven')[0].style.left) < 144) && (parseInt(document.getElementsByClassName('pipeeven')[0].style.left) > 16) && (parseInt(document.getElementsByClassName('pipeeven')[0].style.height) > parseInt(burd.style.top))) //burd hits even top pipe
+            || ((parseInt(document.getElementsByClassName('pipeeven')[1].style.left) < 144) && (parseInt(document.getElementsByClassName('pipeeven')[1].style.left) > 16) && (640 - parseInt(document.getElementsByClassName('pipeeven')[1].style.height) < parseInt(burd.style.top) + 64)) //burd hits even bottom pipe
           )
         {
             go = false;
@@ -56,8 +56,8 @@ function update(){
             //console.log("Burd was stopped, position " + burd.style.top + "; speed " + birdSpeed + ";");
         }
         if( //score condition
-            (parseInt(document.getElementsByClassName('pipe')[0].style.left) == 78)
-            || (parseInt(document.getElementsByClassName('pipeeven')[0].style.left) == 78)
+            (parseInt(document.getElementsByClassName('pipe')[0].style.left) == 16)
+            || (parseInt(document.getElementsByClassName('pipeeven')[0].style.left) == 16)
           )
         {
             score++;
@@ -99,6 +99,7 @@ document.getElementsByTagName('body')[0].onclick = function(e){
 }
 document.getElementsByTagName('body')[0].onkeydown = function(e){
     if(go==true){birdSpeed = -(1.5*8);}
+    else{start();birdSpeed = -(1.5*8);}
     e.preventDefault();
     e.stopPropagation(); //These do work though. Hm.
 }
