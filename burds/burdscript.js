@@ -1,5 +1,5 @@
 var go = false, lose = false, birdSpeed = 0, burd = document.getElementById('burd'), score = 0, hs = parseInt(localStorage['burd.highscore']);
-
+if(isNaN(hs)){hs=0;}
 function randomInt(low, high){return Math.floor(Math.random() * (high - low + 1)) + low;}
 
 function resetPipe(){
