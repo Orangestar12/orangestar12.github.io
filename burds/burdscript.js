@@ -1,4 +1,4 @@
-var go = false, lose = false, birdSpeed = 0, burd = document.getElementById('burd'), score = 0, hs = localstorage['burd.highscore'];
+var go = false, lose = false, birdSpeed = 0, burd = document.getElementById('burd'), score = 0, hs = parseInt(localStorage['burd.highscore']);
 
 function randomInt(low, high){return Math.floor(Math.random() * (high - low + 1)) + low;}
 
@@ -53,7 +53,7 @@ function update(){
             lose = true;
             birdSpeed = -(2*15);
             //console.log("Burd was stopped, position " + burd.style.top + "; speed " + birdSpeed + ";");
-            localstorage['burd.highscore'] = hs;
+            localStorage['burd.highscore'] = hs;
         }
         if( //score condition
             (parseInt(document.getElementsByClassName('pipe')[0].style.left) == 16)
