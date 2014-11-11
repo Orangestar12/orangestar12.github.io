@@ -80,12 +80,18 @@ h2, span{
     color:white;
 }
 /*this is really ugly but it works for now and thats what matters*/
-li
-    line-height:1.1;
+ul{
+    color:rgba(0,0,0,0.55);
+}
+li > div{
+    line-height:0.86;
+    margin:0!important;
+    position:relative;
+    top:-3px;
 }
 span{
-    font-size:0.8em;
-    font-weight:normal;
+    font-size:18px;
+    font-weight:300;
 }
 
 a{
