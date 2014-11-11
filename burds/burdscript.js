@@ -91,7 +91,7 @@ function start(){
     go = true;
     lose = false;
     score = 0;
-    document.getElementById('score').getElementsByTagName('span')[0].innerHTML = score;
+    document.getElementById('score').innerHTML = score;
 }
 setInterval(update, 33.33); //This is ~about~ 30fps
 
