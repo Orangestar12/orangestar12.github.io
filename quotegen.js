@@ -46,4 +46,4 @@ var quotes = [
 "Who's that man with the three piece suit?!" //Intro line to the theme song for Octodad.
 ];
 
-document.getElementById("quote").innerHTML = quotes[Math.floor(Math.random()*(quotes.length))]); //I think that's right
+document.getElementById("quote").innerHTML = quotes[Math.floor(Math.random()*(quotes.length))];
