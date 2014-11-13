@@ -43,7 +43,7 @@ var quotes = [
 "Bring us the girl, and wipe away the debt!", //ArcWords of Bioshock Infinite
 "Check out the &quot;More Phrases&quot; DLC pack available for 12.11 BTC or Dogecoin!", //This is a jab at 1) DLC, and 2) Virtual Currency.
 "Hey, I actually <i>liked</i> James Cameron's AVATAR!",
-"Who's that man with the three piece suit?!"; //Intro line to the theme song for Octodad.
+"Who's that man with the three piece suit?!" //Intro line to the theme song for Octodad.
 ];
 
 document.getElementById("quote").innerHTML = quotes[Math.floor(Math.random()*(quotes.length))]); //I think that's right
