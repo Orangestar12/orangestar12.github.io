@@ -16,9 +16,9 @@ var quotes = [
 "Users of IE 9 and under just have to suck it up!",
 "Ha ha! Hello!", // Quote from some dumb YouTube video.
 "The only catch is, you can only choose one!", //Classic /r9k/ saying
-"And to think, all it took was a !DOCTYPE!",
+"And to think, all it took was a !DOCTYPE!", //HTML5's !DOCTYPE is simply "<!DOCTYPE html>
 "I could make it XHTML if I wanted to, but XHTML's dead anyway!",
-"We'll never be validated by the W3C and I'm okay with that!",
+"Oceania has always been at war with Eastasia!", //From another distopian novel, 1984, by George Orwell
 "But tonight, it's heavy stuff!", // Direct quote from the song "Slam" from Pendulum.
 "It's people! JavaScript is made of people!", //Reference to the infamous "Soylent Green" scene
 "Murdertime, funtime!", //Direct quote from Saint's Row 3
