@@ -112,7 +112,6 @@ p, .noCap{
 }
 
 /*Mobile mode. Activates when screen is <679px*/
-
 @media all and (max-width:679px){
     h1{
         font-size:36pt;
