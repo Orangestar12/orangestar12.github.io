@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<!--http://css-tricks.com/snippets/javascript/get-url-variables/-->
+<html >
+<head>
+    <meta charset="utf-8">
+    <title>Parallax</title>
+    <style>
+@-webkit-keyframes para{
+	from {
+		background-position-x: 0;
+	}
+	to { 
+		background-position-x: 500px;
+	}
+}
+@keyframes para{
+	from {
+		background-position: left;
+	}
+	to { 
+		background-position: right;
+	}
+}
+html{
+    font-family: 'Roboto', sans-serif;
+    background:#F0F0F0;
+    text-align:center;
+}
+#box{
+    height:500px;
+    width:500px;
+    position:relative;
+    left:50%;
+    margin-left:-250px;
+    box-shadow:0 0 10px 5px rgba(0,0,0,0.8);
+}
+.box{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background-position:0 0;
+}
+#one{
+    top:0;
+    background-color:#DDDDFF;
+    background-image:url(clouds.svg);
+    -webkit-animation: para linear 5s infinite;
+    background-size:100%;
+}
+#two{
+    top:50px;
+    -webkit-animation: para linear 2s infinite;
+    background-size:100%;
+    background-image:url(house.svg);
+    background-repeat-y: no-repeat;
+}
+#three{
+    top:380px;
+    background-image:linear-gradient(45deg, #404040 0%, #404040 49%, #989898 50%, #404040 51%, #404040);
+    -webkit-animation: para linear 1s infinite;
+    background-size:50% 100%;
+}
+#four{
+    top:280px;
+    background-image:url(stickman.svg);
+    background-position:top;
+    background-repeat:no-repeat;
+    background-size:25%;
+}
+    </style>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <h1>YOU WANTED PARALLAX</h1>
+    <div id="box">
+        <div id="one" class="box"></div>
+        <div id="two" class="box"></div>
+        <div id="three" class="box"></div>
+        <div id="four" class="box"></div>
+    </div>
+    <h1>YOU GOT PARALLAX</h1>
+</body>
+</html>
