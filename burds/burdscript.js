@@ -20,8 +20,8 @@ function resetPipes(){
 function movePipes(){
         for(i=0; i < document.getElementsByClassName('pipe').length; i++)
         {
-            document.getElementsByClassName('pipe')[i].style.left = parseInt(document.getElementsByClassName('pipe')[i].style.left) - 8 + 'px';
-            document.getElementsByClassName('pipeeven')[i].style.left = parseInt(document.getElementsByClassName('pipeeven')[i].style.left) - 8 + 'px';
+            document.getElementsByClassName('pipe')[i].style.left = parseInt(document.getElementsByClassName('pipe')[i].style.left) - 4 + 'px';
+            document.getElementsByClassName('pipeeven')[i].style.left = parseInt(document.getElementsByClassName('pipeeven')[i].style.left) - 4 + 'px';
         }
         if(parseInt(document.getElementsByClassName('pipe')[0].style.left) <= -64){newPipe();}
         if(parseInt(document.getElementsByClassName('pipeeven')[0].style.left) <= -64){newEvenPipe();}
@@ -40,7 +40,7 @@ function newEvenPipe(){
 
 function update(){
     if(go == true){
-        birdSpeed += 1;
+        birdSpeed += 0.9;
         burd.style.top = (parseInt(burd.style.top) + birdSpeed) + "px";
         if( //lose condition
             (parseInt(burd.style.top) > 580 || parseInt(burd.style.top) < 0) //burd hits boundary
@@ -52,7 +52,7 @@ function update(){
         {
             go = false;
             lose = true;
-            birdSpeed = -(2*15);
+            birdSpeed = -(15);
             //console.log("Burd was stopped, position " + burd.style.top + "; speed " + birdSpeed + ";");
             localStorage['burd.highscore'] = hs;
         }
@@ -72,7 +72,7 @@ function update(){
     }
     if(lose==true){
         if(parseInt(burd.style.top) < 660){
-            birdSpeed += 4;
+            birdSpeed += 2;
             burd.style.top = (parseInt(burd.style.top) + birdSpeed) + "px";
         }
         for(i=0; i < document.getElementsByClassName('pipe').length; i++)
@@ -84,6 +84,7 @@ function update(){
     else{
         document.getElementById('YouLostSon').style.opacity = 0;
     }
+    requestAnimationFrame(update);
 }
 
 function start(){
@@ -94,7 +95,7 @@ function start(){
     score = 0;
     document.getElementById('score').innerHTML = score;
 }
-setInterval(update, 33.33); //This is ~about~ 30fps
+requestAnimationFrame(update);
 
 document.getElementsByTagName('body')[0].onclick = function(e){
     //console.log(e);
