@@ -1,0 +1,27 @@
+html{
+    text-align: center;
+}
+
+h1{
+    font-family: 'Amatic SC', cursive;
+    font-size:80px;
+    margin-bottom:40px;
+}
+
+h2{
+    font-family: 'Pacifico', cursive;
+    font-weight: normal;
+    font-size:28px;
+    margin-bottom:60px;
+}
+
+img{
+    max-height:75vh;
+    width:auto;
+}
+.smaller img{
+    max-height:initial;
+    width:30vh;
+    height:auto;
+    margin:1vh;
+}
