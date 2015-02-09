@@ -44,7 +44,9 @@ var quotes = [
 "Check out the &quot;More Phrases&quot; DLC pack available for 12.11 BTC or Dogecoin!", //This is a jab at 1) DLC, and 2) Virtual Currency.
 "Hey, I actually <i>liked</i> James Cameron's AVATAR!",
 "Who's that man with the three piece suit?!", //Intro line to the theme song for Octodad.
-"They don't pay me <i>near</i> enough to call the cops at 3 A.M. and report a tire-jacking by a walrus!"
+"They don't pay me <i>near</i> enough to call the cops at 3 A.M. and report a tire-jacking by a walrus!",
+"Look elsewhere, <a href='http://twitter.com/h00die96'>@h00die96</a>! Maybe I'm not here!",
+"Quotes for the quote god! JavaScript for the JavaScript throne!"
 ];
 
 document.getElementById("quote").innerHTML = quotes[Math.floor(Math.random()*(quotes.length))];
