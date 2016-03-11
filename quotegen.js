@@ -127,9 +127,9 @@ var quotenum = Math.floor(Math.random()*(quotes.length));
 
 quote.innerHTML = quotes[quotenum][0];
 
-if (quotes[quotenum[1]]){
+if (quotes[quotenum][1]){
     quote.title = quotes[quotenum][1];
 }
 else {
-    quote.title = undefined;
+    quote.title = "";
 }
