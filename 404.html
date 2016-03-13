@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Orangestar</title>
+    <meta property="og:title" content="Four-Zero-Fourangestar on Github" />
+    <meta property="og:description" content="This page doesn't exist!!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://orangestar12.github.io/starvatar.png" />
+    <meta name="viewport" content="initial-scale=1"/>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700,400,300" rel="stylesheet" type="text/css"/> -->
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+    <style>
+@-webkit-keyframes awespin {
+    0% {
+        transform: translateY(-50%) rotate(0deg);
+        color: red;
+    }
+    25% {
+        transform: translateY(-50%) rotate(90deg);
+        color: orange;
+    }
+    50% {
+        transform: translateY(-50%) rotate(180deg);
+        color: yellow;
+    }
+    75% {
+        transform: translateY(-50%) rotate(270deg);
+        color: green;
+    }
+    100% {
+        transform: translateY(-50%) rotate(359deg);
+        color: purple;
+    }
+}
+@keyframes awespin {
+    0% {
+        transform: translateY(-50%) rotate(0deg);
+        color: red;
+    }
+    25% {
+        transform: translateY(-50%) rotate(90deg);
+        color: orange;
+    }
+    50% {
+        transform: translateY(-50%) rotate(180deg);
+        color: yellow;
+    }
+    75% {
+        transform: translateY(-50%) rotate(270deg);
+        color: green;
+    }
+    100% {
+        transform: translateY(-50%) rotate(359deg);
+        color: purple;
+    }
+}
+
+body {
+    font-family: 'Oswald', 'Roboto Condensed', 'Segoe UI Light', 'Source Sans Pro', 'Arial', sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+body.awesome {
+    background: black;
+    color: white;
+}
+
+.text {
+    font-size: 24pt;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+.small {
+    font-size: 16pt;
+}
+
+body.awesome .text {
+    -webkit-animation: awespin linear 120ms infinite;
+    -moz-animation: awespin linear 120ms infinite;
+    animation: awespin linear 120ms infinite;
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="text">
+        Here's your fucking 404 page, Roadcrosser!
+        <div class="small">Click for cool mode - <b>Epilepsy Warning</b> - <b>Music Will Play Warning</b></div>
+    </div>
+    <audio loop preload="none">
+        <source src="./stash/showtime.ogg" />
+        <!-- More when I feel like it. -->
+    </audio>
+<script>
+music = document.querySelector('audio');
+text = document.querySelector('.text');
+small = document.querySelector('.small');
+
+music.addEventListener('canplaythrough', function(){
+    music.playbackRate = 1.5;
+    small.remove();
+    document.body.className = 'awesome';
+    music.play();
+});
+
+text.addEventListener('click', function() {
+    small.textContent = 'Ok, one moment...';
+    document.querySelector('audio').load();
+});
+</script>
+</body>
+</html>
