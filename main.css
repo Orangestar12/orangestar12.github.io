@@ -15,6 +15,7 @@ html {
 
 body {
     height: calc(100% - 150px);
+    font-family: sans-serif;
 }
 
 #header::after {
