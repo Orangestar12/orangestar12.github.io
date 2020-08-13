@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+/*Start Minimal GC Styling*/
+.controller.custom {
+    background: black;
+    height: 300px;
+    width: 650px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.custom .triggers::before {
+    content: "Pedals";
+    color: white;
+    position: absolute;
+    left: 330px;
+    top: 70px;
+}
+
+.custom .trigger {
+    position: absolute;
+    width: 30px;
+    height: 87px;
+    top: 111px
+}
+
+.custom .trigger.left{
+    background: #ff5a5a;
+    display: block;
+    left: 340px;
+}
+
+.custom .trigger.right{
+    background: #2aad2a;
+    display: block;
+    left: 380px;
+}
+
+.custom .dpad{
+    width: 150px;
+    height: 150px;
+    /* background: #FF00008F; */
+    position: absolute;
+    background-size:  164px;
+    top: 259px;
+    left: 327px;
+}
+
+.custom .stick.left{
+    border: 8px solid white;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: block;
+    top: 111px;
+    left: 130px;
+}
+.custom .sticks::after {
+    content: "Wheel Position";
+    top: 70px;
+    left: 80px;
+    position: absolute;
+}
+
+.custom .stick {
+    position:  absolute;
+}
+
+.custom .abxy .button, .custom .bumper {
+    position: absolute;
+    border: 2px white solid;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.custom .abxy .button.a {
+    top: 160px;
+    left: 500px;
+}
+
+.custom .abxy .button.b {
+    top: 190px;
+    left: 530px;
+}
+
+.custom .abxy .button.x {
+    top: 130px;
+    left: 530px;
+}
+
+.custom .abxy .button.y {
+    top: 160px;
+    left: 560px;
+}
+
+.custom .bumpers{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.custom .bumper {
+    left: 516px;
+    top: 80px;
+    border-color: #ff5555;
+    border-radius: 30%
+}
+.custom .bumper.right {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.custom .bumper.left {
+    left: 545px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.custom .pressed{
+    background: white;
+}
+.custom .bumper.pressed {
+    background: #ff5555;
+}
+/*END Minimal GC Styling*/
