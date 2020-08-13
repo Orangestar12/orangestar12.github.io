@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+.controller.custom {
+    height: 170px;
+    width: 400px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.custom .dpad{
+    width: 150px;
+    height: 150px;
+    /* background: #FF00008F; */
+    position: absolute;
+    background-size:  164px;
+    top: 259px;
+    left: 327px;
+}
+
+.custom .stick.left{
+    border: 8px solid white;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: block;
+    top: 40px;
+    left: 80px;
+}
+.custom .sticks::after {
+    content: "Flightstick Position";
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.custom .stick {
+    position:  absolute;
+}
+
+.custom .abxy .button {
+    position: absolute;
+    border: 2px white solid;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.custom .abxy .button.a {
+    top: 40px;
+    left: 320px;
+    border-radius: 0;
+    width: 58px;
+}
+.custom .abxy .button.a::before {
+    content: "Trigger";
+    position: absolute;
+    left: -20px;
+    top: -40px;
+}
+
+.custom .abxy .button.b {
+    top: 105px;
+    left: 300px;
+}
+
+.custom .abxy .button.x {
+    top: 80px;
+    left: 340px;
+}
+
+.custom .abxy .button.y {
+    top: 130px;
+    left: 340px;
+}
+
+.custom .pressed{
+    background: white;
+}
+.custom .bumper.pressed {
+    background: #ff5555;
+}
