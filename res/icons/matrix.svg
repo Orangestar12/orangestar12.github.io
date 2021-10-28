@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg924"
+   sodipodi:docname="matrix.svg"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)">
+  <metadata
+     id="metadata930">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>matrix logo white</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs928" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1475"
+     inkscape:window-height="1020"
+     id="namedview926"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:zoom="7.7101628"
+     inkscape:cx="33.470856"
+     inkscape:cy="12.161766"
+     inkscape:window-x="-5"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg924" />
+  <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+  <title
+     id="title904">matrix logo white</title>
+  <desc
+     id="desc906">Created with Sketch.</desc>
+  <polygon
+     id="Path"
+     points="3.1294248,31.981769 0.094721871,31.981769 0.094721871,9.495549e-05 3.1294248,9.495549e-05 3.1294248,0.73220178 0.93631479,0.73220178 0.93631479,31.249567 3.1294248,31.249567 "
+     style="fill:#ffffff;fill-rule:nonzero;stroke:none;stroke-width:1"
+     transform="matrix(0.69989932,0,0,0.69989932,0.871711,0.77822218)" />
+  <path
+     d="m 7.9756675,8.0618273 v 1.0808938 h 0.030725 C 8.294272,8.7312719 8.6410139,8.4118022 9.0472166,8.1853085 9.453154,7.9592144 9.9184856,7.8457019 10.442614,7.8457019 c 0.503555,0 0.963644,0.098027 1.379867,0.2934174 0.416356,0.1957227 0.732505,0.5403804 0.948381,1.0345716 0.236249,-0.3499077 0.557442,-0.6588103 0.963645,-0.926442 0.405937,-0.2674988 0.886465,-0.401547 1.441651,-0.401547 0.421466,0 0.811874,0.051576 1.171955,0.1545175 0.35955,0.1029454 0.667935,0.2676317 0.924956,0.4940582 0.256755,0.2266267 0.457168,0.5225694 0.601373,0.887697 0.143807,0.3657919 0.215877,0.8056194 0.215877,1.3204794 v 5.342396 l -2.189553,-6.7e-5 v -4.524149 c 0,-0.267499 -0.01022,-0.519711 -0.03086,-0.756639 -0.02077,-0.236595 -0.07705,-0.442353 -0.169554,-0.617606 -0.09258,-0.1748542 -0.228949,-0.3139536 -0.408591,-0.4169654 -0.179908,-0.1025465 -0.42412,-0.1543187 -0.732439,-0.1543187 -0.308319,0 -0.557641,0.059547 -0.747835,0.1775126 -0.190327,0.1185637 -0.339243,0.2730815 -0.447082,0.4632875 -0.107905,0.190672 -0.179908,0.406731 -0.21581,0.648776 -0.03616,0.241779 -0.05402,0.486349 -0.05402,0.733379 v 4.44679 h -2.189353 v -4.477695 c 0,-0.236727 -0.0054,-0.470996 -0.01526,-0.702474 -0.01048,-0.231743 -0.05402,-0.445277 -0.131264,-0.641 -0.07712,-0.19539 -0.205659,-0.3524998 -0.3855,-0.4710635 C 10.19329,9.634653 9.9286383,9.5751049 9.5791751,9.5751049 c -0.1029279,0 -0.2391031,0.023195 -0.4085257,0.069647 C 9.0010281,9.6910712 8.8364496,9.7787336 8.677247,9.9071994 8.5177127,10.035998 8.3816702,10.221286 8.2685892,10.462999 8.1554417,10.705043 8.0989675,11.021389 8.0989675,11.412502 v 4.632278 l -2.1892868,6.7e-5 V 8.0618273 Z"
+     id="path909"
+     style="fill:#ffffff;fill-rule:nonzero;stroke:none;stroke-width:0.699899" />
+  <polygon
+     id="polygon920"
+     points="74.93562,31.981769 71.900727,31.981769 71.900727,31.249567 74.093837,31.249567 74.093837,0.73220178 71.900727,0.73220178 71.900727,9.495549e-05 74.93562,9.495549e-05 "
+     style="fill:#ffffff;fill-rule:nonzero;stroke:none;stroke-width:1"
+     transform="matrix(0.69989932,0,0,0.69989932,-29.38533,0.77822218)" />
+</svg>

@@ -36,9 +36,31 @@ function getQuote() {
 
 function newQuote() {
     // console.log('getting a quote');
-    quoteElement.textContent = getQuote()[0];
+    let result = getQuote();
+    quoteElement.textContent = result[0];
+    quoteElement.setAttribute('title', result[1]);
     quoteElement.style.opacity = 1;
     setTimeout(() => {
         quoteElement.style.opacity = 0;
     }, 29000);
 }
+
+function showReference(e) {
+    if (quoteElement.getAttribute('title') == '') {
+        return;
+    }
+    let popup = document.createElement('div');
+    popup.textContent = quoteElement.getAttribute('title');
+    popup.className = "popup";
+    document.body.appendChild(popup);
+}
+
+function killPopup() {
+    while (document.querySelector('.popup')) {
+        let el = document.querySelector('.popup');
+        el.parentElement.removeChild(el);
+    }
+}
+
+quoteElement.addEventListener("mouseover", showReference, false);
+quoteElement.addEventListener('mouseleave', killPopup, false);

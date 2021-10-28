@@ -10,5 +10,6 @@ let quotes = [
     ["You're gonna PS/2 it!", "IBM - PS/2 It! TV spot"],
     ["Through the woods we ran!", "Of Monsters And Men - Mountain Sound"],
     ["And it's that she loves in spite of everything else!", "The Shins - September"],
-    ["You are huge! That means you have huge guts!", "DOOM comic"]
+    ["You are huge! That means you have huge guts!", "DOOM comic"],
+    ["Here comes a special boy!", "Achewood"]
 ]

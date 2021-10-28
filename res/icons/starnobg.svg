@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="xMaxYMax slice" version="1.1" viewBox="-50 0 150 100" xmlns="http://www.w3.org/2000/svg">
+ <path d="m48.948 30.96-21.94 16.91 8.2878 27.304-22.089-16.8-22.089 16.8 8.3702-27.304-22.022-16.91h27.237l8.5048-27.27 8.5042 27.27z" color="#000000" color-rendering="auto" fill="#f70" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="isolation:auto;mix-blend-mode:normal"/>
+ <path d="m-60 100v-5l160-25v30" fill="#101010"/>
+ <path d="m-60 100 170-30" stroke="#f70" stroke-width="10px"/>
+ <text class="heading" x="93" y="65">Orangestar</text>
+ <text class="quote" x="94" y="72">Perfectly functional without JavaScript!</text>
+</svg>
