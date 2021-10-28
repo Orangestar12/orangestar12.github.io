@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>FPS Ranking Thing | Orangestar</title>
+    <link rel="icon" type="image/png" href="./starvatar.png"/>
+    <meta name="Title" property="og:title" content="FPS Ranking Thing">
+    <meta name="Description" property="og:description" content="A page ranking FPS games, based on how serious/tactical/realistic they are on one axis, and based on how &quot;tryhard&quot; they are on another." />
+    <meta name="Type" property="og:type" content="website" />
+    <meta name="Image" property="og:image" content="https://orangestar.dev/starvatar.png" />
+    <meta name="URL" property="og:url" content="https://orangestar.dev/fpsrankthing/" />
+    <meta name="theme-color" content="#FF7700">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+    <!-- <link href="main.css" rel="stylesheet" type="text/css"/> -->
+    <style>
+        html, body, svg {
+            margin: 0; padding: 0;
+            height:100vh;
+            width: 100vw;
+        }
+
+        svg text {
+            font-weight:bold;
+            font-size:18pt;
+            font-family:Arial;
+            text-align:center;
+            text-anchor:middle;
+        }
+
+        svg image {
+            width: 20px;
+            height: 30px;
+            transform-origin: center;
+            transform-box: fill-box;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270.93333 270.93334" version="1.1">
+        <path style="fill:#000000"
+            d="M 134.3172,22.073219 V 134.3172 H 22.073219 v 2.29938 H 134.3172 v 112.24353 h 2.29938 V 136.61658 H 248.86011 V 134.3172 H 136.61658 V 22.073219 Z"
+        />
+    <text
+       x="-135.38139" y="19.142105"
+       transform="rotate(-90)">Arcadey</text>
+    <text
+       x="135.64856" y="-251.90454"
+       transform="rotate(90)">Tactical</text>
+    <text
+       x="136.00134"
+       y="17.952293">Tryhard</text>
+    <text
+       x="135.41707"
+       y="267.68118">Casual</text>
+    <!-- <image href="./boxart/dueprocess.jpg" height="20" width="20"/> -->
+    </svg>
+    <!-- 0-200, +15 -->
+<script>
+const svg = document.querySelector('svg');
+
+let boxes = [
+    {
+        'name' : 'Due Process',
+        'file' : 'dueprocess.jpg',
+        'tacticalness' : 130,
+        'tryhardiness' : 100
+    },
+    {
+        'name' : 'Counter Strike: Global Offensive',
+        'file' : 'csgo.jpg',
+        'tacticalness' : 140,
+        'tryhardiness' : 180
+    },
+    {
+        'name' : 'Team Fortress 2',
+        'file' : 'tf2.jpg',
+        'tacticalness' : 20,
+        'tryhardiness' : 60
+    },
+    {
+        'name' : 'Titanfall 2',
+        'file' : 'titanfall2.jpg',
+        'tacticalness' : 10,
+        'tryhardiness' : 160
+    },
+    {
+        'name' : 'Fortnite',
+        'file' : 'fortnite.jpg',
+        'tacticalness' : 70,
+        'tryhardiness' : 195
+    },
+    {
+        'name' : 'Squad',
+        'file' : 'squad.jpg',
+        'tacticalness' : 180,
+        'tryhardiness' : 100
+    },
+    {
+        'name' : 'Arma 3',
+        'file' : 'arma3.jpg',
+        'tacticalness' : 215,
+        'tryhardiness' : 200
+    },
+    {
+        'name' : 'Planetside 2',
+        'file' : 'ps2.jpg',
+        'tacticalness' : 150,
+        'tryhardiness' : 60
+    },
+    {
+        'name' : 'Call of Duty: Modern Warfare series',
+        'file' : 'mw.jpg',
+        'tacticalness' : 0,
+        'tryhardiness' : 190
+    },
+    {
+        'name' : 'Battlefield series',
+        'file' : 'bf.jpg',
+        'tacticalness' : 20,
+        'tryhardiness' : 190
+    },
+    {
+        'name' : 'Doom (2016)',
+        'file' : 'doom.jpg',
+        'tacticalness' : 5,
+        'tryhardiness' : 100
+    }
+]
+
+for (let box of boxes) {
+    let img = document.createElementNS('http://www.w3.org/2000/svg','image');
+    img.setAttribute('href', './boxart/' + box.file);
+    img.setAttribute('x', box.tacticalness + 15);
+    img.setAttribute('y', (200 - box.tryhardiness) + 15);
+    svg.appendChild(img);
+}
+
+for (let image of document.querySelectorAll('svg image')) {
+    image.addEventListener('mouseenter', (e) => {
+        e.target.setAttribute('style', 'transform:scale(2.5) translateZ(1px);');
+        svg.appendChild(e.target);
+    });
+    image.addEventListener('mouseleave', (e) => {
+        e.target.setAttribute('style', '');
+    });
+}
+</script>
+</body>
+</html>
