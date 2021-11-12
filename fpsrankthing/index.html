@@ -97,10 +97,28 @@ let boxes = [
         'tryhardiness' : 100
     },
     {
+        'name' : 'Onward',
+        'file' : 'onward.jpg',
+        'tacticalness' : 185,
+        'tryhardiness' : 130
+    },
+    {
+        'name' : 'Escape from Tarkov',
+        'file' : 'tarkov.jpg',
+        'tacticalness' : 175,
+        'tryhardiness' : 180
+    },
+    {
         'name' : 'Arma 3',
         'file' : 'arma3.jpg',
         'tacticalness' : 215,
         'tryhardiness' : 200
+    },
+    {
+        'name' : 'Post Scriptum',
+        'file' : 'postscriptum.jpg',
+        'tacticalness' : 200,
+        'tryhardiness' : 190
     },
     {
         'name' : 'Planetside 2',
@@ -125,6 +143,18 @@ let boxes = [
         'file' : 'doom.jpg',
         'tacticalness' : 5,
         'tryhardiness' : 100
+    },
+    {
+        'name' : 'DUSK',
+        'file' : 'dusk.jpg',
+        'tacticalness' : 5,
+        'tryhardiness' : 170
+    },
+    {
+        'name' : 'Trouble in Terrorist Town',
+        'file' : 'ttt.png',
+        'tacticalness' : 100,
+        'tryhardiness' : 20
     }
 ]
 
@@ -133,12 +163,13 @@ for (let box of boxes) {
     img.setAttribute('href', './boxart/' + box.file);
     img.setAttribute('x', box.tacticalness + 15);
     img.setAttribute('y', (200 - box.tryhardiness) + 15);
+    img.setAttribute('title', box.name);
     svg.appendChild(img);
 }
 
 for (let image of document.querySelectorAll('svg image')) {
     image.addEventListener('mouseenter', (e) => {
-        e.target.setAttribute('style', 'transform:scale(2.5) translateZ(1px);');
+        e.target.setAttribute('style', 'transform:scale(3.5) translateZ(1px);');
         svg.appendChild(e.target);
     });
     image.addEventListener('mouseleave', (e) => {
