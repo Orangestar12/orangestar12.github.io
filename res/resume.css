@@ -1,0 +1,130 @@
+@media print {
+    .noprint { display: none; }
+}
+
+body, body.dark {
+    background: #222;
+    color: white;
+    font: 14pt sans-serif;
+
+    --blue: rgb(80, 180, 255);
+}
+
+body.light {
+    background: white;
+    color: black;
+}
+
+.center { text-align: center; }
+/* .left {
+    float:left;
+    margin:0 0.75em 0.25em 0.25em;
+} */
+.right {
+    float: right;
+    max-width:220px;
+}
+.small { font-size: 0.75em; }
+
+a, a:visited {
+    color: var(--blue);
+}
+p { margin: 0.25em 0; }
+
+h1,h2,h3,h4 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    margin: 0.2em 0;
+}
+h1 { font-size: 38pt; }
+
+
+img {
+    border: 5px solid var(--blue);
+    border-radius: 50%;
+    height: 100px;
+    width: auto;
+    margin: 0 7.5px;
+    background: #444;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container div {
+    flex-grow: 2;
+    font-size: 10pt;
+    width: 200px;
+    height: 100px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.flex-column > * {
+    display: inline-block;
+}
+
+hr {
+    border-top: 5px solid var(--blue);
+    border-bottom: none;
+    margin: 0;
+}
+
+section {
+    margin: 1em 0;
+    padding-left: 12px;
+}
+body > div.main {
+    max-width: 1280px;
+    margin: 0.25em auto;
+    padding: 0 50px;
+}
+
+table {
+    font-size: 10pt;
+    border-collapse: collapse;
+}
+tbody tr:nth-child(even), th,
+body.dark tbody tr:nth-child(even), body.dark th {
+    background: black;
+}
+td, th, body.dark td, body.dark th{
+    padding: 0 8px;
+    border: 1px solid black;
+    border-top: none; border-bottom: none;
+}
+th:first-child, td:first-child {
+    border-left: none;
+}
+th:last-child, td:last-child {
+    border-right: none;
+}
+body.light td, body.light th {
+    border-color: #BBB;
+}
+body.light tr:nth-child(even), body.light th {
+    background: #BBB;
+}
+
+ul {
+    padding-left: 16px;
+}
+
+@media (prefers-color-scheme: light) {
+    body{
+        background: white;
+        color: black;
+    }
+    tbody td, thead th {
+        border-color: #BBB;
+    }
+    tbody tr:nth-child(even), thead th {
+        background: #BBB;
+    }
+}
