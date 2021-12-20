@@ -39,7 +39,7 @@ h1,h2,h3,h4 {
 h1 { font-size: 38pt; }
 
 
-img {
+header img {
     border: 5px solid var(--blue);
     border-radius: 50%;
     height: 100px;
