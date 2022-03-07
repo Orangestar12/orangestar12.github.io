@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>FPS Categorizing Thing | Orangestar</title>
+    <link rel="icon" type="image/png" href="./starvatar.png"/>
+    <meta name="Title" property="og:title" content="FPS Ranking Thing">
+    <meta name="Description" property="og:description" content="A page ranking FPS games, based on how serious/tactical/realistic they are on one axis, and based on how &quot;tryhard&quot; they are on another." />
+    <meta name="Type" property="og:type" content="website" />
+    <meta name="Image" property="og:image" content="https://orangestar.dev/starvatar.png" />
+    <meta name="URL" property="og:url" content="https://orangestar.dev/fpsrankthing/" />
+    <meta name="theme-color" content="#FF7700">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+    <!-- <link href="main.css" rel="stylesheet" type="text/css"/> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0; padding: 0;
+            font-family: 'Oswald', sans-serif;
+            font-size: 14pt;
+            background: black;
+            color: #DDD
+        }
+        .g {
+            color: green;
+            text-shadow: 0 0 1px #DDD;
+        }
+
+        .flex {
+            display:flex;
+        }
+
+        .col {
+            padding: 2px;
+            border: 1px solid #DDD;
+            text-align: center;
+            flex: 1;
+            min-width:100px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="flex">
+            <div class="col"></div>
+            <div class="col">No weapon carry limits</div>
+            <div class="col">Specific enemy placement</div>
+            <div class="col">Trapped in a room until enemies are defeated</div>
+            <div class="col">Extremely Aggressive AI</div>
+            <div class="col">Predictable AI</div>
+            <div class="col">HP/Armor <u>must</u> be acquired via pickups</div>
+            <div class="col">All enemies visually and mechanically distinct</div>
+            <div class="col">Nonlinear level design.</div>
+            <div class="col">Examples</div>
+        </div>
+        <div class="flex">
+            <div class="col">Boomer Shooter</div>
+            <div class="col g">✔</div>
+            <div class="col g">✔</div>
+            <div class="col">❌</div>
+            <div class="col">❌</div>
+            <div class="col g">✔</div>
+            <div class="col g">✔</div>
+            <div class="col g">✔</div>
+            <div class="col g">✔</div>
+            <div class="col">Doom, Quake, Dusk</div>
+        </div>
+        <div class="flex">
+            <div class="col">Arena Shooter</div>
+            <div class="col g">✔</div>
+            <div class="col">❌</div>
+            <div class="col g">✔</div>
+            <div class="col g">✔</div>
+            <div class="col">❔</div>
+            <div class="col g">✔</div>
+            <div class="col">❌</div>
+            <div class="col">❔</div>
+            <div class="col">Doom 2016, Ultrakill, Serious Sam, Shadow Warrior 2013</div>
+        </div>
+        <div class="flex">
+            <div class="col">Twitch Shooter</div>
+            <div class="col">❔</div>
+            <div class="col">❔</div>
+            <div class="col">❌</div>
+            <div class="col g">✔</div>
+            <div class="col">❌</div>
+            <div class="col">❌</div>
+            <div class="col">❌</div>
+            <div class="col">❌</div>
+            <div class="col">Strafe, Doom Eternal, Modern Warfare Multiplayer</div>
+        </div>
+        <div class="flex">
+            <div class="col">"Modern" Shooter</div>
+            <div class="col">❌</div>
+            <div class="col">❌</div>
+            <div class="col">❔</div>
+            <div class="col">❔</div>
+            <div class="col">❔</div>
+            <div class="col">❌</div>
+            <div class="col">❌</div>
+            <div class="col">❌</div>
+            <div class="col">Halo, Modern Warfare Singleplayer</div>
+        </div>
+    </section>
+</body>
+</html>
