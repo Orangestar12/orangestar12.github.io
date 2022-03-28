@@ -18,7 +18,7 @@
             <p style="font-size: 2em;">yeah.</p>
         </button>
         <button class="sound" data-src="./sounds/boowomp.ogg">
-            <div class="img" style="background-image:url('./images/boowomp.png')"></div>
+            <div class="img" style="background-image:url('./images/boowomp.png')"><p class="hidden">Boo-womp</p></div>
         </button>
     </div>
     <h1>Failure</h1>
@@ -27,10 +27,10 @@
             <p>The Price Is Right Losing Horn</p>
         </button>
         <button class="sound red" data-src="./sounds/kot.ogg">
-            <div class="img" style="background-image:url('./images/kot.png')"></div>
+            <div class="img" style="background-image:url('./images/kot.png')"><p class="hidden">King of Town: Boo</p></div>
         </button>
         <button  class="sound slate" data-src="./sounds/failure.ogg">
-            <div class="img" style="background-image:url('./images/failure.png')"></div>
+            <div class="img" style="background-image:url('./images/failure.png')"><p class="hidden">SSBM: Failure</p></div>
         </button>
     </div>
     <h1>Death</h1>
@@ -42,28 +42,28 @@
             <p>Roblox Oof</p>
         </button>
         <button class="sound beige" data-src="./sounds/minecraft.ogg">
-            <div class="img" style="background-image:url('./images/steve.png')"></div>
+            <div class="img" style="background-image:url('./images/steve.png')"><p class="hidden">Old Minecraft hurt noise</p></div>
         </button>
     </div>
     <h1>Anger</h1>
     <div class="flex">
         <button class="sound slate" data-src="./sounds/i_should_kick_your_fuckin_ass.ogg">
-            <div class="img" style="background-image:url('./images/i_should_kick_your_fuckin_ass.png')"></div>
+            <div class="img" style="background-image:url('./images/i_should_kick_your_fuckin_ass.png')"><p class="hidden">Fallout 2 Enclave Soldier: I should kick your fuckin' ass</p></div>
         </button>
     </div>
     <h1>Combat</h1>
     <div class="flex">
         <button class="sound slate" data-src="./sounds/COUNTER.ogg">
-            <div class="img" style="background-image:url('./images/counter.png')"></div>
+            <div class="img" style="background-image:url('./images/counter.png')"><p class="hidden">Guilty Gear Strive: Counter!</p></div>
         </button>
     </div>
     <h1>Combat Over</h1>
     <div class="flex">
         <button class="sound red" data-src="./sounds/DESTROYED.ogg">
-            <div class="img" style="background-image:url('./images/DESTROYED.png')"></div>
+            <div class="img" style="background-image:url('./images/DESTROYED.png')"><p class="hidden">Guilty Gear Xrd: Destroyed!</p></div>
         </button>
         <button class="sound pink" data-src="./sounds/retired.ogg">
-            <div class="img" style="background-image:url('./images/retired!.png')"></div>
+            <div class="img" style="background-image:url('./images/retired!.png')"><p class="hidden">JoJo Eyes of Heaven: Retired!</p></div>
         </button>
     </div>
     <h1>CvS Announcer Lines</h1>
@@ -86,7 +86,7 @@
 <script>
 const buttons = document.querySelectorAll('button.sound'),
       silence = document.getElementById('silence'),
-      preload = document.getElementById('preload');
+      loader = document.getElementById('preload');
 
 function preload(element) {
     if (!element.getAttribute('data-preloaded')) {
@@ -96,7 +96,7 @@ function preload(element) {
             link.href = element.getAttribute('data-src');
             link.as = 'audio';
             document.head.appendChild(link)
-            preload.src = element.getAttribute('data-src');
+            loader.src = element.getAttribute('data-src');
         }
 }
 
