@@ -82,9 +82,11 @@
         </button>
     </div>
     <audio id="silence" src="sounds/0ms.ogg" loop></audio>
+    <audio id="preload" src="" muted></audio>
 <script>
 const buttons = document.querySelectorAll('button.sound'),
-      silence = document.getElementById('silence');
+      silence = document.getElementById('silence'),
+      preload = document.getElementById('preload');
 
 function preload(element) {
     if (!element.getAttribute('data-preloaded')) {
@@ -94,6 +96,7 @@ function preload(element) {
             link.href = element.getAttribute('data-src');
             link.as = 'audio';
             document.head.appendChild(link)
+            preload.src = element.getAttribute('data-src');
         }
 }
 
