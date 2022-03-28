@@ -98,9 +98,10 @@ function preload(element) {
 }
 
 // preload everything button
-document.getElementById('preload').addEventListener('click', () => {
+document.getElementById('preload').addEventListener('click', (e) => {
     for (let button of buttons) {
         preload(button);
+        e.currentTarget.remove();
     }
 });
 
