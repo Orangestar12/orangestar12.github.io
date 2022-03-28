@@ -5,6 +5,7 @@
     <title>Soundboard</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="colors.css" async />
+    <link href="http://fonts.cdnfonts.com/css/sf-pixelate" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,7 +18,7 @@
         <button class="sound" data-src="./sounds/yeah.mp3">
             <p style="font-size: 2em;">yeah.</p>
         </button>
-        <button class="sound" data-src="./sounds/boowomp.ogg">
+        <button class="sound blue" data-src="./sounds/boowomp.ogg">
             <div class="img" style="background-image:url('./images/boowomp.png')"><p class="hidden">Boo-womp</p></div>
         </button>
     </div>
@@ -29,7 +30,7 @@
         <button class="sound red" data-src="./sounds/kot.ogg">
             <div class="img" style="background-image:url('./images/kot.png')"><p class="hidden">King of Town: Boo</p></div>
         </button>
-        <button  class="sound slate" data-src="./sounds/failure.ogg">
+        <button  class="sound blue" data-src="./sounds/failure.ogg">
             <div class="img" style="background-image:url('./images/failure.png')"><p class="hidden">SSBM: Failure</p></div>
         </button>
     </div>
@@ -49,6 +50,9 @@
     <div class="flex">
         <button class="sound slate" data-src="./sounds/i_should_kick_your_fuckin_ass.ogg">
             <div class="img" style="background-image:url('./images/i_should_kick_your_fuckin_ass.png')"><p class="hidden">Fallout 2 Enclave Soldier: I should kick your fuckin' ass</p></div>
+        </button>
+        <button class="sound beige" data-src="./sounds/butt.ogg">
+            <div class="img" style="background-image:url('./images/BUTT.png')"><p class="hidden">Fallout 2 Enclave Soldier: I should kick your fuckin' ass</p></div>
         </button>
     </div>
     <h1>Combat</h1>
@@ -79,6 +83,51 @@
         </button>
         <button class="sound pink" data-src="./sounds/cvs/sneaky.ogg">
             <p>Wow, they came out with a sneaky surprise attack...!</p>
+        </button>
+    </div>
+    <h1>The Castlevania SOTN Intro</h1>
+    <div class="flex small pixelate">
+        <button class="sound blue" data-src="./sounds/sotn/1-die-monster.ogg">
+            <p>Die, monster.</p>
+        </button>
+        <button class="sound blue" data-src="./sounds/sotn/2-you-dont-belong-in-this-world.ogg">
+            <p>You don't belong in this world!</p>
+        </button>
+        <button class="sound slate" data-src="./sounds/sotn/3-it-was-not-by-my-hand-that-i-am-once-again-given-flesh.ogg">
+            <p>It was not by my hand that I am once again given flesh.</p>
+        </button>
+        <button class="sound slate" data-src="./sounds/sotn/4-i-was-called-here-by-humans.ogg">
+            <p>I was called here by <i>humans</i> who wished to pay <i>me</i> tribute.</p>
+        </button>
+        <button class="sound blue" data-src="./sounds/sotn/5-tribute.ogg">
+            <p><i>Tribute?</i></p>
+        </button>
+        <button class="sound blue" data-src="./sounds/sotn/6-you-steal-mens-souls.ogg">
+            <p>You steal men's <i>souls</i> and make them your slaves!</p>
+        </button>
+        <button class="sound slate" data-src="./sounds/sotn/7-perhaps-the-same-could-be-said-of-all-religions.ogg">
+            <p>Perhaps the same could be said of all religions!</p>
+        </button>
+        <button class="sound blue" data-src="./sounds/sotn/8-your-words-are-as-empty-as-your-soul.ogg">
+            <p>Your words are as empty as your soul!</p>
+        </button>
+        <button class="sound blue" data-src="./sounds/sotn/9-mankind-ill-needs-a-savior-such-as-you.ogg">
+            <p>Mankind ill needs a savior such as you!</p>
+        </button>
+        <button class="sound slate" data-src="./sounds/sotn/10-what-is-a-man.ogg">
+            <p><i>What is a man?!</i></p>
+        </button>
+        <button class="sound slate" data-src="./sounds/sotn/11-glass-crash.ogg">
+            <div class="img" style="background-image:url('./images/glass.png')"><p class="hidden">Glass shatters.</p></div>
+        </button>
+        <button class="sound slate" data-src="./sounds/sotn/12-a-miserable-little-pile-of-secrets.ogg">
+            <p>A miserable little pile of <i>secrets!</i></p>
+        </button>
+        <button class="sound slate" data-src="./sounds/sotn/13-but-enough-talk.ogg">
+            <p>But enough talk!</p>
+        </button>
+        <button class="sound slate" data-src="./sounds/sotn/14-have-at-you.ogg">
+            <p>Have at you!</p>
         </button>
     </div>
     <audio id="silence" src="sounds/0ms.ogg" loop></audio>

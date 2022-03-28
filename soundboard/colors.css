@@ -37,6 +37,19 @@ button.red:active {
     box-shadow: 0 0px 0 0 rgb(90, 20, 20);
 }
 
+button.blue {
+    background: rgb(30, 32, 156);
+    box-shadow:0 4px 0 0 rgb(35, 20, 90);
+}
+button.blue:hover {
+    background: rgb(47, 0, 218);
+    box-shadow: 0 8px 0 0 rgb(35, 20, 90);
+}
+button.blue:active {
+    background: rgb(30, 32, 156);
+    box-shadow: 0 0px 0 0 rgb(35, 20, 90);
+}
+
 button.pink {
     background: rgb(158, 70, 180);
     box-shadow:0 4px 0 0 rgb(105, 48, 105);
@@ -48,4 +61,14 @@ button.pink:hover {
 button.pink:active {
     background: rgb(158, 70, 180);
     box-shadow: 0 0px 0 0 rgb(105, 48, 105);
+}
+
+.pixelate button.sound {
+    font-family: 'SF Pixelate', sans-serif;
+}
+
+div.small button.sound {
+    height: 100px;
+    width: 100px;
+    font-size: 0.65em;
 }
