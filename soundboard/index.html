@@ -100,6 +100,19 @@ function preload(element) {
         }
 }
 
+function playSound(e) {
+    let audio = document.createElement('audio');
+    audio.src = e.currentTarget.getAttribute('data-src');
+    document.body.appendChild(audio);
+
+    // delete audio element after playback
+    audio.addEventListener('ended', (e) => {
+        e.currentTarget.remove();
+    });
+
+    audio.play();
+}
+
 // preload everything button
 document.getElementById('preload').addEventListener('click', (e) => {
     for (let button of buttons) {
@@ -127,19 +140,15 @@ for (let button of buttons) {
     button.addEventListener('mouseenter', (e) => {
         preload(e.currentTarget);
     });
+    // preload on button focus
+    button.addEventListener('focus', (e) => {
+        preload(e.currentTarget);
+    });
 
     // play audio
-    button.addEventListener('mousedown', (e) => {
-        let audio = document.createElement('audio');
-        audio.src = e.currentTarget.getAttribute('data-src');
-        document.body.appendChild(audio);
-
-        // delete audio element after playback
-        audio.addEventListener('ended', (e) => {
-            e.currentTarget.remove();
-        });
-
-        audio.play();
+    button.addEventListener('mousedown', playSound);
+    button.addEventListener('keydown', (e) => {
+        if(e.keyCode === 32 || e.keyCode === 13) playSound(e)
     });
 }
 </script>
