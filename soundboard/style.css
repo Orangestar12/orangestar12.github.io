@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: black;
+    color: white;
+    
+    text-align: center;
+    
+    font-family: sans-serif;
+}
+
+body {
+    margin-top: 4em;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    padding: 1em;
+    background: black;
+    z-index: 10000;
+
+}
+
+button.sound {
+    appearance: none;
+    overflow: hidden;
+
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    padding: 2.5px;
+
+    background-color: rgb(35, 83, 23);
+    color: white;
+    box-shadow: 0 4px 0 0 rgb(10, 53, 5);
+    border: none;
+    font-size: 1.2rem;
+
+    border-radius:50%;
+    transition: transform 200ms, box-shadow 200ms, background-color 200ms;
+    transform: translateY(0);
+}
+button.sound:hover {
+    transform: translateY(-4px);
+    box-shadow:0 8px 0 0 rgb(10, 53, 5);
+    background-color: rgb(53, 124, 36);
+}
+button.sound:active {
+    transform: translateY(4px);
+    box-shadow:0 0 0 0 rgb(10, 53, 5);
+}
+
+button.sound div.img {
+    display:inline-block;
+    border-radius: 50%;
+
+    width: 95%;
+    height: 95%;
+    margin-top: 2.5%;
+
+    background-size:cover;
+    background-position: center;
+}

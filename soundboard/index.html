@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Soundboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="colors.css" async />
+</head>
+<body>
+    <header>
+        <button id="preload">Preload everything</button>
+        <button id="bug">Loop silence (click to fix a Chrome switchable GPU lag bug)</button>
+        <button id="stop">Stop all sounds</button>
+    </header>
+    <p>Sounds are preloaded when you hover your mouse over the button.</p>
+    <div class="flex">
+        <button class="sound" data-src="./sounds/yeah.mp3">
+            <p style="font-size: 2em;">yeah.</p>
+        </button>
+        <button class="sound" data-src="./sounds/boowomp.ogg">
+            <div class="img" style="background-image:url('./images/boowomp.png')"></div>
+        </button>
+    </div>
+    <h1>Failure</h1>
+    <div class="flex">
+        <button class="sound" data-src="./sounds/losing_horn.ogg">
+            <p>The Price Is Right Losing Horn</p>
+        </button>
+        <button class="sound red" data-src="./sounds/kot.ogg">
+            <div class="img" style="background-image:url('./images/kot.png')"></div>
+        </button>
+        <button  class="sound slate" data-src="./sounds/failure.ogg">
+            <div class="img" style="background-image:url('./images/failure.png')"></div>
+        </button>
+    </div>
+    <h1>Death</h1>
+    <div class="flex">
+        <button class="sound beige" data-src="./sounds/popeyes_biscuit.ogg">
+            <p>Mmm, Popeye's Biscuit...</p>
+        </button>
+        <button class="sound" data-src="./sounds/oof.ogg">
+            <p>Roblox Oof</p>
+        </button>
+        <button class="sound beige" data-src="./sounds/minecraft.ogg">
+            <div class="img" style="background-image:url('./images/steve.png')"></div>
+        </button>
+    </div>
+    <h1>Anger</h1>
+    <div class="flex">
+        <button class="sound slate" data-src="./sounds/i_should_kick_your_fuckin_ass.ogg">
+            <div class="img" style="background-image:url('./images/i_should_kick_your_fuckin_ass.png')"></div>
+        </button>
+    </div>
+    <h1>Combat</h1>
+    <div class="flex">
+        <button class="sound slate" data-src="./sounds/COUNTER.ogg">
+            <div class="img" style="background-image:url('./images/counter.png')"></div>
+        </button>
+    </div>
+    <h1>Combat Over</h1>
+    <div class="flex">
+        <button class="sound red" data-src="./sounds/DESTROYED.ogg">
+            <div class="img" style="background-image:url('./images/DESTROYED.png')"></div>
+        </button>
+        <button class="sound pink" data-src="./sounds/retired.ogg">
+            <div class="img" style="background-image:url('./images/retired!.png')"></div>
+        </button>
+    </div>
+    <h1>CvS Announcer Lines</h1>
+    <div class="flex">
+        <button class="sound slate" data-src="./sounds/cvs/this_battle_is_about_to_explode.ogg">
+            <p>This battle is about to explode!</p>
+        </button>
+        <button class="sound red" data-src="./sounds/cvs/big_damage.ogg">
+            <p><i>That's</i> what we like to call <i>big damage!</i></p>
+        </button>
+        <button class="sound" data-src="./sounds/cvs/calm_before_the_storm.ogg">
+            <p>You can feel the calm before the storm...</p>
+        </button>
+        <button class="sound pink" data-src="./sounds/cvs/sneaky.ogg">
+            <p>Wow, they came out with a sneaky surprise attack...!</p>
+        </button>
+    </div>
+    <audio id="silence" src="sounds/0ms.ogg" loop></audio>
+<script>
+const buttons = document.querySelectorAll('button.sound'),
+      silence = document.getElementById('silence');
+
+function preload(element) {
+    if (!element.getAttribute('data-preloaded')) {
+            element.setAttribute('data-preloaded', "True");
+            let link = document.createElement('link');
+            link.rel = 'preload';
+            link.href = element.getAttribute('data-src');
+            link.as = 'audio';
+            document.head.appendChild(link)
+        }
+}
+
+// preload everything button
+document.getElementById('preload').addEventListener('click', () => {
+    for (let button of buttons) {
+        preload(button);
+    }
+});
+
+// fix bug button
+document.getElementById('bug').addEventListener('click', (e) => {
+    silence.play();
+    e.currentTarget.remove();    
+});
+
+// stop all sounds button
+document.getElementById('stop').addEventListener('click', () => {
+    for (let audio of document.querySelectorAll('audio')) {
+        audio.pause();
+        audio.remove();
+    }
+});
+
+for (let button of buttons) {
+    // preload sound on mouse hover
+    button.addEventListener('mouseenter', (e) => {
+        preload(e.currentTarget);
+    });
+
+    // play audio
+    button.addEventListener('mousedown', (e) => {
+        let audio = document.createElement('audio');
+        audio.src = e.currentTarget.getAttribute('data-src');
+        document.body.appendChild(audio);
+
+        // delete audio element after playback
+        audio.addEventListener('ended', (e) => {
+            e.currentTarget.remove();
+        });
+
+        audio.play();
+    });
+}
+</script>
+</body>
+</html>

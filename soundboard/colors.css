@@ -1,0 +1,51 @@
+button.beige {
+    background: rgb(116, 90, 60);
+    box-shadow:0 4px 0 0 rgb(83, 67, 49);
+}
+button.beige:hover {
+    background: rgb(158, 122, 80);
+    box-shadow: 0 8px 0 0 rgb(83, 67, 49);
+}
+button.beige:active {
+    background: rgb(116, 90, 60);
+    box-shadow: 0 0px 0 0 rgb(83, 67, 49);
+}
+
+button.slate {
+    background: rgb(80,80,80);
+    box-shadow:0 4px 0 0 rgb(50, 50, 50);
+}
+button.slate:hover {
+    background: rgb(114, 114, 114);
+    box-shadow: 0 8px 0 0 rgb(50, 50, 50);
+}
+button.slate:active {
+    background: rgb(80,80,80);
+    box-shadow: 0 0px 0 0 rgb(50, 50, 50);
+}
+
+button.red {
+    background: rgb(156, 30, 30);
+    box-shadow:0 4px 0 0 rgb(90, 20, 20);
+}
+button.red:hover {
+    background: rgb(218, 0, 0);
+    box-shadow: 0 8px 0 0 rgb(90, 20, 20);
+}
+button.red:active {
+    background: rgb(156, 30, 30);
+    box-shadow: 0 0px 0 0 rgb(90, 20, 20);
+}
+
+button.pink {
+    background: rgb(158, 70, 180);
+    box-shadow:0 4px 0 0 rgb(105, 48, 105);
+}
+button.pink:hover {
+    background: rgb(148, 86, 163);
+    box-shadow: 0 8px 0 0 rgb(105, 48, 105);
+}
+button.pink:active {
+    background: rgb(158, 70, 180);
+    box-shadow: 0 0px 0 0 rgb(105, 48, 105);
+}
