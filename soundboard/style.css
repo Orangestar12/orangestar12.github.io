@@ -27,7 +27,10 @@ header {
     padding: 1em;
     background: black;
     z-index: 10000;
+}
 
+h1 {
+    margin: 0.25em 0;
 }
 
 p.hidden {
@@ -38,16 +41,16 @@ button.sound {
     appearance: none;
     overflow: hidden;
 
-    width: 150px;
-    height: 150px;
-    margin: 20px;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
     padding: 2.5px;
 
     background-color: rgb(35, 83, 23);
     color: white;
     box-shadow: 0 4px 0 0 rgb(10, 53, 5);
     border: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
 
     border-radius:50%;
     transition: transform 200ms, box-shadow 200ms, background-color 200ms;
