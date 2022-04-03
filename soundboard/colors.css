@@ -63,6 +63,19 @@ button.pink:active {
     box-shadow: 0 0px 0 0 rgb(105, 48, 105);
 }
 
+button.orange {
+    background: rgb(235, 146, 21);
+    box-shadow:0 4px 0 0 rgb(159, 103, 7);
+}
+button.orange:hover {
+    background: rgb(255, 171, 52);
+    box-shadow: 0 8px 0 0 rgb(159, 103, 7);
+}
+button.orange:active {
+    background: rgb(196, 119, 13);
+    box-shadow: 0 0px 0 0 rgb(159, 103, 7);
+}
+
 .pixelate button.sound {
     font-family: 'SF Pixelate', sans-serif;
 }
