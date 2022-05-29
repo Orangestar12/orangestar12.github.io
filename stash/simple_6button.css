@@ -1,0 +1,108 @@
+.controller.fight-stick {
+    background: transparent;
+}
+
+.fight-stick .button, .fight-stick .bumper, .fight-stick .trigger-button {
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 0 2px #0f0f0f, 0 4px 0 10px black;
+}
+.fight-stick .button.pressed, .fight-stick .bumper.pressed, .fight-stick .trigger-button.pressed {
+    box-shadow: 0 0px 0 10px black;
+}
+
+.fight-stick .abxy {
+    position: absolute;
+    width: 310px;
+    height: 370px;
+    bottom: 75px;
+    left: 440px;
+    right: auto;
+    top: auto;
+}
+.fight-stick .triggers {
+    width: 326px;
+    height: 198px;
+    left: 755px;
+    bottom: 0;
+    right: auto;
+    top: auto;
+}
+.fight-stick .bumpers {
+    width: 295px;
+    height: 198px;
+    left: 755px;
+    bottom: 150px;
+    right: auto;
+    top: auto;
+}
+
+.fight-stick .button.a {
+    bottom: 0px;
+    left: 0px;
+    right: auto;
+    top: auto;
+    background: #55D;
+    box-shadow: 0 4px 0 2px #3c29d9, 0 4px 0 10px black;
+}
+.fight-stick .button.b {
+    background: #22D;
+    box-shadow: 0 4px 0 2px #2d1ea7, 0 4px 0 10px black;
+    bottom: 0;
+    right: 31px;
+    left: auto;
+    top: auto;
+}
+.fight-stick .button.x {
+    background-color: #D55;
+    box-shadow: 0 4px 0 2px #d72e2e, 0 4px 0 10px black;
+    bottom: 150px;
+    left: 0;
+    right: auto;
+    top: auto;
+}
+.fight-stick .button.y {
+    background-color: #d52222;
+    box-shadow: 0 4px 0 2px #9f1313, 0 4px 0 10px black;
+    right: 31px;
+    bottom: 150px;
+    left: auto;
+    top: auto;
+}
+
+.fight-stick .bumper.right {
+    background: #900;
+    box-shadow: 0 4px 0 2px #740808, 0 4px 0 10px black;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    top: auto;
+}
+
+.fight-stick .trigger-button.right {
+    float: left;
+    background: #009;
+    box-shadow: 0 4px 0 2px #0b024e, 0 4px 0 10px black;
+}
+
+.fight-stick .bumper.left, .fight-stick .trigger-button.left { display: none; }
+
+.fight-stick .quadrant {
+    display: none;
+}
+
+.fight-stick::after {
+    display: block;
+    content: '';
+    width: 125px;
+    height: 125px;
+    background: black;
+    border-radius: 50%;
+    left: 240px;
+    top: 247px;
+    position: absolute;
+    z-index: -1;
+}
+
+.fight-stick .arrows {
+    display: none;
+}
