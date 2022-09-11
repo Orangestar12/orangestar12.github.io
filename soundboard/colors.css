@@ -2,7 +2,7 @@ button.beige {
     background: rgb(116, 90, 60);
     box-shadow:0 4px 0 0 rgb(83, 67, 49);
 }
-button.beige:hover {
+button.beige:hover, button.beige:focus {
     background: rgb(158, 122, 80);
     box-shadow: 0 8px 0 0 rgb(83, 67, 49);
 }
@@ -15,7 +15,7 @@ button.slate {
     background: rgb(80,80,80);
     box-shadow:0 4px 0 0 rgb(50, 50, 50);
 }
-button.slate:hover {
+button.slate:hover, button.slate:focus {
     background: rgb(114, 114, 114);
     box-shadow: 0 8px 0 0 rgb(50, 50, 50);
 }
@@ -28,7 +28,7 @@ button.red {
     background: rgb(156, 30, 30);
     box-shadow:0 4px 0 0 rgb(90, 20, 20);
 }
-button.red:hover {
+button.red:hover, button.red:focus {
     background: rgb(218, 0, 0);
     box-shadow: 0 8px 0 0 rgb(90, 20, 20);
 }
@@ -41,7 +41,7 @@ button.blue {
     background: rgb(30, 32, 156);
     box-shadow:0 4px 0 0 rgb(35, 20, 90);
 }
-button.blue:hover {
+button.blue:hover, button.blue:focus {
     background: rgb(47, 0, 218);
     box-shadow: 0 8px 0 0 rgb(35, 20, 90);
 }
@@ -54,7 +54,7 @@ button.pink {
     background: rgb(158, 70, 180);
     box-shadow:0 4px 0 0 rgb(105, 48, 105);
 }
-button.pink:hover {
+button.pink:hover, button.pink:focus {
     background: rgb(148, 86, 163);
     box-shadow: 0 8px 0 0 rgb(105, 48, 105);
 }
@@ -67,7 +67,7 @@ button.orange {
     background: rgb(235, 146, 21);
     box-shadow:0 4px 0 0 rgb(159, 103, 7);
 }
-button.orange:hover {
+button.orange:hover, button.orange:focus {
     background: rgb(255, 171, 52);
     box-shadow: 0 8px 0 0 rgb(159, 103, 7);
 }
