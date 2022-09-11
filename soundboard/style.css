@@ -1,3 +1,18 @@
+@keyframes fadeinout {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }   
+}
+
 * {
     box-sizing: border-box;
 }
@@ -76,4 +91,17 @@ button.sound div.img {
 
     background-size:cover;
     background-position: center;
+}
+
+.toast {
+    position:fixed;
+    left: 5%;
+    right: 5%;
+    bottom: 2em;
+    padding: 0.25em;
+    font-size: 1.25em;
+    border-radius: 15px;
+    color: white;
+    background: #404040;
+    animation: 5s fadeinout;
 }
