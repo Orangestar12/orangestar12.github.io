@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Which games work for me on SteamVR for Linux? | Orangestar</title>
+    <link rel="icon" type="image/png" href="./starvatar.png"/>
+    <meta name="Title" property="og:title" content="Which games work for me on SteamVR for Linux?">
+    <meta name="Description" property="og:description" content="A lot of them do but with major caveats." />
+    <meta name="Type" property="og:type" content="website" />
+    <meta name="Image" property="og:image" content="https://orangestar.dev/res/vr/alyx.png" />
+    <meta name="URL" property="og:url" content="https://orangestar.dev/vr.html" />
+    <meta name="theme-color" content="#FF7700">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+    <!-- <link href="main.css" rel="stylesheet" type="text/css"/> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+html, body {
+    margin: 50px 0; padding: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14pt;
+    background: black;
+    color: #DDD;
+}
+
+h1 {
+    margin: 0.25em;
+}
+
+section {
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.flex {
+    display:flex;
+}
+
+.top {
+    position: fixed;
+    left:12%;
+    right:12%;
+    top: 0;
+    background: black;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    margin: 0.1em;
+}
+ul {
+    margin: 0.25em 1ch;
+    padding-left: 4ch;
+}
+
+.col {
+    border: 2px solid black;
+    flex: 1;
+    min-width:100px;
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black;
+}
+.col p {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 8px;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+.col.one {
+    max-width: 100px;
+    font-size: 0;
+}
+img {
+    max-width: 100%;
+}
+.hard.yes {
+    background: green;
+}
+.yes {
+    color: #0F0;
+    background: #020;
+}
+.sorta {
+    background: #220;
+    color: #FF0;
+}
+.hard.no {
+    background: red;
+}
+.no {
+    background: #200;
+    color: #F00;
+}
+.dunno {
+    background: #202;
+    color: #F0F;
+}
+
+a, a:visited {
+    color: #AAF;
+}
+.no a {
+    color: #F66;
+}
+.sorta a {
+    color: FF6;
+}
+.yes a {
+    color: #6F6;
+}
+    </style>
+</head>
+<body>
+    <section>
+    <p style="text-align:center;">Proton is only mentioned if it's required despite there being a native version of the game.</p>
+        <div class="flex top">
+            <div class="col one"></div>
+            <div class="col"><h1>DOES IT BOOT?</h1></div>
+            <div class="col"><h1>DOES IT WORK?</h1></div>
+            <div class="col"><h1>IS IT MISSING SOMETHING?</h1></div>
+        </div>
+        <div class="flex">
+            <div class="col one"><img src="res/vr/distance.png" alt="Distance"></div>
+            <div class="col hard yes"></div>
+            <div class="col hard yes"></div>
+            <div class="col yes">
+                <p>Nope.</p>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="col one"><img src="res/vr/ed.png" alt="Elite: Dangerous"></div>
+            <div class="col hard yes"></div>
+            <div class="col no">
+                <p><a href="https://github.com/ValveSoftware/SteamVR-for-Linux/issues/452">Error -203</a> sometimes. Seems random?</p>
+            </div>
+            <div class="col sorta">
+                <p>Very sensitive to antialiasing settings.</p>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="col one"><img src="res/vr/alyx.png" alt="Half-Life: Alyx"></div>
+            <div class="col dunno">
+                <p>Untested, yet.</p>
+            </div>
+            <!--<div class="col hard yes"></div>
+            <div class="col sorta">
+                <p>Hitches and stops drawing to the headset if you put it in the background for too long.</p>
+            </div>-->
+        </div>
+        <div class="flex">
+            <div class="col one"><img src="res/vr/ets2.png" alt="Euro Truck Simulator 2"></div>
+            <div class="col hard yes"></div>
+            <div class="col hard yes"></div>
+            <div class="col sorta">
+                <p>Don't press the function keys.</p>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="col one"><img src="res/vr/neos.png" alt="NEOS VR"></div>
+            <div class="col hard yes"></div>
+            <div class="col yes">
+                <p><a href="https://github.com/Frozenreflex/NeosVideoPlayerFix">Use this mod to get video players working.</a></p>
+                <p>You don't even need the Windows version running in Proton to use mods. Mono just kinda works with Windows DLLs. C# is fucking wack yo.</p>
+            </div>
+            <div class="col yes">
+                <p>Install <a href="https://github.com/zkxs/NeosPlatformSpoof">the platform spoofing mod</a> if you need to use Proton.</p>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="col one"><img src="res/vr/pavlov.png" alt="Pavlov VR"></div>
+            <div class="col hard yes"></div>
+            <div class="col sorta">
+                <ul>
+                    <li>
+                        Sometimes picking up a sniper will make the framerate halve.
+                        <ul>
+                            <li>Setting antialiasing to low sometimes fixes it.</li>
+                            <li>You can also fix this by setting your render resolution to a number lower than 100%</li>
+                            <li>Doing this also has a 50/50 chance of causing the game to stop drawing to the headset until you reboot or change a video setting and press "Apply" completely blind.</li>
+                        </ul>
+                    </li>
+                    <li>Sometimes, after about 10-12 rounds of SnD, the buy menu stops updating. Inputs still work.</li>
+                </ul>
+                <p class="yes">Otherwise, completely playable.</p>
+            </div>
+            <div class="col sorta">
+                <ul>
+                    <li>Voice chat is weird.
+                        <ul>
+                            <li>
+                                It's locked to Vive Mono.
+                            </li>
+                            <li>
+                                I can't change it to my actual dedicated mic, either through Pulseaudio or the settings.
+                            </li>
+                            <li>
+                                In-game, I just get "Default Device."
+                            </li>
+                            <li>When it works, it works. It's up to SteamVR to decide if it works or not.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="col one"><img src="res/vr/payday_2.jpg" alt="Payday 2"></div>
+            <div class="col yes">
+                <p>You need to force it to run in Proton, of course. Go to its properties and set the compatibility tool to any given Proton version.</p>
+            </div>
+            <div class="col no">
+                <p><a href="https://github.com/ValveSoftware/SteamVR-for-Linux/issues/452">Error -203</a> shortly after loading into a mission. Usually, right when the game says "Stealth is also an option" so presumably level data is being initialized then, or something?</p>
+            </div>
+            <div class="col"><p>N/A</p></div>
+        </div>
+        <div class="flex">
+            <div class="col one"><img src="res/vr/phasmophobia.png" alt="Phasmophobia"></div>
+            <div class="col hard yes">
+            </div>
+            <div class="col hard yes">
+            </div>
+            <div class="col no"><p>Voice recognition doesn't work, obviously.</p></div>
+        </div>
+        <div class="flex">
+            <div class="col one"><img src="res/vr/pokerstars.png" alt="Pokerstars"></div>
+            <div class="col hard yes">
+            </div>
+            <div class="col hard yes">
+            </div>
+            <div class="col no">
+                <p>The garbage custom audio codec they licensed doesn't fucking work on Linux regardless of what I do.</p>
+                <p>...and that's like half the game so it's basically unplayable.</p>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="col one"><img src="res/vr/recroom.png" alt="Rec Room"></div>
+            <div class="col dunno">
+                <p>Untested, yet.</p>
+            </div>
+            <!--<div class="col no">
+                <p><a href="https://github.com/ValveSoftware/SteamVR-for-Linux/issues/452">Error -203</a> shortly after loading into a mission. Usually, right when the game says "Stealth is also an option" so presumably level data is being initialized then, or something?</p>
+            </div>
+            <div class="col"><p>N/A</p></div>-->
+        </div>
+        <div class="flex">
+            <div class="col one"><img src="res/vr/sculptvr.png" alt="SculptrVR"></div>
+            <div class="col hard yes"></div>
+            <div class="col hard yes"></div>
+            <div class="col sorta">
+                <p>Hitches and stops drawing to the headset if you put it in the background for too long.</p>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="col one"><img src="res/vr/ssf.png" alt="Serious Sam Fusion"></div>
+            <div class="col dunno">
+                <p>Untested, yet.</p>
+            </div>
+            <!--<div class="col hard yes"></div>
+            <div class="col sorta">
+                <p>Hitches and stops drawing to the headset if you put it in the background for too long.</p>
+            </div>-->
+        </div>
+    </section>
+</body>
+</html>
