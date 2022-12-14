@@ -10,7 +10,7 @@
     <meta property="og:description" content="The resume for Daniel 'Orangestar' O'Day.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.orangestar.dev/starvatar.png">
-    <meta property="og:url" content="https://www.orangestar.dev/commissions.html">
+    <meta property="og:url" content="https://orangestar.dev/commissions">
     <meta name="theme-color" content="#FF7700">
 
     <link rel="stylesheet" href="./res/resume.css">
@@ -18,29 +18,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <style>
-td, th {
-    padding: 8px 8px;
+html {
+    padding-bottom: 6em;
 }
 p {
     margin: 1em 0;
 }
 
-h2 {
-    font-size: 4em;
+h1 {
+    font-size: 3.5em;
+    text-align: center;
 }
-h3 {
+h2 {
     font-size: 2em;
 }
 
 section {
     min-height: 150px;
+    clear: both;
 }
 
-section > img {
+img.float {
     float:right;
     height:128px;
-    width:128px;
+    width:auto;
     margin:8px
+}
+
+a.button, a.button:visited {
+    background: #f70;
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 0 1px black;
+    padding: 8px;
+    font-size: 1.25em;
+    border-radius: 24px;
+}
+
+a.button:hover {
+    background: white;
+    color: black;
 }
     </style>
 </head>
@@ -51,7 +68,7 @@ section > img {
             <div class="flex-column">
                 <p><a href="https://matrix.to/#/@orangestar:matrix.org" rel="me">@orangestar:matrix.org</a></p>
                 <hr />
-                <p><a href="https://mastodon.social/@orangestar1" rel="me">@orangestar1@mastodon.social</a></p>
+                <p><a href="https://wetdry.world/@orangestar" rel="me">@orangestar@wetdry.world</a></p>
             </div>
             <img src="starvatar.png" alt="Avatar" />
             <div class="flex-column">
@@ -62,147 +79,49 @@ section > img {
         </div>
         <div class="flex-container small" style="margin-top: 1em;flex-wrap:wrap; justify-content: space-evenly;">
         <p class="noprint"><span class="mode-text-long">Your OS is set to dark mode.</span> <a href="#" class="force-light-mode">Click here to force <span class="mode-text-reverse">light</span> mode.</a></p>
-        <p><a href="https://www.orangestar.dev/commissions.html">Permalink</a></p>
+        <p><a href="https://orangestar.dev/commissions">Permalink</a></p>
         </div>
     </header>
     <div class="main">
         <section>
-            <p>I've been playing around with SculptrVR and I think I've practiced enough to the point where I'd like to offer my services! If you're looking for a 3D model made with love from scratch, I'm available.</p>
-            <p>I'm offering a variety of "tiers" from simple static meshes, sculpted and traditionally-modeled/lowpoly objects, and even fully rigged Tower Unite, NEOS, or VRChat ready models.</p>
-            <p>Simply select a tier and a product and get in touch with me. I'll try to communicate as openly as I can and send dailies on my progress as I work on your model!</p>
-        <h2>Products</h2>
-        <p>Here are the "products" I'm offering, i.e. the actual thing you will recieve from me:</p>
+            <h1>Models for your meta-whatever</h1>
+            <p>It's all new! The prices are more straightforward! The page is less confusing! I make models!</p>
         </section>
         <section>
-            <img src="/res/com/01_01_snapshot_simple_model.jpg" alt="Snapshot"/>
-            <h3>Snapshot</h3>
-            <p>Starting as low as $1, if all you want is a nice mesh with some decent lighting as seen in SculptrVR I can construct a scene exactly as you'd like it. 4k PNG (usually about 8MB). I don't have the best GPU but I'll try to max out as many settings as I can before my PC crawls to a stutter.</p>
+            <a href="/res/com/succulent.png"><img class="float" src="/res/com/succulent.png"/></a>
+            <h2>$50 - Box Model</h2>
+            <p>You pay $50, I box-model something for you. Simple as.</p>
+            <ul>
+                <li>Low-poly! Perfect for game engines, metaverses, Vtuber usage.</li>
+                <li>Fast turnaround: Can be ready same-day most times.</li>
+            </ul>
         </section>
         <section>
-            <img src="/res/com/02_01_blender_render_simple_model.jpg" alt="Render"/>
-            <h3>Blender Render</h3>
-            <p>If you want something that looks a bit more professional, we can pop the model into Blender and give it the full treatment: raytraced lighting with Cycles, all new materials from Blenderkit, postprocessing effects, the whole 9 yards.</p>
+            <h2>$100 - Fully Rigged Figure</h2>
+            <a href="/res/com/figures.png"><img class="float" src="/res/com/figures.png"/></a>
+            <p>Add another 50 and I'll rig it up. We can even add visemes or whatever you need.</p>
+            <ul>
+                <li>Great for Vtubers, VRChat, and other real-time 3D!</li>
+            </ul>
         </section>
         <section>
-            <h3>Raw SculptrVR Output</h3>
-            <p>Exactly as it came out of the app, if you want a static mesh to play with as you please, no restrictions, you can have it. These models will be <em><u>extremely high poly.</u></em> They should not be used in video games or metaverse apps like Tower Unite, VRChat, or NEOS. They should be great for 3D printing though.</p>
+            <a href="/res/com/sapari.png"><img class="float" src="/res/com/sapari.png"/></a>
+            <h2>$20 - Rig an existing model</h2>
+            <p>Got a 3D Model but it's not rigged to a skeleton or weight painted? For $20 I can correct that!</p>
         </section>
         <section>
-            <h3>Decimated Blender Sculpt</h3>
-            <p>The exported mesh can then be imported to Blender and decimated. This isn't just "throwing it in a plugin and letting it do the work": I'll go through with a fine tooth comb and fix any vertex complexity, boolean out the layers so they stick together (except like eyes), and even go through and vertex paint the model again if anything got lost. By your request, I can even convert the vertex painting to UVs so you have traditional textures. These models are perfect for real-time rendering and video games. The textures will be pretty simplistic but they'll get the job done.</p>
-            <h3>Retextured Decimation</h3>
-            <p>...unless you want me to try to make them better.</p>
-            <p>Full disclaimer: I am not adept at texture painting whatsoever. I was never really good at painting in general. (I'm an illustrator, sorry.) Expect very flat colors and photo-kitbashed textures.</p>
-            <p>If you're into that though, yeah, I can do it. Better than no textures at all, I guess.</p>
+            <h2>$Various - Previous Models</h2>
+            <p>Head to <a href="https://orangestar.gumroad.com/">My Gumroad page</a> to see previous models I've made that I've been given permission to re-sell!</p>
         </section>
-        <section>
-            <h3>Fully Rigged Mesh</h3>
-            <p>The whole shebang. Shell out and you get it all - a fully rigged, perfectly weight painted model. For humanoid models, I'll try to map it to the Tower Unite skeleton, which is made to mimic the Source SMD skeleton and will be recognized by Unity's Humanoid Avatar system. This means the model can easily be converted for GMod, Source Filmmaker, and VRChat, and it can be directly imported with no changes into Tower Unite and NEOS.</p>
-            <p>I consider the price point on this tier to be flexible - I'm willing to apply discounts for less complex models, or charge extra for more complexity. For example, a model with no mouth - like a robot or power armor - would need no visemes. $5 off! But on the opposite end, a model with one tail will require changes to the armature to add bones to the hip, but that's usually fine. Once you start getting into multiple tails, the rigging and weight painting complexity increases, and I might charge extra.</p>
-        </section>
-        <h2>Tiers</h2>
-        <p>I'm offering 4 simple "tiers" for what kind of items you can get from me.</p>
-        <section>
-            <img src="/res/com/01_01_snapshot_simple_model.jpg" alt="Snapshot"/>
-            <h3>Simple Mesh</h3>
-            <p>A basic sculpt, great for simple renders or 3D printing. If you need to print a miniature or want a small sculpture for your Tower Unite condo, this should do.</p>
-        </section>
-        <section>
-            <img src="/res/com/05_02_rigged_lowpoly.jpg" alt="Lowpoly models in NEOS"/>
-            <h3>Inorganic Object/Lowpoly Mesh</h3>
-            <p>Rather than scuplting, I can create a simple mesh for you using traditional modeling methods like extruding and beveling. This is good for furniture or other simple objects.</p>
-        </section>
-        <section>
-            <h3>Single Figure</h3>
-            <p>A fully modeled figure, humanoid or otherwise. Unless specified, humanoid figures will be modeled in a T or star pose. Quadrepedal ones will just be in a basic reference pose.</p>
-        </section>
-        <section>
-            <h3>Full Scene</h3>
-            <p>This is a wild one, but if you want like a full blown sculpted out scene of whatever you like, I can do that too.</p>
-        </section>
-        <p>Here's a table with the base prices for each tier/product These will be modulated for more or less complex requests.</p>
-        <table class="center" style="margin:1.5em auto;">
-            <thead>
-                <tr>
-                    <th>Price</th>
-                    <th scope="col">Snapshot</td>
-                    <th scope="col">Blender Render</td>
-                    <th scope="col">Raw SculptrVR Output</td>
-                    <th scope="col">Decimated Blender Sculpt</td>
-                    <th scope="col">Retextured Decimation</td>
-                    <th scope="col">Fully Rigged Mesh</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">Simple Mesh</th>
-                    <!-- <td>$1 / 1d</td>
-                    <td>$5 / 1d</td>
-                    <td>$5 / 1d</td>
-                    <td>$10 / 2d</td>
-                    <td>$15 / 4d</td> -->
-                    <td>$1</td>
-                    <td>$5</td>
-                    <td>$5</td>
-                    <td>$10</td>
-                    <td>$15</td>
-                </tr>
-                <tr>
-                    <th scope="row">Inorganic Object/Lowpoly Mesh</th>
-                    <!-- <td></td>
-                    <td>$5 / 2d</td>
-                    <td></td>
-                    <td></td>
-                    <td>$10 / 3d</td>
-                    <td>$20-$50 depending on complexity / 5-7d</td> -->
-                    <td></td>
-                    <td>$5</td>
-                    <td></td>
-                    <td></td>
-                    <td>$10</td>
-                    <td>$20-$50 depending on complexity</td>
-                </tr>
-                <tr>
-                    <th scope="row">Single Figure</th>
-                    <!-- <td>$10 / 2-5d</td>
-                    <td>$15 / 2-5d</td>
-                    <td>$20 / 2-5d</td>
-                    <td>$30 / 3-7d</td>
-                    <td>$35 / 4-7d</td>
-                    <td>$50 / 1w+</td> -->
-                    <td>$10</td>
-                    <td>$15</td>
-                    <td>$20</td>
-                    <td>$30</td>
-                    <td>$35</td>
-                    <td>$50</td>
-                </tr>
-                <tr>
-                    <th scope="row">Full Scene</th>
-                    <!-- <td>$20 / 2-5d</td>
-                    <td>$30 / 2-5d</td>
-                    <td>$50 / 2-5d</td>
-                    <td></td>
-                    <td></td>
-                    <td></td> -->
-                    <td>$20</td>
-                    <td>$30</td>
-                    <td>$50</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-        <h2>Bonuses!</h2>
-        <ul>
-            <li>Got a 3D Model but it's not rigged to a skeleton or weight painted? For $10 I can correct that!</li>
-            <li>Want me to do the grunt work to get a model configured for or uploaded to Tower Unite, VRChat, or NEOS for you? I can absolutely do just that for a $10 additional fee on top!</li>
-        </ul>
+        <p style="text-align:center"><a href="#" class="button">Contact details available at the top of the page</a></p>
+        <p style="text-align:center"><a href="/">Or, on my homepage.</a></p>
         <h2>License?</h2>
         <p>After recieving whatever it is you ordered, you're given a full permissive license to transform the object however you like. Retexture it, rerig it, move vertices around, throw on new clothing, put it in Gmod or Source Filmmaker, give a copy to a friend so they can retexture it or even just use it, whatever.</p>
-        <p>However, I would request that you not resell the product <i>unless</i> you give a similar permissive license and transfer all transformative rights to the person you're reselling to. (I.E. you transfer the model, then remove the model from your digital possession completely.) The reason should be obvious: I ain't making models to be mass-produced here. I'm perfectly capable of doing that myself, and I'd rather not just get cut out of profit for a Gumroad scam or Etsy scheme.</p>
+        <p>However, I would request that you not resell the product <i>unless</i> you give a similar permissive license and transfer all transformative rights to the person you're reselling to. (I.E. you transfer the model, then remove the model from your digital possession completely.) The reason should be obvious: I'm perfectly capable of selling these models in a mass-produced quantity myself, and I'd rather not just get cut out of profit for a Gumroad scam or Etsy scheme.</p>
         <p>But because the kind of people who commission someone and then turn around and sell the result digitally for a profit aren't the kind of people to uphold license agreements, allow me to dissuade them a different way: If I find out you're mass producing a commission I sold you, I still have the model. I can undersell you. It doesn't matter how cheap you make it. Don't tempt me.</p>
+        <br/>
+        <p style="text-align:center"><a href="#" class="button">Contact details available at the top of the page</a></p>
+        <p style="text-align:center"><a href="/">Or, on my homepage.</a></p>
     </div>
 <script>
 'use strict';
