@@ -21,13 +21,22 @@ html, body {
 }
 
 header {
+    position: relative;
     fill: var(--foreground);
-    background: linear-gradient(45deg, #0a1a1e, #4f5f63);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
 
     overflow: hidden;
+}
+
+header::before {
+    content: '';
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    z-index: -50;
+    background: linear-gradient(45deg, #0a1a1e, #4f5f63);
 }
 
 header svg {
@@ -45,7 +54,7 @@ header svg {
     transform-origin: right;
     text-align: center;
     background: var(--black);
-    padding-bottom: 3ch;
+    padding-bottom: 5vw;
 }
 
 .heading .title {
