@@ -17,7 +17,7 @@
 </head>
 <body>
     <header>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMinYMin meet">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75" preserveAspectRatio="xMidyMid meet">
             <g transform="translate(25, 0)">
                 <path d="m48.948 30.96-21.94 16.91 8.2878 27.304-22.089-16.8-22.089 16.8 8.3702-27.304-22.022-16.91h27.237l8.5048-27.27 8.5042 27.27z" fill="#f70" />
             </g>
@@ -26,27 +26,117 @@
             <div class="title">Orangestar</div>
             <div class="quote">Perfectly functional without JavaScript!</div>
         </div>
-        <div class="menu">
-            <!-- <a href="./worldbuilding.html">Worldbuilding</a><br/>
-            <a href="./art.html">Illustrations</a><br/>
-            <a href="./games.html">Entertainment</a><br/>
-            <a href="./videos.html">Multimedia</a><br/>
-            <a href="./projects.html">Development</a><br/> -->
-            <a href="#social">Social</a><br/>
-        </div>
     </header>
     <main>
-        <h1>Hi. I'm Daniel, but you can call me Orangestar.</h1>
-        <p>I'm most known for running the <a href="https://rutdiscord.github.io/">r/Undertale Discord</a>.</p>
-        <h1 id="social">How to get a hold of me:</h1>
-        <p>If you need me, here's some quick ways to get to me:</p>
-        <ul class="custom">
-            <li style="background-image:url('/res/icons/discord.svg')"><a href="https://rutdiscord.github.io/">The aforementioned Discord link.</a> I'm on this server very often and I respond to mentions on it pretty quickly. You can also shoot me a friend request at Orangestar#1432, but I don't often accept random friend requests.</li>
-            <li style="background-image:url('/res/icons/mastodon.svg')"><a href="https://mastodon.social/@orangestar1" rel="me">Mastodon.</a> I check it regularly instead of Twitter. I only post replies to Twitter if someone posts something I want to talk about. Mastodon is my major microblogging service.</li>
-            <li style="background-image:url('/res/icons/matrix.svg')"><a href="https://matrix.to/#/@orangestar:matrix.org">Matrix.</a> I keep Element on my phone for push notifications.</li>
-            <li style="background-image:url('/res/icons/mail.svg')"><a href="mailto:orangestar@cats4gold.net">My e-mail.</a> I have notifications for it on, and I trust GMail's spam filter to keep garbage out of my inbox.</li>
-        </ul>
+        <h1>Who?</h1>
+        <p>Hi, I'm Daniel, but you can call me Orangestar. I'm most known for running the <a href="#social">r/Undertale Discord</a>.</p>
+        <div class="centered">
+            <a class="button" href="#social">Social stuff</a>
+            <a class="button" href="./commissions">Commissions</a>
+            <a class="button" href="#small-pages">Small pages</a>
+        </div>
+        <h2 id="social">Social Stuff</h2>
+        <hr />
+        <h3><img src="./res/icons/discord.svg" alt="Discord" height="50"></h3>
+        <div class="flex">
+            <div class="card">
+                <div class="flex">
+                    <div>
+                        <img class="thumb" alt='' src='./starvatar.png'/>
+                    </div>
+                    <div>
+                        <p class="title">Account name</p>
+                        <p>Orangestar#1432</p>
+                        <p>I don't usually accept random friend requests. Fair warning.</p>
+                    </div>
+                </div>
+            </div>
+        </div><div class="flex">
+            <a href="https://rutdiscord.github.io/"><div class="card">
+                <div class="flex">
+                    <div>
+                        <img class="thumb no-shadow" alt='' src='./res/coatbig.png'/>
+                    </div>
+                    <div>
+                        <p class="title">The r/Undertale Discord server</p>
+                        <p>I own this server, and I'm on it frequently. <span style="color:var(--accent);text-decoration:underline">Click to join.</span></p>
+                    </div>
+                </div>
+            </div></a>
+            <a href="https://discord.gg/t9PP4nb"><div class="card">
+                <div class="flex">
+                    <div>
+                        <img class="thumb" alt='' src='./res/emote-server-and-hangout.webp'/>
+                    </div>
+                    <div>
+                        <p class="title">Orangestar's Emote Server and Hangout</p>
+                        <p>A generic server I created, originally for emotes. Now it is a general gathering point. <span style="color:var(--accent);text-decoration:underline">Click to join.</span></p>
+                    </div>
+                </div>
+            </div></a>
+        </div>
+        <hr />
+        <h3><img src="./res/icons/mastodon.svg" alt="Mastodon" height="50"/></h3>
+        <div class="flex">
+            <a href="https://wetdry.world/@orangestar" rel="me"><div class="card">
+                <div class="flex">
+                    <div>
+                        <img class="thumb no-shadow" alt='' src='./res/main/wdw_sculttebug.png'/>
+                    </div>
+                    <div>
+                        <p class="title">Wet-Dry World</p>
+                        <p>My current Mastodon instance. Run by esm. <span style="color:var(--accent);text-decoration:underline">View profile.</span></p>
+                    </div>
+                </div>
+            </div></a>
+            <a href="https://mastodon.social/@orangestar1" rel="me"><div class="card">
+                <div class="flex">
+                    <div>
+                        <div style="background:grey;width:64px;height:64px;-webkit-mask: url(./res/icons/mastodon.svg) no-repeat center;mask: url(./res/icons/mastodon.svg) no-repeat center;-webkit-mask-size:contain;mask-size:contain"></div>
+                    </div>
+                    <div>
+                        <p class="title">Mastodon.social</p>
+                        <p>My previous Mastodon account. <span style="color:var(--accent);text-decoration:underline">View profile.</span></p>
+                    </div>
+                </div>
+            </div></a>
+        </div>
+        <hr />
+        <h3>Other</h3>
+        <div class="flex">
+            <a href="https://matrix.to/#/@orangestar:matrix.org"><div class="card">
+                <div class="flex">
+                    <div>
+                        <img class="thumb no-shadow" src="./res/icons/matrix.svg" alt="">
+                    </div>
+                    <div>
+                        <p class="title">Matrix</p>
+                        <p><span style="color:var(--accent);text-decoration:underline">Chat with me on Matrix.</span></p>
+                    </div>
+                </div>
+            </div></a>
+            <a href="mailto:orangestar@cats4gold.net"><div class="card">
+                <div class="flex">
+                    <div>
+                        <img class="thumb no-shadow" src="./res/icons/mail.svg" alt="">
+                    </div>
+                    <div>
+                        <p class="title">E-Mail</p>
+                        <p><span style="color:var(--accent);text-decoration:underline">Shoot me an email</span></p>
+                    </div>
+                </div>
+            </div></a>
+        </div>
+        <hr />
+        <br/><br/><br/><br/> <!-- cope -->
+        <h2 id="small-pages">Small Pages</h2>
+        <hr />
+        <p><a href="./mofumofu.html">A Biased and intermediate Mofumofu Sensen tier list.</a></p>
+        <p><a href="./fpsrankthing/">A ranking of FPS games, kinda.</a></p>
+        <p><a href="./vr.html">Which games work for me on SteamVR for Linux?</a></p>
+        <p><a href="./soundboard/">A very straightforward soundboard.</a></p>
     </main>
+    <footer>Unless otherwise stated, please assume all content on this website is licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0.</a></footer>
     <script async src="./res/quotegen.js"></script>
 </body>
 </html>

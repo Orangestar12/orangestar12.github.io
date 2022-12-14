@@ -5,75 +5,68 @@
 
 html {
     --black: #101010;
+    --off-black: #303030;
     --main: #F70;
     --accent: #7FF;
+    --foreground: white;
 
     background-color: var(--black);
-    color: white;
+    color: var(--foreground);
     font-size: 18pt;
     font-family: sans-serif;
 }
 
-header {
-    overflow:hidden;
-}
-
-html, body, header {
-    height: 100vh;
+html, body {
     margin: 0;
 }
 
 header {
-    fill: white;
+    fill: var(--foreground);
     background: linear-gradient(45deg, #0a1a1e, #4f5f63);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
+
+    overflow: hidden;
 }
 
 header svg {
-    font: bold 3.5px sans-serif;
-    text-anchor: end;
+    position: static;
+    display: block;
+    margin: 0 auto;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    width: 512px;
+    height: 512px;
 }
 
 .heading {
     text-shadow: 0 1px 2px rgba(0,0,0,0.8);
-    transform: translate(0, 60vh) rotate(-8deg);
+    transform: rotate(-2.5deg);
     transform-origin: right;
-    text-align: right;
+    text-align: center;
     background: var(--black);
+    padding-bottom: 3ch;
 }
 
 .heading .title {
     font: bold 3.5em sans-serif;
     background: var(--main);
-
-    width: 98%;
-    padding: 0 50% 12px 10%;
-    transform: translate(-6%, 0);
+    width:105%;
+    transform:translateX(-2.5%)
 }
 
 .quote {
     transition: opacity 1s;
     font-size: 1.5em;
 
-    width: 96%;
-    margin-left: 2%;
-    margin-top: 6px;
-    transform: translate(-1%, 0);
+    padding-top: 0.5ch;
 }
 
 .popup{
-    position: absolute;
-    background: #303030;
+    position: fixed;
+    background: var(--off-black);
     border: 1px solid var(--black);
-    right: 6px;
+    right: 8px;
     bottom: 8px;
     font-size: 28px;
     max-width: 70%;
@@ -81,27 +74,7 @@ header svg {
     text-align: right;
 }
 
-.heading::before {
-    background: var(--black);
-    content: '';
-    position: absolute;
-    left: -50%;
-    right: -50%;
-    height: 500px;
-    top:0;
-}
-
-.menu {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    text-align: right;
-    font-size: 32px;
-    max-height: 90vh;
-    overflow-y: auto;
-}
-
-.menu > a, .menu > a:visited {
+a.button, a.button:visited {
     display: inline-block;
     background-color: var(--main);
     color: white;
@@ -113,35 +86,90 @@ header svg {
     transition: background-color 500ms, color 500ms;
 }
 
-.menu > a:hover {
+a.button:hover {
     background-color: white;
     color: var(--main);
 }
 
-main {
-    max-width: 1024px;
+main, footer {
+    max-width: 1280px;
     margin: auto;
     padding: 15px;
-    /* transform: translate3d(0, 0, 0); ugh */
+}
+
+h1, h2, h3, h4, h5, h6, .centered {
+    text-align: center;
 }
 
 h1 {
+    font-size: 2.5em;
+    margin: 0.75em;
+}
+h2 {
+    font-size: 2.25em;
+    margin: 0.5em;
+}
+h3 {
     font-size: 1.75em;
+    margin: 0.25em 0;
 }
 
 a, a:visited {
     color: var(--accent);
 }
 
-ul.custom {
-    padding-left: 32px;
-    list-style-type: none;
+.flex {
+    display:flex;
+    justify-content: center;
 }
 
-ul.custom li {
-    padding-left: 32px;
-    background-position: 0 2px;
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
-    margin: 0.5em 0;
+div.card {
+    display:inline-block;
+    text-align: left;
+
+    max-width: 350px;
+    font-size: 0.75em;
+    margin: 12px;
+    padding: 6px;
+    border-radius: 6px;
+
+    background: var(--off-black);
+    color: var(--foreground);
+
+    box-shadow: 6px 6px 3px black;
+}
+
+div.card img.thumb {
+    width: 64px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px -2.5px black;
+}
+
+div.card > div > div {
+    padding: 12px;
+}
+
+div.card .title {
+    font-weight: bold;
+    text-transform:uppercase;
+}
+
+hr {
+    margin: 2em 25%;
+}
+
+.no-shadow {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+main {
+    padding-bottom: 4em;
+}
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    padding-bottom: 2em;
 }
