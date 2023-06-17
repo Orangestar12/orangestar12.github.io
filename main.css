@@ -182,3 +182,10 @@ footer {
     font-size: 0.8em;
     padding-bottom: 2em;
 }
+
+.small {
+    font-size: 0.75em;
+}
+p.small {
+    margin: 0.75em 0;
+}
