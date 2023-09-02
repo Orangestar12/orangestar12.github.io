@@ -74,6 +74,8 @@ button {
   opacity: 1;
   transition: transform 50ms, opacity 50ms;
   cursor: pointer;
+  touch-action:none;
+  -webkit-tap-highlight-color: transparent
 }
 .box div.ral {
   background-image: url("./res/gote.png");

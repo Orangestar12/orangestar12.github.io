@@ -33,6 +33,25 @@ function hit(e) {
     scorecard.textContent = score;
 }
 
+function touchEffect(e) {
+    let target = e.target.count === undefined ? e.target : boxes[e.target.count];
+
+    // console.log(target, e.target.count === undefined);
+
+    if (e.pointerType === "touch") {
+        target.green = 250;
+    }
+}
+
+function processTouchEffect() {
+    for (let box of boxes) {
+        box.style.backgroundColor = `rgba(0, ${box.green}, 0)`;
+        if (box.green != 0) { box.green -= 10; }
+    }
+
+    requestAnimationFrame(processTouchEffect);
+}
+
 function countdown() {
     time--;
     timer.textContent = time;
@@ -81,7 +100,7 @@ function pop() {
 
         let split = randInt(speed, 450); // how soon should another mole appear
 
-        console.log(split, speed);
+        // console.log(split, speed);
 
         setTimeout(pop, split);
     }
@@ -93,6 +112,7 @@ function go(e) {
     setTimeout(countdown, 1000);
     setTimeout(pop, 300)
     e.target.remove();
+    requestAnimationFrame(processTouchEffect);
 }
 
 function prep() {
@@ -100,11 +120,19 @@ function prep() {
     scorecard = document.querySelector('#score');
 
     boxes = document.querySelectorAll('.box');
+
+    let count = 0; // hack?
+
     for (let box of boxes) {
         box.dude = box.children[0];
         box.dude.classList.remove('spam', 'ral', 'hit');
         box.dude.classList.add('down');
         box.dude.addEventListener('pointerdown', hit);
+
+        box.dude.count = count; count++;
+
+        box.green = 0;
+        box.addEventListener('pointerdown', touchEffect);
     }
     let button = document.createElement('button');
     button.textContent = 'Go!';
