@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Orangestar</title>
+    <link rel="icon" type="image/png" href="/starvatar.png">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+    <meta property="og:title" content="Android Flight Icons" />
+    <meta property="og:description" content="Additional icons for the Android theme &quot;Flight&quot;.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.orangestar.dev/starvatar.png">
+    <meta property="og:url" content="https://www.orangestar.dev/assets/flight">
+    <meta name="theme-color" content="#FF7700">
+
+    <link href="/res/main.css" rel="stylesheet" type="text/css">
+    <style>
+header {
+    background: var(--main);
+    text-shadow: 1px 1px rgba(0,0,0,0.5);
+    padding: 1em 1ch 0.25em;
+}
+header a, header a:visited {
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+}
+header h1 {
+    padding: 0;
+    margin: 0;
+}
+
+#shots > div {
+    max-width: 30%;
+    padding: 5px;
+}
+#shots div img {
+    height: auto;
+    max-width: 100%;
+}
+
+.icons img{
+    width: 128px;
+    height: auto;
+    background: var(--off-black);
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 15%;
+}
+.icons div {
+    padding: 5px;
+    flex: 1 1 0px; /* https://stackoverflow.com/questions/29503227/how-to-make-flexbox-items-the-same-size */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Android Flight Icons</h1>
+        <p class="small"><a href="/">← Return to Main page</a></p>
+    </header>
+    <main>
+        <p class="centered"><a class="button" href="#icons">Skip to the icons.</a></p>
+        <p><a href="https://play.google.com/store/apps/details?id=com.natewren.flightlite">Flight <span class="small">(Google Play Link)</span></a> is an icon theme for Android launchers. The intention is to create a series of unified monochrome variants for each app's logo to create a consistent, minimalist look.</p>
+        <p>Flight comes in two variants: A free "Lite" variant, and a paid "Pro" variant. The only difference between them is that Pro comes with additional icons.</p>
+        <p>While I understand the need to monetize your work if you spend time on something - especially art - the Flight icon theme is incredibly bare bones for what it's producing. Most of the icons can be replicated by simply stealing SVGs from Google Images or tracing them using the "Trace Bitmap" option in Inkscape. It would be incredibly easy to suppliment the free icon theme with additional icons made this way.</p>
+        <p>So anyway, I did that thing. Here they are.</p>
+        <hr>
+        <h2>Example screenshots</h2>
+        <p class="small centered">Screenshots use <a href="https://play.google.com/store/apps/details?id=com.teslacoilsw.launcher">Nova Launcher <span class="small">(Google Play link)</span></a>.</p>
+        <script>
+            document.write('<p class="centered"><button id="highlight">Highlight icons I made</button></p><div class="flex" id="shots"><div><p class="centered">Home Screen</p><img src="/res/assets/flight/screen1.jpg" alt=""></div><div><p class="centered">App Drawer</p><img src="/res/assets/flight/screen2.jpg" alt=""></div><div><p class="centered">With Widgets</p><img src="/res/assets/flight/screen3.jpg" alt=""></div></div>');
+        </script>
+        <noscript><div class="flex" id="shots"><div><img src="/res/assets/flight/screen1_d.jpg" alt=""></div><div><img src="/res/assets/flight/screen2_d.jpg" alt=""></div><div><img src="/res/assets/flight/screen3_d.jpg" alt=""></div></div></noscript>
+        <hr>
+        <h2 id="icons">Icons</h2>
+        <p class="centered">Click the icon itself for a PNG. Click the text for the SVG.</p>
+        <p class="small centered">If you're not sure which to grab, you want the PNG.</p>
+        <br/>
+        <div class="flex centered icons small">
+            <div id="Arbys">
+                <a href="/res/assets/flight/Icons/Arbys.png" download><img src="/res/assets/flight/Icons/Arbys.png" alt="Arby's"></a>
+                <a href="/res/assets/flight/Icons/Arbys.svg" download><p>Arby's</p></a>
+                <p class="small">A chain of fast-food restaurants specializing in sliced deli meat.</p>
+            </div>
+            <div id="Caseys">
+                <a href="/res/assets/flight/Icons/Caseys.png" download><img src="/res/assets/flight/Icons/Caseys.png" alt="Casey's"></a>
+                <a href="/res/assets/flight/Icons/Caseys.svg" download><p>Casey's</p></a>
+                <p class="small">Popular midwestern convenience store and gas station chain.</p>
+            </div>
+            <div id="Dasher">
+                <a href="/res/assets/flight/Icons/Dasher.png" download><img src="/res/assets/flight/Icons/Dasher.png" alt="Dasher"></a>
+                <a href="/res/assets/flight/Icons/Dasher.svg" download><p>Dasher</p></a>
+                <p class="small">The <i>Doordash</i> app used to send delivery orders to drivers.</p>
+            </div>
+            <div>
+                <a href="/res/assets/flight/Icons/dollar general.png" download><img src="/res/assets/flight/Icons/dollar general.png" alt="Dollar General"></a>
+                <a href="/res/assets/flight/Icons/dollar general.svg" download><p>Dollar General</p></a>
+                <p class="small">A self-owned general store, popularized by selling known brands at cheap prices by making up for the costs in other areas (often by inflating other brands' prices).</p>
+            </div>
+            <div id="doordash">
+                <a href="/res/assets/flight/Icons/doordash.png" download><img src="/res/assets/flight/Icons/doordash.png" alt="Doordash"></a>
+                <a href="/res/assets/flight/Icons/Doordash.svg" download><p>Doordash</p></a>
+                <p class="small">The customer-facing half of the <i>Doordash</i> app duo. Used to place delivery orders for known food chains and stores.</p>
+            </div>
+            <div id="dq">
+                <a href="/res/assets/flight/Icons/dq.png" download><img src="/res/assets/flight/Icons/dq.png" alt="Dairy Queen"></a>
+                <a href="/res/assets/flight/Icons/DQ.svg" download><p>Dairy Queen</p></a>
+                <p class="small">Also called <i>DQ</i>, <i>Dairy Queen</i> is a fast food chain famous for their ice cream products.</p>
+            </div>
+            <div id="element">
+                <a href="/res/assets/flight/Icons/element.png" download><img src="/res/assets/flight/Icons/element.png" alt="Element"></a>
+                <a href="/res/assets/flight/Icons/Element.svg" download><p>Element</p></a>
+                <p class="small">The flagship <i>Matrix</i>-based chat application by <i>Vector</i>.</p>
+            </div>
+            <div>
+                <a href="/res/assets/flight/Icons/Epic Games.png" download><img src="/res/assets/flight/Icons/Epic Games.png" alt="Epic Games"></a>
+                <a href="/res/assets/flight/Icons/Epic Games.svg" download><p>Epic Games</p></a>
+                <p class="small">A desktop and mobile storefront for video games, most famous for the game <i>Fortnite</i>.</p>
+            </div>
+            <div id="everlance">
+                <a href="/res/assets/flight/Icons/everlance.png" download><img src="/res/assets/flight/Icons/everlance.png" alt="Everlance"></a>
+                <a href="/res/assets/flight/Icons/Everlance.svg" download><p>Everlance</p></a>
+                <p class="small">An app designed to track a user's mileage when driving for tax purposes.</p>
+            </div>
+            <div id="Fortnite">
+                <a href="/res/assets/flight/Icons/Fortnite.png" download><img src="/res/assets/flight/Icons/Fortnite.png" alt="Fortnite"></a>
+                <a href="/res/assets/flight/Icons/Fortnite.svg" download><p>Fortnite</p></a>
+                <p class="small">A "Battle Royale" shooter game by <i>Epic Games</i>.</p>
+            </div>
+            <div id="GZDoom">
+                <a href="/res/assets/flight/Icons/GZDoom.png" download><img src="/res/assets/flight/Icons/GZDoom.png" alt="GZDoom"></a>
+                <a href="/res/assets/flight/Icons/GZDoom.svg" download><p>GZDoom</p></a>
+                <p class="small">Currently the most advanced <i>Doom</i> engine in production next to the <i>Eternity Engine</i>. I recommend using this icon for <a href="https://play.google.com/store/apps/details?id=com.opentouchgaming.deltatouch"><i>Delta Touch</i> <span class="small">(Google Play link)</span></a></p>
+            </div>
+            <div>
+                <a href="/res/assets/flight/Icons/KDE Connect.png" download><img src="/res/assets/flight/Icons/KDE Connect.png" alt="KDE Connect"></a>
+                <a href="/res/assets/flight/Icons/KDE Connect.svg" download><p>KDE Connect</p></a>
+                <p class="small"><i>KDE Connect</i> is a multiplatform service by <i>KDE</i> that allows users to sync content between their devices over a local network, such as files, clipboard content, or keyboard input.</p>
+            </div>
+            <div>
+                <a href="/res/assets/flight/Icons/Live Transcribe.png" download><img src="/res/assets/flight/Icons/Live Transcribe.png" alt="Live Transcribe"></a>
+                <a href="/res/assets/flight/Icons/Live Transcribe.svg" download><p>Live Transcribe</p></a>
+                <p class="small">A service using <i>Google</i>'s voice recognition software to provide captions for the hearing-impaired.</p>
+            </div>
+            <div>
+                <a href="/res/assets/flight/Icons/Magic The Gathering Arena.png" download><img src="/res/assets/flight/Icons/Magic The Gathering Arena.png" alt="Magic The Gathering Arena"></a>
+                <a href="/res/assets/flight/Icons/Magic The Gathering Arena.svg" download><p>Magic: The Gathering Arena</p></a>
+                <p class="small">The digital incarnation of the trading card game by <i>Wizards of the Coast</i>.</p>
+            </div>
+            <div id="Max">
+                <a href="/res/assets/flight/Icons/Max.png" download><img src="/res/assets/flight/Icons/Max.png" alt="Max"></a>
+                <a href="/res/assets/flight/Icons/Max.svg" download><p>Max</p></a>
+                <p class="small">The streaming service headed by <i>Warner Bros.</i>, also called <i>HBO Max</i> outside of the United States.</p>
+            </div>
+            <div id="McAllisters">
+                <a href="/res/assets/flight/Icons/McAllisters.png" download><img src="/res/assets/flight/Icons/McAllisters.png" alt="McAllisters"></a>
+                <a href="/res/assets/flight/Icons/McAllisters.svg" download><p>McAllisters</p></a>
+                <p class="small">A chain of deli restaurants, self-described as famous for their iced tea.</p>
+            </div>
+            <div id="McDonalds">
+                <a href="/res/assets/flight/Icons/McDonalds.png" download><img src="/res/assets/flight/Icons/McDonalds.png" alt="McDonalds"></a>
+                <a href="/res/assets/flight/Icons/McDonalds.svg" download><p>McDonalds</p></a>
+                <p class="small">The original fast food hamburger restaurant, and one of the most popular in the world.</p>
+            </div>
+            <div id="Nextdoor">
+                <a href="/res/assets/flight/Icons/Nextdoor.png" download><img src="/res/assets/flight/Icons/Nextdoor.png" alt="Nextdoor"></a>
+                <a href="/res/assets/flight/Icons/Nextdoor.svg" download><p>Nextdoor</p></a>
+                <p class="small">A social network unique in that it only allows users to communicate with other users in a specified physical location near or around their home.</p>
+                <p class="small">Like <a href="https://en.wikipedia.org/wiki/Topix_(website)"><i>Topix</i> <span class="small">(Wikipedia Link)</span></a> and <a href="https://en.wikipedia.org/wiki/Yik_Yak"><i>Yik Yak</i> <span class="small">(Wikipedia Link)</span></a> before it, <i>Nextdoor</i> has a reputation for allowing an informed minority - its users - to perform profiling and bigotry on people unaware of its existence.</p>
+            </div>
+            <div id="NoMachine">
+                <a href="/res/assets/flight/Icons/NoMachine.png" download><img src="/res/assets/flight/Icons/NoMachine.png" alt="NoMachine"></a>
+                <a href="/res/assets/flight/Icons/NoMachine.svg" download><p>NoMachine</p></a>
+                <p class="small">Proprietary remote desktop application, based on the NX server protocol.</p>
+            </div>
+            <div>
+                <a href="/res/assets/flight/Icons/On The Run.png" download><img src="/res/assets/flight/Icons/On The Run.png" alt="On The Run"></a>
+                <a href="/res/assets/flight/Icons/On The Run.svg" download><p>On The Run</p></a>
+                <p class="small"><i>ExxonMobil</i>-owned convenience store chain, operating inside <i>ExxonMobile</i> gas stations.</p>
+            </div>
+            <div>
+                <a href="/res/assets/flight/Icons/Phelps County Bank.png" download><img src="/res/assets/flight/Icons/Phelps County Bank.png" alt="Phelps County Bank"></a>
+                <a href="/res/assets/flight/Icons/Phelps County Bank.svg" download><p>Phelps County Bank</p></a>
+                <p class="small">Also called <i>PCB</i> and <i>MyPCB</i>, a very small Missouri-centric banking chain associated with <i>MasterCard</i>.</p>
+            </div>
+            <div id="Postparty">
+                <a href="/res/assets/flight/Icons/Postparty.png" download><img src="/res/assets/flight/Icons/Postparty.png" alt="Postparty"></a>
+                <a href="/res/assets/flight/Icons/Postparty.svg" download><p>Postparty</p></a>
+                <p class="small">A video game clip-saving service using a remote recording server, provided by <i>Epic Games</i>.</p>
+            </div>
+            <div id="QooApp">
+                <a href="/res/assets/flight/Icons/QooApp.png" download><img src="/res/assets/flight/Icons/QooApp.png" alt="QooApp"></a>
+                <a href="/res/assets/flight/Icons/QooApp.svg" download><p>QooApp</p></a>
+                <p class="small">An alternative Android store, based upon providing region-free access to otherwise Japanese-exclusive mobile apps.</p>
+            </div>
+            <div id="Retroarch">
+                <a href="/res/assets/flight/Icons/Retroarch.png" download><img src="/res/assets/flight/Icons/Retroarch.png" alt="Retroarch"></a>
+                <a href="/res/assets/flight/Icons/Retroarch.svg" download><p>Retroarch</p></a>
+                <p class="small">The (in)famous emulator frontend, designed to abstract and collate multiple emulators to a single easily-portable interface.</p>
+            </div>
+            <div>
+                <a href="/res/assets/flight/Icons/Riichi City.png" download><img src="/res/assets/flight/Icons/Riichi City.png" alt="Riichi City"></a>
+                <a href="/res/assets/flight/Icons/Riichi City.svg" download><p>Riichi City</p></a>
+                <p class="small">A Riichi Mahjong game by <i>Formirai</i>, and basically your only option for English competitive Riichi Mahjong if you're mad at <i>Mahjong Soul</i> for not getting meaningful QoL updates.</p>
+            </div>
+            <div id="Roku">
+                <a href="/res/assets/flight/Icons/Roku.png" download><img src="/res/assets/flight/Icons/Roku.png" alt="Roku"></a>
+                <a href="/res/assets/flight/Icons/Roku.svg" download><p>Roku</p></a>
+                <p class="small">A combination streaming service, set-top box brand, and now smart home security manufacturer, <i>Roku</i>'s app allows you to control TVs under their brand over WiFi or route their audio to your Android device.</p>
+            </div>
+            <div>
+                <a href="/res/assets/flight/Icons/SEGANET MJ.png" download><img src="/res/assets/flight/Icons/SEGANET MJ.png" alt="SEGANET-MJ"></a>
+                <a href="/res/assets/flight/Icons/SEGANET-MJ.svg" download><p>SEGANET-MJ</p></a>
+                <p class="small">A more fast-paced Riichi Mahjong application from <i>Sega AM2</i>. Originally a network-linked arcade cabinet.</p>
+                <p class="small">Also called <i>Sega MJ</i>, <i>Sega NetMahjong</i>, <span style="white-space: nowrap;"><i>セガNET麻雀 MJ</i></span>, and <i>Sega Networks Taisen Mahjong MJ</i></p>
+            </div>
+            <div>
+                <a href="/res/assets/flight/Icons/Smoothie King.png" download><img src="/res/assets/flight/Icons/Smoothie King.png" alt="Smoothie King"></a>
+                <a href="/res/assets/flight/Icons/Smoothie King.svg" download><p>Smoothie King</p></a>
+                <p class="small">Health-themed food chain which serves smoothies and other blended drinks.</p>
+            </div>
+            <div id="Sonic">
+                <a href="/res/assets/flight/Icons/Sonic.png" download><img src="/res/assets/flight/Icons/Sonic.png" alt="Sonic"></a>
+                <a href="/res/assets/flight/Icons/Sonic.svg" download><p>Sonic</p></a>
+                <p class="small">"Drive-in" fast food chain with an emphasis on fast turnaround regarding order completion. Unique for not having an indoor seating area.</p>
+            </div>
+            <div id="Staples">
+                <a href="/res/assets/flight/Icons/Staples.png" download><img src="/res/assets/flight/Icons/Staples.png" alt="Staples"></a>
+                <a href="/res/assets/flight/Icons/Staples.svg" download><p>Staples</p></a>
+                <p class="small">Office supplies and electronics department store. Business-oriented customers looking to order online are recommended to download the <a href="https://play.google.com/store/apps/details?id=app.staples">Staples Shopping App <span class="small">(Google Play link)</span></a> while in-store customers are recommended to use the <a href="https://play.google.com/store/apps/details?id=app.staples">Staples Connect app <span class="small">(Google Play link)</span></a> for coupons and personalized shopping recommendations.</p>
+            </div>
+            <div>
+                <a href="/res/assets/flight/Icons/Steak N Shake.png" download><img src="/res/assets/flight/Icons/Steak N Shake.png" alt="Steak N Shake"></a>
+                <a href="/res/assets/flight/Icons/Steak n Shake.svg" download><p>Steak N Shake</p></a>
+                <p class="small">Fast food chain oriented around milkshakes and steakburgers.</p>
+            </div>
+            <div>
+                <a href="/res/assets/flight/Icons/Steam Link.png" download><img src="/res/assets/flight/Icons/Steam Link.png" alt="Steam Link"></a>
+                <a href="/res/assets/flight/Icons/Steam Link.svg" download><p>Steam Link</p></a>
+                <p class="small">Remote desktop and cloud gaming service by <i>Valve Software</i> which connects users to their home desktop computers rather than anonymous servers.</p>
+            </div>
+            <div>
+                <a href="/res/assets/flight/Icons/Taco Bell.png" download><img src="/res/assets/flight/Icons/Taco Bell.png" alt="Taco Bell"></a>
+                <a href="/res/assets/flight/Icons/taco bell.svg" download><p>Taco Bell</p></a>
+                <p class="small">Tex-Mex themed fast food chain with a modern style.</p>
+            </div>
+            <div id="Tusky">
+                <a href="/res/assets/flight/Icons/Tusky.png" download><img src="/res/assets/flight/Icons/Tusky.png" alt="Tusky"></a>
+                <a href="/res/assets/flight/Icons/Tusky.svg" download><p>Tusky</p></a>
+                <p class="small"><i>Mastodon</i>-compatible Fediverse client designed to mimic the former client for the social network <i>Twitter</i>. <a href="https://chaos.social/@ConnyDuck/105904002285019275">Courted minor controversy when the app deliberately blacklisted users from signing into bigoted social networks like <i>Gab</i>. <span class="small">(chaos.social Fediverse link)</span></a></p>
+                <p class="small">Note: This icon is based on the former icon design for Tusky, rather than the new ones by <a href="https://dzuk.zone">Dzuk <span class="small">(External link)</span></a></p>
+            </div>
+            <div id="Wendys">
+                <a href="/res/assets/flight/Icons/Wendys.png" download><img src="/res/assets/flight/Icons/Wendys.png" alt="Wendy's"></a>
+                <a href="/res/assets/flight/Icons/Wendys.svg" download><p>Wendy's</p></a>
+                <p class="small">Burger fast food chain that prides itself on high quality ingredients.</p>
+            </div>
+        </div>
+    </main>
+    <footer>Unless otherwise stated, please assume all content on this website is licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0.</a></footer>
+    <script async>
+let h = document.getElementById('highlight');
+let shots = document.getElementById('shots');
+
+h.addEventListener('click', () => {
+    h.classList.toggle('toggled');
+    if (h.classList.contains('toggled')) {
+        for (i = 0; i < shots.children.length; i++) {
+            shots.children[i].querySelector('img').src = `/res/assets/flight/screen${i + 1}_d.jpg`;
+        }
+    } else {
+        for (i = 0; i < shots.children.length; i++) {
+            shots.children[i].querySelector('img').src = `/res/assets/flight/screen${i + 1}.jpg`;
+        }
+    }
+});
+    </script>
+</body>
+</html>
