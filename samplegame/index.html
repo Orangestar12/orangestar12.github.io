@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Whack-a-mole</title>
+    <link rel="icon" type="image/png" href="/starvatar.png">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <link rel="stylesheet" href="./stylesheet.css" />
+  </head>
+  <body>
+    <h1>Whack-a-mole proof</h1>
+    <h2 id="timer">60</h2>
+    <div id="gamebox" class="col flex">
+      <div class="pad">
+        <div class="flex">
+          <div class="box"><div class="spam"></div></div>
+          <div class="box"><div class="spam hit"></div></div>
+          <div class="box"><div class="spam hit"></div></div>
+        </div>
+        <div class="flex">
+          <div class="box"><div class="ral"></div></div>
+          <div class="box"><div class="ral hit"></div></div>
+          <div class="box"><div class="spam hit"></div></div>
+        </div>
+        <div class="flex">
+          <div class="box"><div class="spam hit"></div></div>
+          <div class="box"><div class="spam hit"></div></div>
+          <div class="box"><div class="spam hit"></div></div>
+        </div>
+      </div>
+    </div>
+    <h2 id="score">0</h2>
+    <p>Hit Spamton!</p>
+    <p>Don't hit not Spamton!</p>
+    <p id="raedy"></p>
+  <script async src="whack.js"></script>
+  </body>
+</html>

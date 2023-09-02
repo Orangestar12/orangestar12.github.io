@@ -1,0 +1,93 @@
+
+html, body {
+  background: black;
+  color: #DDD;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#gamebox {
+  border: 1px solid green;
+  margin: auto;
+  max-width: 350px;
+  position: relative;
+  overflow: hidden;
+}
+div#gamebox.over:before {
+    display: block;
+    content: '';
+    background: rgba(0,0,0,0.85);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 50;
+}
+div#gamebox.over:after {
+    display: block;
+    content: "IT'S OVER!";
+    position: absolute;
+    transform: translate(-50%,-50%) rotate(45deg);
+    color: red;
+    text-shadow: 0 0 5px BLACK;
+    left: 50%;
+    top: 50%;
+    font: 50pt Arial;
+    width: 150%;
+    z-index: 100;
+}
+.pad {
+  margin: auto;
+  padding: 25px;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid green;
+  overflow: hidden;
+  position: relative;
+}
+.flex {
+  display: flex;
+  flex: 1 0 0;
+}
+.col {
+  flex-direction: column;
+}
+button {
+  appearance: none;
+  border-radius: 0;
+  border: 2px solid green;
+  font: 14pt monospace;
+  color: green;
+  background: black;
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+}
+.box div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  transform: translateY(0%);
+  opacity: 1;
+  transition: transform 50ms, opacity 50ms;
+  cursor: pointer;
+}
+.box div.ral {
+  background-image: url("./res/gote.png");
+}
+.box div.ral.hit {
+  background-image: url("./res/gote2.png");
+}
+.box div.spam {
+  background-image: url("./res/spam.png");
+}
+.box div.spam.hit {
+  background-image: url("./res/spam2.png");
+}
+.box div.down {
+  opacity: 0;
+  transform: translateY(100%);
+}
