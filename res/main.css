@@ -100,6 +100,11 @@ a, a:visited {
     display:flex;
     justify-content: center;
     flex-wrap:wrap;
+    flex-direction: row;
+}
+
+.col {
+    flex-direction: column;
 }
 
 div.card {
@@ -158,4 +163,11 @@ footer {
 }
 p.small {
     margin: 0.75em 0;
+}
+
+img.linker {
+    max-height: 0.85em;
+    margin-bottom: 0.15em;
+    margin-left:0.35ch;
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(134deg);
 }
