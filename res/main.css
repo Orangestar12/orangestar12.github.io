@@ -8,6 +8,7 @@ html {
     --off-black: #303030;
     --main: #F70;
     --accent: #7FF;
+    --off-accent: rgb(252, 152, 177);
     --foreground: white;
 
     background-color: var(--black);
@@ -85,7 +86,12 @@ h1 {
 }
 h2 {
     font-size: 2.25em;
-    margin: 0.5em;
+    /* Dumb hack so clear:both; and margin collapse works right */
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    margin: 0;
+    padding-bottom: 0;
+    clear:both;
 }
 h3 {
     font-size: 1.75em;
@@ -94,6 +100,8 @@ h3 {
 
 a, a:visited {
     color: var(--accent);
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .flex {
