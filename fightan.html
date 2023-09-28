@@ -2,36 +2,67 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>What Fighting Game Should I Play First? | Orangestar</title>
+    <title>Fightan Games | Orangestar</title>
     <link rel="icon" type="image/png" href="/starvatar.png">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
-    <meta property="og:title" content="What Fighting Game Should I Play First?">
-    <meta property="og:description" content="A lot of them do but with major caveats.">
+    <meta property="og:title" content="Fightan Games">
+    <meta property="og:description" content="FIGHTING GAMES SOMETHING SO GREAT">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://www.orangestar.dev/res/7qSQ.gif">
+    <meta property="og:image" content="https://www.orangestar.dev/fightan.svg">
     <meta property="og:url" content="https://www.orangestar.dev/fightan.html">
     <meta name="theme-color" content="#FF7700">
-    
-    <!-- <link href="main.css" rel="stylesheet" type="text/css"/> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <style>
-html, body {
-    margin: 8px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 14pt;
-    background: black;
-    color: #DDD;
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
-a, a:visited {
-    color: #AAF;
+
+html, body {
+    margin: 0; padding: 0;
+    background: black;
+    color: white;
+    text-align:center;
+    font-family: Arial, sans-serif;
+}
+html, body, img {
+    height: 99%;
+    width: 99%;
+}
+
+#pinchtozoom {
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fadeout 8s;
+    background: rgba(20,20,20,0.9);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px rgba(20,20,20,0.9);
+}
+#pinchtozoom img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
     </style>
 </head>
 <body>
-    <p>Hi! This page is a carbon copy of <a href="/vr.html">Which games work for me on SteamVR for Linux?</a> but with all the markup deleted so you can't see it. I've been duplicating the HTML file for <a href="/fpsrankthing">the FPS Ranking page thing</a> over and over and slowly adding more stuff to it as I go to make these little one-off pages. I accidentally pushed this duplicate before I even started writing it. Sorry!</p>
-    <p>Go to one of those other pages. This page isn't done yet.</p>
+    <img src="./fightan.svg" alt=""/>
+    <div id="pinchtozoom">
+        <img src="/res/pinch_to_zoom.svg" alt=""/>
+    </div>
 </body>
 </html>
