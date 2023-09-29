@@ -96,6 +96,7 @@ main .box {
 
 .flex {
     display: flex;
+    padding-right:2ch;
 }
 
 .modal .flex > img {
