@@ -33,3 +33,13 @@ header h1 {
     padding: 5px;
     flex: 1 1 0px; /* https://stackoverflow.com/questions/29503227/how-to-make-flexbox-items-the-same-size */
 }
+
+code {
+    background: var(--off-black);
+    padding: 0 0.5ch;
+    border-radius: 4px;
+}
+
+li {
+    margin: 0.25em 0;
+}

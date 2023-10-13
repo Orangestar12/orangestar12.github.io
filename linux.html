@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stupid Linux Garbage | Orangestar</title>
+    <link rel="icon" type="image/png" href="/starvatar.png">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+    <meta property="og:title" content="Stupid Linux Garbage I Had To Search For And Troubleshoot" />
+    <meta property="og:description" content="Archived here so you don't have to.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.orangestar.dev/starvatar.png">
+    <meta property="og:url" content="https://www.orangestar.dev/linux.html">
+    <meta name="theme-color" content="#FF7700">
+
+    <link href="/res/main.css" rel="stylesheet" type="text/css"/>
+    <link href="/res/side.css" rel="stylesheet" type="text/css"/>
+<style>
+nav {
+    background: var(--off-black);
+    padding: 8px;
+    border: 2px solid black;
+    outline: 4px solid var(--off-black);
+}
+
+h2, h3 {
+    margin-top:0;
+}
+h3, h4 {
+    text-align:left;
+}
+h2 {
+    color: var(--main); /* wait this looks awesome i might keep this */
+}
+h3 {
+    color: #F44;
+}
+h4 {
+    font-size: 1.15em;
+    padding-left: 1.15ch;
+    color: var(--accent);
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Stupid Linux Garbage I Had To Search For And Troubleshoot</h1>
+        <p class="centered">Archived here so you don't have to do that.</p>
+        <p class="small"><a href="/">← Return to Main page</a></p>
+    </header>
+    <main>
+        <section>
+            <p>Linux is cool because if something breaks I know I can usually fix it myself instead of waiting for an upstream patch from a corporation to eventually fix my issue.</p>
+            <p>However, heavy lifting is hard sometimes, and finding results on the internet sucks because of SEO stupidity.</p>
+            <p>So here's my attempt to solve the problem without making a five-trillion-line Gist and praying to Steve Ballmer that it shows up on Google or Bing or Dog Pile.</p>
+            <p>May you attain enlightenment:</p>
+            <ol>
+                <li>Getting intimate with software internals.</li>
+                <li>Stupid solutions that make you slap your head.</li>
+                <li>Familiarity with the command line.</li>
+            </ol>
+        </section>
+        <hr/>
+        <nav>
+            <h2>Table of Contents</h2>
+            <h3><a href="#rEFInd">rEFInd</a></h3>
+            <ul>
+                <li><a href="#refind-wrong-initramfs">rEFInd boots the wrong initramfs file for your kernel flavor</a></li>
+            </ul>
+            <h3><a href="#Vulkan">Vulkan</a></h3>
+            <ul>
+                <li><a href="#steam-games-dont-work">After a fresh install, random Steam games fail to launch with cryptic, unsearchable error messages</a></li>
+            </ul>
+            <h3><a href="#Xorg">Xorg/X11</a></h3>
+            <ul>
+                <li><a href="#xorg-conf-doesnt-apply">Edits to <code>xorg.conf</code> fail to apply, even though the file saves correctly and errors still make X11 exit</a></li>
+                <li><a href="#missing-video-modes">On an older DVI monitor, some video modes are completely missing</a></li>
+            </ul>
+        </nav>
+        <hr/>
+        <section>
+            <h2 id="rEFInd">rEFInd</h2>
+            <section>
+                <h3 id="refind-wrong-initramfs">rEFInd boots the wrong initramfs file for your kernel flavor</h3>
+                <section>
+                    <h4>Symptoms and relations:</h4>
+                    <ul>
+                        <li>You're probably on Arch or a derivative.</li>
+                        <li>You are running more than 1 flavor of Linux kernel.</li>
+                        <li>After upgrading, booting sends you to an emergency shell.</li>
+                        <li>You can prevent the shell by pressing F2 or tab and selecting a very specific kernel, usually the last one that got upgraded.</li>
+                        <li>You can also fix it by meticulously managing your <code>refind.conf</code> file, but that sucks and takes time and you have to do this every time you upgrade.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>What's happening?</h4>
+                    <p>By default rEFInd assumes that the end of a kernel file is its version number: like, <code>vmlinuz-linux-4.8</code> will obviously match with <code>initramfs-linux-4.8</code>, and so on with flavors like <code>initramfs-linux-zen-4.8</code>.</p>
+                    <p>Arch decided to be different and spunky and doesn't put version numbers on its kernels whatsoever, so rEFInd fucks up and assumes that <code>-zen</code> <em>is</em> the version number it's looking for. As a result it will just load a random <code>initramfs</code> and <code>vmlinuz</code> file and assume they both work together. (Ok, it's not random, but it's based on which file got <code>touch</code>ed last so it's effectively random.)</p>
+                </section>
+                <section>
+                    <h4>How do I fix it?</h4>
+                    <ol>
+                        <li>Open up <code>/boot/EFI/refind/refind.conf</code></li>
+                        <li>Search for "<code>extra_kernel_version_strings</code>"</li>
+                        <li>If that line is commented out, uncomment it.</li>
+                        <li>Whatever is in there, make sure the last thing in the list is <code>linux</code> without anything else after it.<br/>
+                        <br/>
+                        Here's what mine is set to:<br/>
+                        <code style="font-size:12pt;">extra_kernel_version_strings linux-lts,linux-rt,linux-hardened,linux-zen,linux-rt-lts,linux</code></li>
+                    </ol>
+                    <p>While you're there, consider uncommenting the <code>fold_linux_kernels</code> option as well, which will split all your various flavors into individual bootable buttons instead of putting them all under one generic "Arch Linux" bootable option.</p>
+                </section>
+            </section>
+        </section>
+        <hr/>
+        <section>
+            <h2 id="Vulkan">Vulkan</h2>
+            <section>
+                <h3 id="steam-games-dont-work">After a fresh install, random Steam games fail to launch with cryptic, unsearchable error messages</h3>
+                <section>
+                    <h4>Symptoms and relations:</h4>
+                    <ul>
+                        <li>You're on Arch Linux.</li>
+                        <li>You have an NVidia video card.</li>
+                        <li>You selected to install <code>steam</code> as an optional install package during your <code>archinstall</code> process.</li>
+                        <li>SteamVR gives you "Error 308: A Component Is Not Working Correctly".</li>
+                        <li>Capcom games crash with "ERR03: Failed to Initialize DirectX11".</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>What's happening?</h4>
+                    <p>Valve wants all your games to run properly when you install Steam, so as a part of its package install process it will try to install proper packages as dependencies to run things like DXVK and 32-bit drivers for your hardware.</p>
+                    <p>During the <code>archinstall</code> process, though, it doesn't know anything about your hardware and will just assume you have an AMD card, installing the AMD drivers in the process.</p>
+                    <p>Needless to say, your NVidia card won't care at all about these AMD drivers.</p>
+                </section>
+                <section>
+                    <h4>How do I fix it?</h4>
+                    <p><code>pacman -S nvidia-utils lib32-nvidia-utils</code></p>
+                    <p>Pacman will complain that installing this will conflict with some other provider of <code>vulkan-driver</code> and <code>lib32-vulkan-driver</code>, just have it remove the other one and tell it everything is going to be okay.</p>
+                </section>
+            </section>
+        </section>
+        <hr/>
+        <section>
+            <h2 id="Xorg">Xorg/X11</h2>
+            <section>
+                <h3 id="xorg-conf-doesnt-apply">Edits to <code>xorg.conf</code> fail to apply, even though the file saves correctly and errors still make X11 exit</h3>
+                <section>
+                    <h4>Symptoms and relations:</h4>
+                    <ul>
+                        <li>You're on Manjaro Linux.</li>
+                        <li>Regardless of how much you change <code>xorg.conf</code>, somehow it seems to completely ignore whatever you write.</li>
+                        <li>NVidia users will find that <code>nvidia-settings</code> settings don't persist after a reboot.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>What's happening?</h4>
+                    <p>Manjaro doesn't use <code>xorg.conf</code>. At least, it does, but not directly. Anyway, quit touching it.</p>
+                    <p>Arch doesn't generate an <code>xorg.conf</code> anymore by default, but that breaks spectacularly in edge cases. Because Manjaro is specifically designed to be user friendly, it overengineers a nice <code>conf</code> file setup particular for your computer when you first install it in a way that will ideally scale up well as you change your hardware.</p>
+                    <p>Part of this setup involves not editing the main <code>xorg.conf</code> and instead importing a bunch of smaller <code>conf</code> files that it can swap out as it needs. These are found in <code>/etc/X11/mhwd.d/</code>, and are - of course - managed by <code>mhwd</code>.</p>
+                </section>
+                <section>
+                    <h4>How do I fix it?</h4>
+                    <p>Edit the files in <code>/etc/X11/mhwd.d/</code> instead, or at least go to the linked folder from there and make your own <code>conf</code> to activate with <code>mhwd</code>.</p>
+                </section>
+            </section>
+            <br/><br/> <!-- Cry about it -->
+            <section>
+                <h3 id="missing-video-modes">On an older DVI monitor, some video modes are completely missing</h3>
+                <section>
+                    <h4>Symptoms and relations:</h4>
+                    <ul>
+                        <li>You're on NVidia.</li>
+                        <li>Your monitor is from like 1999.</li>
+                        <li>You're using DVI.</li>
+                        <li>You know for an absolute fact your monitor is specifically 720p, but every time you try to set that resolution specifically you can't find it. All you have are 1280x768 and 1280x1024.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>What's happening?</h4>
+                    <p>Computers are fucking STUPID is what's happening.</p>
+                    <p>So when the first few HDTVs and HD monitors came out some computers were still stuck with Extended VGA modes, and that meant they had no clue how to output to progressive scan TVs.</p>
+                    <p>So the idea was instead you just tell your monitor to output to a 4:3 resolution and the TV would squish it to be 720p. Then make your video player display a stretched fullscreen image and presto, you can watch your DVDs on your computer!</p>
+                    <p>Unfortunately, it's now $CURRENT_YEAR and your modern day graphics card has no qualms outputting a grid of pixels, but the EDID on your TV is saying "Nooo I don't support that! Don't break your TV tuner!"</p>
+                    <p>Windows just doesn't care and forcibly puts 720p as one of the resolutions available if it detects similar resolutions being reported by the TV (though that doesn't stop it from trying to set 1280x768 as the default.) X11 is a but more strict, though, and will read the EDID and take it at its word, meaning that the resolution you need just doesn't show up.</p>
+                </section>
+                <section>
+                    <h4>How do I fix it?</h4>
+                    <p>Pop open your <code>xorg.conf</code> or <a href="#xorg-conf-doesnt-apply">equivalent</a>.</p>
+                    <p>You've probably <a href="https://download.nvidia.com/XFree86/Linux-x86_64/396.51/README/xconfigoptions.html" target="_blank">read in the NVidia docs<img src="/res/external_link.svg" alt="(External)" class="linker" /></a> that you should use options like <code>Option "ModeValidation" "NoEdidModes"</code> or <code>Option "UseEdidFreqs" "false"</code>.</p>
+                    <p>These are wrong and the actual option isn't even in this part of the NVidia Docs. In fact, the first option straight up got deprecated without warning and doesn't work anymore. Computers are awesome <span class="small">(sarcasm)</span>.</p>
+                    <p>The actual option you want is this:<br/><code style="margin-left:1ch">Option "ModeValidation" "AllowNonEdidModes"</code></p>
+                    <p>In fact, it's probably not a good idea to enable that for every single monitor or you'd be flooded with possible resolutions. You can enable non-EDID modes for individual outputs like this:<br/><code style="margin-left:1ch">Option "ModeValidation" "DVI-D-0:AllowNonEdidModes"</code></p>
+                    <p>You can get the names of your outputs from <code>xrandr</code>.</p>
+                </section>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
