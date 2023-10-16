@@ -63,6 +63,10 @@ h4 {
         <hr/>
         <nav>
             <h2>Table of Contents</h2>
+            <h3><a href="#Browsers">Browsers</a></h3>
+            <ul>
+                <li><a href="#resizing-divs">HTML Elements on various websites randomly resize or reflow when you focus them</a></li>
+            </ul>
             <h3><a href="#rEFInd">rEFInd</a></h3>
             <ul>
                 <li><a href="#refind-wrong-initramfs">rEFInd boots the wrong initramfs file for your kernel flavor</a></li>
@@ -77,6 +81,28 @@ h4 {
                 <li><a href="#missing-video-modes">On an older DVI monitor, some video modes are completely missing</a></li>
             </ul>
         </nav>
+        <hr/>
+        <section>
+            <h2 id="Browsers">Browsers, Websites, and Extensions</h2>
+            <p>This isn't Linux-specific, but it's worth documenting.</p>
+            <section>
+                <h3 id="resizing-divs">HTML Elements on various websites randomly resize or reflow when you focus them</h3>
+                <section>
+                    <h4>Symptoms and relations:</h4>
+                    <ul>
+                        <li>You've recently installed the DeepL extension to your browser to translate text.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>What's happening?</h4>
+                    <p>The DeepL extension is fucking awful and will forcibly inject itself into and around <code>contenteditable</code> and <code>textarea</code> nodes on the off chance you want to translate your text into other languages.</p>
+                </section>
+                <section>
+                    <h4>How do I fix it?</h4>
+                    <p>Uninstall or disable the extension. Sorry, mac.</p>
+                </section>
+            </section>
+        </section>
         <hr/>
         <section>
             <h2 id="rEFInd">rEFInd</h2>
