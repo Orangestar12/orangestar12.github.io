@@ -98,6 +98,10 @@ h3 {
     margin: 0.25em 0;
 }
 
+p {
+    line-height: 1.25em;
+}
+
 a, a:visited {
     color: var(--accent);
     cursor: pointer;

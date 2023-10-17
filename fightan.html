@@ -2,36 +2,410 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>What Fighting Game Should I Play First? | Orangestar</title>
+    <title>Fightan Games | Orangestar</title>
     <link rel="icon" type="image/png" href="/starvatar.png">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
-    <meta property="og:title" content="What Fighting Game Should I Play First?">
-    <meta property="og:description" content="A lot of them do but with major caveats.">
+    <meta property="og:title" content="Fightan Games">
+    <meta property="og:description" content="FIGHTING GAMES SOMETHING SO GREAT">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://www.orangestar.dev/res/7qSQ.gif">
+    <meta property="og:image" content="https://www.orangestar.dev/res/fightan/bg.png">
     <meta property="og:url" content="https://www.orangestar.dev/fightan.html">
     <meta name="theme-color" content="#FF7700">
-    
-    <!-- <link href="main.css" rel="stylesheet" type="text/css"/> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-html, body {
-    margin: 8px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 14pt;
-    background: black;
-    color: #DDD;
-}
-a, a:visited {
-    color: #AAF;
-}
-    </style>
+
+    <link href="/res/fightan/style.css" rel="stylesheet" />
 </head>
 <body>
-    <p>Hi! This page is a carbon copy of <a href="/vr.html">Which games work for me on SteamVR for Linux?</a> but with all the markup deleted so you can't see it. I've been duplicating the HTML file for <a href="/fpsrankthing">the FPS Ranking page thing</a> over and over and slowly adding more stuff to it as I go to make these little one-off pages. I accidentally pushed this duplicate before I even started writing it. Sorry!</p>
-    <p>Go to one of those other pages. This page isn't done yet.</p>
+    <main>
+        <!-- 1 on 1: The Basket -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/1on1.png');
+            width: 9.8%;
+            transform:translate(178%, -240%) rotate(-14deg) scale(0.28)"
+        data-data='{
+            "name": "SIMPLE 1500 SERIES: 1 on 1: The Basket",
+            "stuff": {
+                "Type": "Basketball",
+                "What?": "No, really.",
+                "Rollback Via": "Duckstation"
+            }
+        }'></div>
+        <!-- Akatsuki Blitzkampf -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/akb.png');
+            transform:translate(-82%, -85%) rotate(30deg) scale(1.5)"
+        data-data='{
+            "name": "Akatsuki Blitzkampf",
+            "stuff": {
+                "Type": "Standard Fighter",
+                "Inputs": "Easy",
+                "Combo System": "ABC, Special Canceling",
+                "Supers?": "3 Bars; 1bar supers, 3bar supers.",
+                "Rollback Via": "Fightcade"
+            }
+        }'></div>
+        <!-- Advanced V.G. 2 -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/avg2.png');
+            width: 9.8%;
+            transform:translate(195%, -140%) rotate(1deg) scale(0.25)"
+        data-data='{
+            "name": "Advanced Variable Geo 2",
+            "stuff": {
+                "Type": "Standard Fighter",
+                "Inputs": "Classic",
+                "Combo System": "Special Canceling",
+                "Rollback Via": "Duckstation"
+            }
+        }'></div>
+        <!-- Breakers Revenge -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/breakrev.png');
+                width: 7%;
+                transform:translate(161%, -211%) rotate(-50deg) scale(0.6)"
+        data-data='{
+            "name": "Breakers Revenge",
+            "stuff": {
+                "Type": "Standard Fighter",
+                "Inputs": "Classic",
+                "Combo System": "Special Canceling",
+                "Supers?":"3 bars, 1bar supers",
+                "Rollback Via": "Fightcade"
+            }
+        }'></div>
+        <!-- TODO: Brawlhalla -->
+        <!-- Dragon Ball FighterZ -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/dbfz.png');
+                height: 5%;
+                transform:translate(-221%, -206%) rotate(-50deg) scale(0.55)"
+        data-data='{
+            "name": "Dragon Ball FighterZ",
+            "stuff": {
+                "Type": "Versus/Tag Fighter (\"Mahvel\"-style)",
+                "Inputs": "Easy",
+                "Combo System": "Gattling, Special Canceling, Launchers, Air combos",
+                "Supers?": "7 Bars; At least 3 different supers per character.",
+                "Rollback When?": "Never. 😭"
+            }
+        }'></div>
+        <!-- Guilty Gear XX Accent Core Plus R -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/ggacpr.png');
+                height: 5%;
+                transform:translate(-31%, -511%) rotate(-18deg) scale(0.3)"
+        data-data='{
+            "name": "Guilty Gear XX Accent Core Plus R",
+            "stuff": {
+                "Type": "Anime Fighter",
+                "Inputs": "Classic",
+                "Combo System": "Gattling, Special Canceling",
+                "Supers?": "2 Bars; 1bar Supers.",
+                "How do I beat Testament?": "Cry."
+            }
+        }'></div>
+        <!-- Guilty Gear Xrd Rev 2 -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/ggxrd.png');
+                height: 5%;
+                transform:translate(-5%, -491%) rotate(-18deg) scale(0.3)"
+        data-data='{
+            "name": "Guilty Gear Xrd REV 2",
+            "stuff": {
+                "Type": "Anime Fighter",
+                "Inputs": "Classic",
+                "Combo System": "Gattling, Special Canceling",
+                "Supers?": "2 Bars; 1bar Supers.",
+                "How do I beat Johnny?": "Cry."
+            }
+        }'></div>
+        <!-- Guilty Gear -STRIVE- -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/ggs.png');
+                height: 5%;
+                transform:translate(-135%, -373%) rotate(8deg) scale(0.4)"
+        data-data='{
+            "name": "GUILTY GEAR -STRIVE-",
+            "stuff": {
+                "Type": "Anime Fighter",
+                "Inputs": "Classic",
+                "Combo System": "Gattling, Special Canceling",
+                "Supers?": "2 Bars; 1bar Supers.",
+                "How do I beat Nago?": "Cry."
+            }
+        }'></div>
+        <!-- JoJo's Bizzare Adventure: Heritage for the Future -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/jjbahftf.png');
+            width: 9.8%;
+            transform:translate(177%, -5%) rotate(20deg) scale(0.4)"
+        data-data='{
+            "name": "JoJo&apos;s Bizzare Adventure: Heritage For The Future",
+            "stuff": {
+                "Type": "Standard Fighter",
+                "Inputs": "Classic",
+                "Combo System": "Special Canceling",
+                "Rollback Via": "Fightcade or Duckstation"
+            }
+        }'></div>
+        <!-- Killer Instinct -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/ki.jpg');
+                height: 5%;
+                transform:translate(20%, -470%) rotate(-18deg) scale(0.3)"
+        data-data='{
+            "name": "Killer Instinct (2017)",
+            "stuff": {
+                "Type": "Standard Fighter",
+                "Inputs": "Easy",
+                "Combo System": "Autos, Manuals, Linkers, and Enders",
+                "Supers?": "2 Bars. 1bar supers.",
+                "Gimmick": "Combos can be \"Broken\" out of."
+            }
+        }'></div>
+        <!-- Mortal Kombat 1 -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/mk1.png');
+                transform:translate(0, -360%)"
+        data-data='{
+            "name": "Mortal Kombat 1",
+            "stuff": {
+                "Type": "Fighter with Assists",
+                "Inputs": "MK Style",
+                "Combo System": "Dial-ins, Special Canceling",
+                "Supers?": "3 Bars; Supers, breakers, armored hits",
+                "Should you play it?": "God no."
+            }
+        }'></div>
+        <!-- Mofumofu Sensen 1 -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/mmss.png');
+                height: 6%;
+                transform:translate(-210%, -315%) rotate(-55deg) scale(0.5)"
+        data-data='{
+            "name": "Mofumofu Sensen",
+            "stuff": {
+                "Type": "Standard Fighter",
+                "Inputs": "Easy",
+                "Gimmick": "Blocking chips you on the NEXT round.",
+                "Online?": "Just over Parsec.",
+                "Oh....": "Sorry."
+            }
+        }'></div>
+        <!-- Power Rangers: Battle for the Grid -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/bftg.jpg');
+                height: 5%;
+                transform:translate(-148%, -454%) rotate(45deg) scale(0.8)"
+        data-data='{
+            "name": "Power Rangers: Battle for the Grid",
+            "stuff": {
+                "Type": "Versus/Tag Fighter (\"Mahvel\"-style)",
+                "Inputs": "Simple",
+                "Wow I hope the developers are doing well with how cool this game turned out": ":&apos;&#41;"
+            }
+        }'></div>
+        <!-- Rivals of Aether -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/roa.png');
+                width: 7%;
+                transform:translate(-130%, -230%) rotate(-30deg) scale(0.4)"
+        data-data='{
+            "name": "Rivals of Aether",
+            "stuff": {
+                "Type": "Platform Fighter",
+                "...and?": "It&apos;s the best one."
+            }
+        }'></div>
+        <!-- Skullgirls -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/skullgirls.png');
+                height: 5%;
+                transform:translate(-171%, -315%) rotate(-72deg) scale(0.4)"
+        data-data='{
+            "name": "Skullgirls",
+            "stuff": {
+                "Type": "Versus/Tag Fighter (\"Mahvel\"-style)",
+                "Inputs": "Easy",
+                "Combo System": "Gattling, Special Canceling, Launchers, Air combos",
+                "Supers?": "5 Bars; At least 3 different supers per character.",
+                "Why is this easy for noobs?": "It&apos;s not. It just has a great tutorial."
+            }
+        }'></div>
+        <!-- Super Smash Bros. Melee -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/ssbm.png');
+            width: 8%;
+            transform:translate(146%, 125%) rotate(72deg) scale(0.4)"
+        data-data='{
+            "name": "Super Smash Bros. Melee",
+            "stuff": {
+                "Type": "Platform Fighter",
+                "Rollback Via": "Slippi"
+            }
+        }'></div>
+        <!-- Super Smash Bros. Ultimate -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/ssbu.png');
+                height: 5.5%;
+                transform: translate(175%, 355%) rotate(-40deg) scale(1)"
+        data-data='{
+            "name": "Super Smash Bros. Ultimate",
+            "stuff": {
+                "Type": "Platform Fighter",
+                "Should I spend 20 dollars a year to play this online?": "God, no."
+            }
+        }'></div>
+        <!-- Street Fighter III: Third Strike -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/sfts.png');
+            width: 9.5%;
+            transform:translate(152%, -175%) rotate(45deg) scale(0.5)"
+        data-data='{
+            "name": "Street Fighter III: Third Strike",
+            "stuff": {
+                "Type": "Standard Fighter",
+                "Inputs": "Classic",
+                "Combo System": "Special Canceling",
+                "Supers?":"Per-character bar sizes, per-character super bars, 1bar supers",
+                "Rollback Via": "Fightcade"
+            }
+        }'></div>
+        <!-- Street Fighter IV -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/sf4.png');
+            height: 5%;
+            transform:translate(-280%, -425%) rotate(-30deg) scale(1)"
+        data-data='{
+            "name": "Ultra Street Fighter IV",
+            "stuff": {
+                "Type": "Standard Fighter",
+                "Inputs": "Classic",
+                "Combo System": "Special Canceling",
+                "Supers?":"Seperate bars for \"Supers\" and \"Ultras\"",
+                "Rollback?": "Never."
+            }
+        }'></div>
+        <!-- Street Fighter V -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/sfv.png');
+                height: 5%;
+                transform: translate(70%, 515%) rotate(-10deg) scale(1)"
+        data-data='{
+            "name": "Street Fighter V",
+            "stuff": {
+                "Type": "Standard Fighter",
+                "Inputs": "Classic",
+                "Combo System": "Special Canceling",
+                "Supers?":"1 Super bar, Universal V-Trigger system.",
+                "Rollback?": "Why?"
+            }
+        }'></div>
+        <!-- Street Fighter 6 -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/sf6.png');
+                height: 5%;
+                transform:translate(-61%, -454%) rotate(8deg) scale(0.6)"
+        data-data='{
+            "name": "Street Fighter 6",
+            "stuff": {
+                "Type": "Standard Fighter",
+                "Inputs": "Classic, Simple",
+                "Combo System": "Special Canceling",
+                "Supers?":"3 bars. 1, 2, and 3 bar supers."
+            }
+        }'></div>
+        <!-- Tatsunoko Vs. Capcom: Ultimate All Stars -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/tvc.png');
+            width: 8%;
+            transform:translate(-250%, 90%) rotate(-30deg) scale(0.45)"
+        data-data='{
+            "name": "Tatsunoko Vs. Capcom: Ultimate All Stars",
+            "stuff": {
+                "Type": "Versus/Tag Fighter (\"Mahvel\"-style)",
+                "Inputs": "Easy",
+                "Combo System": "ABC combos, Special Canceling, Launchers, Air combos",
+                "Supers?": "5 Bars; 1bar and 3bar supers.",
+                "Rollback When?": "For the Wii? Good luck."
+            }
+        }'></div>
+        <!-- TODO: Tekken 7 -->
+        <!-- Ultimate Marvel Vs Capcom 3 -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/umvc3.png');
+            width: 8%;
+            transform:translate(-370%, -125%) rotate(10deg) scale(1)"
+        data-data='{
+            "name": "Ultimate Marvel Vs Capcom 3",
+            "stuff": {
+                "Type": "Versus/Tag Fighter (\"Mahvel\"-style)",
+                "Inputs": "Easy",
+                "Combo System": "ABC combos, Special Canceling, Launchers, Air combos",
+                "Supers?": "5 Bars; 1bar and 3bar supers.",
+                "Rollback When?": "HARD MAYBE. User Parsec for now."
+            }
+        }'></div>
+        <!-- Ultimate Mortal Kombat 3 -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/umk3.png');
+            width: 8%;
+            transform:translate(250%, -105%) rotate(10deg) scale(0.4)"
+        data-data='{
+            "name": "Ultimate Mortal Kombat 3",
+            "stuff": {
+                "Type": "Standard Fighter",
+                "Inputs": "MK Style",
+                "Combo System": "Dial-ins, Special Canceling",
+                "Supers?": "No.",
+                "Rollback Via": "Fightcade",
+                "Wait, why is this MK in the \"Good\" section?": "Because it has actual tech and the gore doesn&apos;t make me want to vomit."
+            }
+        }'></div>
+        <!-- Vargverse -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/vargverse.png');
+            width: 9%;
+            transform:translate(67%, -25%) rotate(30deg) scale(1.5)"
+        data-data='{
+            "name": "Vargverse",
+            "stuff": {
+                "Type": "Standard Fighter/MUGEN Screenpack",
+                "Combo System": "Per-character",
+                "Supers?": "Universal \"Vinetrigger\" supers, plus per-character options.",
+                "Rollback Via": "Ikemen GO",
+                "Why???": "Because Jerma has a 3-bar TOD."
+            }
+        }'></div>
+        <!-- WWE Immortals -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/wwe.png');
+                height: 5.5%;
+                transform:translate(145%, 150%) rotate(-52deg) scale(0.7)"
+        data-data='{
+            "name": "WWE Immortals",
+            "stuff": {
+                "Type": "Mobile Fighter/Deck Builder",
+                "Inputs": "Touch",
+                "Who do I pick?": "I like Taker.",
+                "Does this ACTUALLY have rollback?": "It resolves confusing states! It counts!"
+            }
+        }'></div>
+        <!-- Ys Vs. -->
+        <div class="box"
+        style="background-image:url('/res/fightan/boxes/ys.png');
+            width: 6%;
+            transform:translate(405%, -55%) rotate(0deg) scale(0.5)"
+        data-data='{
+            "name": "Ys vs. Trails in the Sky",
+            "stuff": {
+                "Huh?": "I was asked to put this one on here."
+            }
+        }'></div>
+    </main>
+    <div id="pinchtozoom">
+        <img src="/res/pinch_to_zoom.svg" alt=""/>
+    </div>
+    <script src="/res/fightan/script.js"></script>
 </body>
 </html>

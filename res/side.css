@@ -101,3 +101,13 @@ figcaption {
 .youtube-wrapper > iframe:target {
     opacity: 1;
 }
+
+code {
+    background: var(--off-black);
+    padding: 0 0.5ch;
+    border-radius: 4px;
+}
+
+li {
+    margin: 0.25em 0;
+}
