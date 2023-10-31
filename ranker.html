@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Game ranker thing</title>
+    <link rel="icon" type="image/png" href="/starvatar.png">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+
+    <!-- <link href="main.css" rel="stylesheet" type="text/css"/> -->
+    <style>
+html, body {
+    font: bold 12pt sans-serif;
+    background: black;
+    color: #DDD;
+    text-align: center;
+}
+#boxes {
+    display: flex;
+    width: 1032px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.box {
+    display: inline-block;
+    border: 1px solid white;
+    margin: 5px;
+    min-width: 160px;
+    width: 160px;
+    height: 320px;
+}
+.img {
+    height: 255px;
+    margin: 8px;
+    position: relative;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.caption {
+    padding: 5px;
+    height: 2.5em;
+}
+.img:focus {
+    outline: 4px rgb(0, 255, 255) dashed;
+}
+.img::after {
+    left:0;right:0;bottom:0;top:0;
+    display: block;
+    position: absolute;
+    text-align: center;
+    padding-top: 120px;
+}
+.img.unset::after {
+    padding-top: 128px;
+    content: 'Click here'
+}
+.img:focus::after {
+    padding-top: 120px;
+    content: 'Now press CTRL+V';
+}
+a, a:focus {
+    color: rgb(84, 163, 163)
+}
+    </style>
+</head>
+<body>
+    <p style="font-weight:normal;font-style:italic;">Need a source for your images? Try <a href="https://www.steamgriddb.com/" target="_blank">SteamGridDB</a></p>
+    <p style="font-weight:normal;font-style:italic;">Need to zoom out? <code>Ctrl</code>+<code>Minus</code></p>
+    <p style="font-weight:normal;font-style:italic;">Just short on height? <code>F11</code> for fullscreen.</p>
+    <div id="boxes">
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Favorite Game of All Time</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Favorite Series</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Best Soundtrack</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Favorite Protagonist</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Favorite Villain</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Best Story</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Have not played but want to</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">You Love, Everyone Hates</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">You Hate, Everyone Loves</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Best Art Style</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Favorite Ending</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Favorite Boss Fight</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Childhood Game</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Relaxing Game</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Stressful Game</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Game You Always Come Back To</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Guilty Pleasure</div>
+        </div>
+        <div class="box">
+            <div class="img unset" tabindex="0"></div>
+            <div class="caption">Tons of Hours Played</div>
+        </div>
+    </div>
+<script>
+// stolen from https://ourcodeworld.com/articles/read/491/how-to-retrieve-images-from-the-clipboard-with-javascript-in-the-browser
+
+for (box of document.querySelectorAll('.box .img')) {
+    box.addEventListener('paste', (e) => {
+        if (!e.clipboardData) { return; }
+
+        if (e.clipboardData.items == undefined) { return; }
+
+        for (let i of e.clipboardData.items) {
+            if (i.type.indexOf("image") != -1) {
+                // console.log(i);
+                e.target.style.backgroundImage = 'url("' + window.URL.createObjectURL(i.getAsFile()) + '")';
+                e.target.classList.remove('unset');
+                e.target.blur();
+
+                return;
+            }
+        }
+    });
+}
+</script>
+</body>
+</html>
