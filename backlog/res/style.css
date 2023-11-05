@@ -24,6 +24,7 @@ html, body {
 }
 .box {
     background: grey;
+    color: #111;
     border: 4px outset darkgrey;
     width: 400px;
     margin: 1em;
@@ -31,8 +32,12 @@ html, body {
     text-align: center;
 }
 .box h2 {
+    color: #DDD;
     text-shadow: 0 0 4px black;
     margin: 0.25em 1ch;
+}
+.box p.i {
+    margin-top: 0;
 }
 .scroller {
     margin: auto;
@@ -68,9 +73,8 @@ html, body {
     cursor: help;
 }
 p.i {
-    color: #111;
     font-style: italic;
-    margin-top: 0;
+    text-align: center;
 }
 
 .game:hover, .game:focus {
