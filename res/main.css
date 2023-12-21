@@ -70,7 +70,7 @@ a.button:active, button:active {
     color: white;
 }
 
-main, footer {
+main, article, footer {
     max-width: 1280px;
     margin: auto;
     padding: 15px;
@@ -161,7 +161,7 @@ hr {
     border-radius: 0 !important;
 }
 
-main {
+main, article {
     padding-bottom: 4em;
 }
 footer {
