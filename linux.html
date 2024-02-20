@@ -15,7 +15,7 @@
 
     <link href="/res/main.css" rel="stylesheet" type="text/css"/>
     <link href="/res/side.css" rel="stylesheet" type="text/css"/>
-<style>
+    <style>
 nav {
     background: var(--off-black);
     padding: 8px;
@@ -23,24 +23,45 @@ nav {
     outline: 4px solid var(--off-black);
 }
 
-h2, h3 {
+h2, h3, .fakeh3 {
     margin-top:0;
 }
-h3, h4 {
+h3, h4, .fakeh3 {
     text-align:left;
 }
 h2 {
     color: var(--main); /* wait this looks awesome i might keep this */
 }
-h3 {
+h3, .fakeh3 {
     color: #F44;
+}
+.fakeh3 {
+    font-size: 1.75em;
+    margin: 0.25em 0;
+    font-weight: bold;
 }
 h4 {
     font-size: 1.15em;
     padding-left: 1.15ch;
     color: var(--accent);
 }
-</style>
+
+code.block {
+    display: block;
+    padding: 8px;
+    border: 2px groove #777;
+    font-size: 0.8em;
+    margin: 1em;
+}
+
+section.innerbox h3 {
+    margin-top: 2em;
+}
+
+img {
+    max-width: 100%;
+}
+    </style>
 </head>
 <body>
     <header>
@@ -60,6 +81,15 @@ h4 {
                 <li>Familiarity with the command line.</li>
             </ol>
         </section>
+        <section>
+            <h3>Changelog</h3>
+            <p class="small" style="font-style:italic;">Last updated <time datetime="2024-02-20">Feb 20, 2024</time></p>
+            <ul>
+                <li style="font-size:1.1em;font-weight:bold;margin-bottom:1em;">New solution: <a href="#fullscreen-games-freeze-xorg">On Xorg, Putting a game in fullscreen makes the whole system slow to a near-freeze until you Alt+Tab out</a>.</li>
+                <li>New code block design to increase visibility</li>
+                <li><a href="#steam-games-dont-work">After a fresh install, random Steam games fail to launch with cryptic, unsearchable error messages</a> now explains solutions for AMD users as well.</li>
+            </ul>
+        </section>
         <hr/>
         <nav>
             <h2>Table of Contents</h2>
@@ -78,6 +108,8 @@ h4 {
             <h3><a href="#Xorg">Xorg/X11</a></h3>
             <ul>
                 <li><a href="#xorg-conf-doesnt-apply">Edits to <code>xorg.conf</code> fail to apply, even though the file saves correctly and errors still make X11 exit</a></li>
+                <li><p style="margin-bottom:0.1em;"><a href="#fullscreen-games-freeze-xorg">On Xorg, Putting a game in fullscreen makes the whole system slow to a near-freeze until you Alt+Tab out</a></p>
+                <p class="small" style="margin-top:0.1em;">and also <a href="#fullscreen-games-freeze-xorg">Steam Remote Play fails to pick up hardware-accelerated games on Xorg</a></p></li>
                 <li><a href="#missing-video-modes">On an older DVI monitor, some video modes are completely missing</a></li>
             </ul>
         </nav>
@@ -129,11 +161,10 @@ h4 {
                         <li>Open up <code>/boot/EFI/refind/refind.conf</code></li>
                         <li>Search for "<code>extra_kernel_version_strings</code>"</li>
                         <li>If that line is commented out, uncomment it.</li>
-                        <li>Whatever is in there, make sure the last thing in the list is <code>linux</code> without anything else after it.<br/>
-                        <br/>
-                        Here's what mine is set to:<br/>
-                        <code style="font-size:12pt;">extra_kernel_version_strings linux-lts,linux-rt,linux-hardened,linux-zen,linux-rt-lts,linux</code></li>
+                        <li>Whatever is in there, make sure the last thing in the list is <code>linux</code> without anything else after it.</li>
                     </ol>
+                    <p>Here's what mine is set to:</p>
+                    <code class="block">extra_kernel_version_strings linux-rt-lts,linux-lts,linux-rt,linux-hardened,linux-zen,linux</code>
                     <p>While you're there, consider uncommenting the <code>fold_linux_kernels</code> option as well, which will split all your various flavors into individual bootable buttons instead of putting them all under one generic "Arch Linux" bootable option.</p>
                 </section>
             </section>
@@ -147,7 +178,7 @@ h4 {
                     <h4>Symptoms and relations:</h4>
                     <ul>
                         <li>You're on Arch Linux.</li>
-                        <li>You have an NVidia video card.</li>
+                        <li>You have a dedicated graphics video card.</li>
                         <li>You selected to install <code>steam</code> as an optional install package during your <code>archinstall</code> process.</li>
                         <li>SteamVR gives you "Error 308: A Component Is Not Working Correctly".</li>
                         <li>Capcom games crash with "ERR03: Failed to Initialize DirectX11".</li>
@@ -156,12 +187,17 @@ h4 {
                 <section>
                     <h4>What's happening?</h4>
                     <p>Valve wants all your games to run properly when you install Steam, so as a part of its package install process it will try to install proper packages as dependencies to run things like DXVK and 32-bit drivers for your hardware.</p>
-                    <p>During the <code>archinstall</code> process, though, it doesn't know anything about your hardware and will just assume you have an AMD card, installing the AMD drivers in the process.</p>
-                    <p>Needless to say, your NVidia card won't care at all about these AMD drivers.</p>
+                    <p>During the <code>archinstall</code> process, though, it doesn't know anything about your hardware and will just assume the correct graphics device, installing the AMD or Intel drivers in the process.</p>
+                    <p>Needless to say, your card won't care at all about these other drivers.</p>
                 </section>
                 <section>
                     <h4>How do I fix it?</h4>
-                    <p><code>pacman -S nvidia-utils lib32-nvidia-utils</code></p>
+                    <h5>For NVidia:</h5>
+                    <code class="block">pacman -S nvidia-utils lib32-nvidia-utils</code>
+                    <h5>For AMD:</h5>
+                    <p>Check the <a href="https://wiki.archlinux.org/title/AMDGPU" target="_self">Arch Wiki<img src="/res/external_link.svg" alt="(External)" class="linker" /></a> for specifics, but try one of these:</p>
+                    <code class="block">pacman -S vulkan-radeon lib32-vulkan-radeon && pacman -R amdvlk lib32-amdvlk</code>
+                    <code class="block">pacman -S amdvlk lib32-amdvlk && pacman -R vulkan-radeon lib32-vulkan-radeon</code>
                     <p>Pacman will complain that installing this will conflict with some other provider of <code>vulkan-driver</code> and <code>lib32-vulkan-driver</code>, just have it remove the other one and tell it everything is going to be okay.</p>
                 </section>
             </section>
@@ -190,8 +226,46 @@ h4 {
                     <p>Edit the files in <code>/etc/X11/mhwd.d/</code> instead, or at least go to the linked folder from there and make your own <code>conf</code> to activate with <code>mhwd</code>.</p>
                 </section>
             </section>
-            <br/><br/> <!-- Cry about it -->
-            <section>
+            <section class="innerbox">
+                <h3 id="fullscreen-games-freeze-xorg">On Xorg, Putting a game in fullscreen makes the whole system slow to a near-freeze until you Alt+Tab out</h3>
+                <div class="small" style="text-align:center;">And also:</div>
+                <div class="fakeh3"><span class="small">Steam Remote Play fails to pick up hardware-accelerated games on Xorg</span></div>
+                <section>
+                    <h4>Symptoms and relations:</h4>
+                    <ul>
+                        <li>You're on NVidia.</li>
+                        <li>You're using proprietary drivers.</li>
+                        <li>You're on Xorg.</li>
+                        <li>You turned display compositing off, either per-game or manually.</li>
+                        <li>Playing a game in fullscreen causes the entire system to immediately slow down so much it's almost like it froze.
+                            <ul>
+                                <li>Pressing Alt+Tab will resume the computer eventually like nothing happened.</li>
+                            </ul>
+                        </li>
+                        <li><code>oom_kill</code> does nothing.</li>
+                        <li>Making the game render in borderless windowed mode doesn't fix the problem.</li>
+                        <li>If you make the game windowed, and then position the window perfectly so the entirety of the monitor is taken up by the game, the system freezes.</li>
+                        <li>Turning on the compositor fixes the freeze but then the program lags.</li>
+                        <li>Steam Remote Play does not stream hardware-accelerated windows, but the program otherwise works fine.</li>
+                        <li>If the fullscreen game is in the background, everything is fine.</li>
+                        <li>Sometimes after updating your driver, X11 will completely crash on boot until you downgrade.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>What's happening?</h4>
+                    <p>Driver bug relating to the "force full composition pipeline" setting. Popped up in version 455 and comes back occasionally as a regression.</p>
+                </section>
+                <section>
+                    <h4>How do I fix it?</h4>
+                    <p>Open <code>nvidia-settings</code> and click "X Server Display Configuration".</p>
+                    <p>Click "Advanced..." to show the full display settings.</p>
+                    <p>For each monitor you have plugged in, switch to it with the dropdown labeled "Selection:" and uncheck the boxes labeled "Force Composition Pipeline" and "Force Full Composition Pipeline".</p>
+                    <div style="text-align:center"><img src="/res/linux/screenshot_2024-02-20_17-39-42.png" alt="Screenshot of the NVidia settings dialogue." /></div>
+                    <p>Click "Apply", and optionally save your <code>xorg.conf</code> with the "Save to X Configuration File" button.</p>
+                    <p>You may experience screen tearing. Don't buy an NVidia card next time.</p>
+                </section>
+            </section>
+            <section class="innerbox">
                 <h3 id="missing-video-modes">On an older DVI monitor, some video modes are completely missing</h3>
                 <section>
                     <h4>Symptoms and relations:</h4>
@@ -215,8 +289,10 @@ h4 {
                     <p>Pop open your <code>xorg.conf</code> or <a href="#xorg-conf-doesnt-apply">equivalent</a>.</p>
                     <p>You've probably <a href="https://download.nvidia.com/XFree86/Linux-x86_64/396.51/README/xconfigoptions.html" target="_blank">read in the NVidia docs<img src="/res/external_link.svg" alt="(External)" class="linker" /></a> that you should use options like <code>Option "ModeValidation" "NoEdidModes"</code> or <code>Option "UseEdidFreqs" "false"</code>.</p>
                     <p>These are wrong and the actual option isn't even in this part of the NVidia Docs. In fact, the first option straight up got deprecated without warning and doesn't work anymore. Computers are awesome <span class="small">(sarcasm)</span>.</p>
-                    <p>The actual option you want is this:<br/><code style="margin-left:1ch">Option "ModeValidation" "AllowNonEdidModes"</code></p>
-                    <p>In fact, it's probably not a good idea to enable that for every single monitor or you'd be flooded with possible resolutions. You can enable non-EDID modes for individual outputs like this:<br/><code style="margin-left:1ch">Option "ModeValidation" "DVI-D-0:AllowNonEdidModes"</code></p>
+                    <p>The actual option you want is this:</p>
+                    <code class="block">Option "ModeValidation" "AllowNonEdidModes"</code>
+                    <p>In fact, it's probably not a good idea to enable that for every single monitor or you'd be flooded with possible resolutions. You can enable non-EDID modes for individual outputs like this:</p>
+                    <code class="block">Option "ModeValidation" "DVI-D-0:AllowNonEdidModes"</code>
                     <p>You can get the names of your outputs from <code>xrandr</code>.</p>
                 </section>
             </section>
