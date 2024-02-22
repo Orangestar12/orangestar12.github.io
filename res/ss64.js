@@ -50,13 +50,8 @@ const topsites = [
 
 const bottomsites = [
     {
-        seed:"PCB",
-        displayName:"MyPCB",
-        prefix: '*'
-    },
-    {
-        seed:"namecheap",
-        displayName:"Namecheap"
+        seed:"gitlab",
+        displayName:"Gitlab"
     },
     {
         seed:"libera",
@@ -67,12 +62,17 @@ const bottomsites = [
         displayName:"Podverse"
     },
     {
-        seed:"modio",
-        displayName:"Mod.io"
+        seed:"PCB",
+        displayName:"MyPCB",
+        prefix: '*'
     },
     {
-        seed:"gitlab",
-        displayName:"Gitlab"
+        seed:"namecheap",
+        displayName:"Namecheap"
+    },
+    {
+        seed:"modio",
+        displayName:"Mod.io"
     },
     {
         seed:"stripe",
@@ -344,6 +344,7 @@ function update() {
     for (let site of bottomsites) {
         let select = bottomSite.querySelector('select');
         if (site.element) {
+            console.log(site.element);
             select.appendChild(site.element);
         }
     }
@@ -420,11 +421,13 @@ function init() {
         site.element.value = site.seed;
         site.element.textContent = site.displayName;
         select.appendChild(site.element);
+        site.priority = i;
+        i++;
     }
 
     update();
 
-    select.value = select.firstChild.value;
+    // select.value = select.firstChild.value;
 }
 
 sortType.addEventListener('change', update);
