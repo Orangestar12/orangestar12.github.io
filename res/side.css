@@ -40,6 +40,6 @@ code {
     border-radius: 4px;
 }
 
-li {
-    margin: 0.25em 0;
-}
+li { margin: 0.25em 0; }
+
+.i { font-style: italic; }
