@@ -15,6 +15,53 @@
 
     <link href="/res/main.css" rel="stylesheet" type="text/css"/>
     <link href="/res/side.css" rel="stylesheet" type="text/css"/>
+    <style>
+nav {
+    background: var(--off-black);
+    padding: 8px;
+    border: 2px solid black;
+    outline: 4px solid var(--off-black);
+}
+
+h2, h3, .fakeh3 {
+    margin-top:0;
+}
+h3, h4, .fakeh3 {
+    text-align:left;
+}
+h2 {
+    color: var(--main); /* wait this looks awesome i might keep this */
+}
+h3, .fakeh3 {
+    color: #F44;
+}
+.fakeh3 {
+    font-size: 1.75em;
+    margin: 0.25em 0;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1.15em;
+    padding-left: 1.15ch;
+    color: var(--accent);
+}
+
+code.block {
+    display: block;
+    padding: 8px;
+    border: 2px groove #777;
+    font-size: 0.8em;
+    margin: 1em;
+}
+
+section.innerbox h3 {
+    margin-top: 1.5em;
+}
+
+img {
+    max-width: 100%;
+}
+    </style>
 </head>
 <body>
     <header>
@@ -34,12 +81,32 @@
                 <li>Familiarity with the command line.</li>
             </ol>
         </section>
+        <section>
+            <h3>Changelog</h3>
+            <p class="small i">Last updated <time datetime="2024-02-27">February 27, 2024</time></p>
+            <ul>
+                <li style="font-size:1.1em;font-weight:bold;margin-bottom:1em;">
+                    <p>New solutions:</p>
+                    <ol>
+                        <li><a href="#proton-ignores-wineprefix">Proton does not respect the WINEPREFIX environment variable</a>.</li>
+                        <li><a href="#steam-cant-launch-proton-on-ntfs">Windows games on Steam fail to launch with no errors if they're on an NTFS or FAT filesystem</a></li>
+                    </ol>
+                </li>
+                <li>Issues now have a last-changed date, so you can scrutinize particularly old solutions.</li>
+                <li>I put more horizontal rules up because it was starting to get hard to see deliniation while scrolling.</li>
+            </ul>
+        </section>
         <hr/>
         <nav>
             <h2>Table of Contents</h2>
             <h3><a href="#Browsers">Browsers</a></h3>
             <ul>
                 <li><a href="#resizing-divs">HTML Elements on various websites randomly resize or reflow when you focus them</a></li>
+            </ul>
+            <h3><a href="#Games">Games</a></h3>
+            <ul>
+                <li><a href="#proton-ignores-wineprefix">Proton does not respect the WINEPREFIX environment variable</a></li>
+                <li><a href="#steam-cant-launch-proton-on-ntfs">Windows games on Steam fail to launch with no errors if they're on an NTFS or FAT filesystem</a></li>
             </ul>
             <h3><a href="#rEFInd">rEFInd</a></h3>
             <ul>
@@ -52,6 +119,8 @@
             <h3><a href="#Xorg">Xorg/X11</a></h3>
             <ul>
                 <li><a href="#xorg-conf-doesnt-apply">Edits to <code>xorg.conf</code> fail to apply, even though the file saves correctly and errors still make X11 exit</a></li>
+                <li><p style="margin-bottom:0.1em;"><a href="#fullscreen-games-freeze-xorg">On Xorg, Putting a game in fullscreen makes the whole system slow to a near-freeze until you Alt+Tab out</a></p>
+                <p class="small" style="margin-top:0.1em;">and also <a href="#fullscreen-games-freeze-xorg">Steam Remote Play fails to pick up hardware-accelerated games on Xorg</a></p></li>
                 <li><a href="#missing-video-modes">On an older DVI monitor, some video modes are completely missing</a></li>
             </ul>
         </nav>
@@ -59,8 +128,10 @@
         <section>
             <h2 id="Browsers">Browsers, Websites, and Extensions</h2>
             <p>This isn't Linux-specific, but it's worth documenting.</p>
+            <hr/>
             <section>
                 <h3 id="resizing-divs">HTML Elements on various websites randomly resize or reflow when you focus them</h3>
+                <p class="i">Last edited <time datetime="2023-10-15">October 15, 2023</time>.</p>
                 <section>
                     <h4>Symptoms and relations:</h4>
                     <ul>
@@ -79,9 +150,87 @@
         </section>
         <hr/>
         <section>
+            <h2 id="Games">Games</h2>
+            <hr/>
+            <section>
+                <h3 id="proton-ignores-wineprefix">Proton does not respect the WINEPREFIX environment variable</h3>
+                <p class="i">Last edited <time datetime="2024-02-27">February 27, 2024</time>.</p>
+                <p class="i">Thanks to <a href="https://askubuntu.com/a/1074816">David Foerster on Ask Ubuntu<img src="/res/external_link.svg" alt="(External)" class="linker" /></a>.</p>
+                <section>
+                    <h4>Symptoms and relations:</h4>
+                    <ul>
+                        <li>You're using Steam, or you have Proton installed and plan to use it for games.</li>
+                        <li>Setting the <code>WINEPREFIX</code> variable does not seem to have any effect on Proton.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>What's happening?</h4>
+                    <p>A couple of things.</p>
+                    <ol>
+                        <li>
+                            <p>Steam itself manages the WINEPREFIXes used by Proton when you launch a game through it. The Prefix will be stored in the same <code>/steamapps/</code> folder that your game is installed under, inside a folder named <code>/compatdata/</code>.</p>
+                            <img src="/res/linux/Screenshot_20240227_013224.png" alt="A screenshot of the steamapps folder, showing the compatdata folder highlighted and some example internals.">
+                            <p>The folders in here are all organized relative to the game's Steam App ID.</p>
+                            <ul>
+                                <li>Non-Steam games will use an automatically generated App ID.</li>
+                                <li>Games launched via Proton outside of steam will use a default folder named <code>/0/</code>.</li>
+                            </ul>
+                            <p>The folder contains relevant Proton information, and the prefix itself is under a child folder named <code>/pfx/</code>. There will also be backups of old, corrupted prefixes and custom-compiled versions of certain applications, such as GStreamer, in this folder.</p>
+                        </li>
+                        <li>
+                            <p>Proton is a Python-based wrapper around Wine, setting up game or engine-specific fixes as well as DXVK and managing the WINEPREFIX. Whatever you have the environment variable set to will be overwritten by Proton. Instead of just, you know, checking those environment variables and assuming good faith, Steam just made an entirely <em>new</em> set of environment variables for you to have to look up, and then didn't document them anywhere.</p>
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h4>How do I fix it?</h4>
+                    <p>The environment variable you <em>should</em> be changing is this:</p>
+                    <code class="block">STEAM_COMPAT_DATA_PATH</code>
+                    <p>This will create an entire Proton <code>compatdata</code> folder for you instead of a simple WINEPREFIX.</p>
+                    <p>If you'd like to use this with Steam, you'll need to set it as an "advanced launch option" with this syntax:</p>
+                    <code class="block">STEAM_COMPAT_DATA_PATH="/your/compatdata/path/here" %command%</code>
+                </section>
+            </section>
+            <hr/>
+            <section>
+                <h3>Windows games on Steam fail to launch with no errors if they're on an NTFS or FAT filesystem</h3>
+                <p class="i">Last edited <time datetime="2024-02-27">February 27, 2024</time>.</p>
+                <section>
+                    <h4>Symptoms and relations:</h4>
+                    <ul>
+                        <li>You installed a Steam game to an NTFS or FAT partition.</li>
+                        <li>Pressing launch in Steam causes Proton to immediately exit with no error.</li>
+                        <li>Setting the environment variable <code>PROTON_LOG=1</code> generates a log with no output beyond the boilerplate showing system and game information.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>What's happening?</h4>
+                    <p>I think this is a Wine thing? Largely, though, it's a "Unix permissions and NTFS permissions conflicting" thing, so it's not something Valve can just "patch out" without changing a lot of default settings. Basically, NTFS sucks.</p>
+                    <p>So this error is due to the location of the WINEPREFIX, or more specifically, the <a href="#proton-ignores-wineprefix">Proton <code>compatdata</code> path</a>, which is the Proton-specific variant of a WINEPREFIX.</p>
+                    <p>As far as I know, Wine works by translating a program's Win16 and Win32 API calls into equivalents for your Unix/POSIX compliant system. This means that it doesn't fully implement the Windows/NTFS permission system in your filesystem, it simply translates the existing Unix permissions system <em>into</em> the NTFS permission system on the fly.</p>
+                    <p>But the NTFS permission system is way more nuanced than the Unix system, and as a result some compromises have to be made when you mount an NTFS drive onto Linux. So when you have Steam try to run a game with Proton while its <code>compatdata</code> folder is <em>also</em> on that NTFS drive, then we're converting NTFS permissions into Unix permissions which are being fed into Wine and converted back into NTFS permissions. And if Windows/Wine/the Win32 app decides it needs to change those permissions on the filesystem... the whole system falls apart.</p>
+                </section>
+                <section>
+                    <h4>How do I fix it?</h4>
+                    <p>You've got a few options.</p>
+                    <h5>1. Use a different filesystem.</h5>
+                    <p>You can just go full scorched earth and replace the partition with an EXT one, or move the game to a different, non-NTFS partition.</p>
+                    <p>This is definitely the "I give up" approach.</p>
+                    <h5>2. Symlink your <code>compatdata</code> folder.</h5>
+                    <p>This is the technical option. Since the problem isn't with the location where the game is stored and is, instead, a problem with the location where the <em>WINEPREFIX</em> is stored, you can simply put the WINEPREFIX somewhere else with normal Unix permissions and it will run fine.</p>
+                    <p>If you don't know what symbolic linking is, read <a href="https://en.wikipedia.org/wiki/Symbolic_link" target="_blank">the Wikipedia Page on it<img src="/res/wikipedia.svg" alt="(Wikipedia)" class="linker"></a>.</p>
+                    <p>It can be tempting to want to symlink all of your <code>compatdata</code> folders to the main one you have at <code>~/.local/share/steam/steamapps/</code>, and that's a completely valid fix. I don't recommend it, though: Steam's built-in game mover thingy will throw an error that the files couldn't be moved if all of your <code>compatdata</code> folders are pointing to the same place - frustratingly, it will only error after it already tries moving the data, which takes a lot of time. This is because the last step in Steam's moving process is to try to move the <code>compatdata</code> folder. In this case, it will try moving the folder to... the place it currently exists at. This results in an error, and Steam will abort the whole process. It will even leave an orphaned folder that you will have to manually delete in the target <code>steamapps/common</code> folder.</p>
+                    <p>Instead, I recommend making a set of additional <code>compatdata</code> folders with conspicuous names in a folder not managed by Steam, and symlinking to those folders individually, so as not to cause these conflicts.</p>
+                </section>
+            </section>
+        </section>
+        <hr/>
+        <section>
             <h2 id="rEFInd">rEFInd</h2>
+            <hr/>
             <section>
                 <h3 id="refind-wrong-initramfs">rEFInd boots the wrong initramfs file for your kernel flavor</h3>
+                <p class="i">Last edited <time datetime="2023-10-13">October 13, 2023</time>.</p>
                 <section>
                     <h4>Symptoms and relations:</h4>
                     <ul>
@@ -103,11 +252,10 @@
                         <li>Open up <code>/boot/EFI/refind/refind.conf</code></li>
                         <li>Search for "<code>extra_kernel_version_strings</code>"</li>
                         <li>If that line is commented out, uncomment it.</li>
-                        <li>Whatever is in there, make sure the last thing in the list is <code>linux</code> without anything else after it.<br/>
-                        <br/>
-                        Here's what mine is set to:<br/>
-                        <code style="font-size:12pt;">extra_kernel_version_strings linux-lts,linux-rt,linux-hardened,linux-zen,linux-rt-lts,linux</code></li>
+                        <li>Whatever is in there, make sure the last thing in the list is <code>linux</code> without anything else after it.</li>
                     </ol>
+                    <p>Here's what mine is set to:</p>
+                    <code class="block">extra_kernel_version_strings linux-rt-lts,linux-lts,linux-rt,linux-hardened,linux-zen,linux</code>
                     <p>While you're there, consider uncommenting the <code>fold_linux_kernels</code> option as well, which will split all your various flavors into individual bootable buttons instead of putting them all under one generic "Arch Linux" bootable option.</p>
                 </section>
             </section>
@@ -115,13 +263,15 @@
         <hr/>
         <section>
             <h2 id="Vulkan">Vulkan</h2>
+            <hr/>
             <section>
                 <h3 id="steam-games-dont-work">After a fresh install, random Steam games fail to launch with cryptic, unsearchable error messages</h3>
+                <p class="i">Last edited <time datetime="2024-02-27">February 20, 2024</time>.</p>
                 <section>
                     <h4>Symptoms and relations:</h4>
                     <ul>
                         <li>You're on Arch Linux.</li>
-                        <li>You have an NVidia video card.</li>
+                        <li>You have a dedicated graphics video card.</li>
                         <li>You selected to install <code>steam</code> as an optional install package during your <code>archinstall</code> process.</li>
                         <li>SteamVR gives you "Error 308: A Component Is Not Working Correctly".</li>
                         <li>Capcom games crash with "ERR03: Failed to Initialize DirectX11".</li>
@@ -130,12 +280,17 @@
                 <section>
                     <h4>What's happening?</h4>
                     <p>Valve wants all your games to run properly when you install Steam, so as a part of its package install process it will try to install proper packages as dependencies to run things like DXVK and 32-bit drivers for your hardware.</p>
-                    <p>During the <code>archinstall</code> process, though, it doesn't know anything about your hardware and will just assume you have an AMD card, installing the AMD drivers in the process.</p>
-                    <p>Needless to say, your NVidia card won't care at all about these AMD drivers.</p>
+                    <p>During the <code>archinstall</code> process, though, it doesn't know anything about your hardware and will just assume the correct graphics device, installing the AMD or Intel drivers in the process.</p>
+                    <p>Needless to say, your card won't care at all about these other drivers.</p>
                 </section>
                 <section>
                     <h4>How do I fix it?</h4>
-                    <p><code>pacman -S nvidia-utils lib32-nvidia-utils</code></p>
+                    <h5>For NVidia:</h5>
+                    <code class="block">pacman -S nvidia-utils lib32-nvidia-utils</code>
+                    <h5>For AMD:</h5>
+                    <p>Check the <a href="https://wiki.archlinux.org/title/AMDGPU" target="_self">Arch Wiki<img src="/res/external_link.svg" alt="(External)" class="linker" /></a> for specifics, but try one of these:</p>
+                    <code class="block">pacman -S vulkan-radeon lib32-vulkan-radeon && pacman -R amdvlk lib32-amdvlk</code>
+                    <code class="block">pacman -S amdvlk lib32-amdvlk && pacman -R vulkan-radeon lib32-vulkan-radeon</code>
                     <p>Pacman will complain that installing this will conflict with some other provider of <code>vulkan-driver</code> and <code>lib32-vulkan-driver</code>, just have it remove the other one and tell it everything is going to be okay.</p>
                 </section>
             </section>
@@ -143,8 +298,10 @@
         <hr/>
         <section>
             <h2 id="Xorg">Xorg/X11</h2>
+            <hr/>
             <section>
                 <h3 id="xorg-conf-doesnt-apply">Edits to <code>xorg.conf</code> fail to apply, even though the file saves correctly and errors still make X11 exit</h3>
+                <p class="i">Last edited <time datetime="2023-10-13">October 13, 2023</time>.</p>
                 <section>
                     <h4>Symptoms and relations:</h4>
                     <ul>
@@ -164,9 +321,51 @@
                     <p>Edit the files in <code>/etc/X11/mhwd.d/</code> instead, or at least go to the linked folder from there and make your own <code>conf</code> to activate with <code>mhwd</code>.</p>
                 </section>
             </section>
-            <br/><br/> <!-- Cry about it -->
-            <section>
+            <hr/>
+            <section class="innerbox">
+                <h3 id="fullscreen-games-freeze-xorg">On Xorg, Putting a game in fullscreen makes the whole system slow to a near-freeze until you Alt+Tab out</h3>
+                <div class="small" style="text-align:center;">And also:</div>
+                <div class="fakeh3"><span class="small">Steam Remote Play fails to pick up hardware-accelerated games on Xorg</span></div>
+                <p class="i">Last edited <time datetime="2024-02-27">February 20, 2024</time>.</p>
+                <section>
+                    <h4>Symptoms and relations:</h4>
+                    <ul>
+                        <li>You're on NVidia.</li>
+                        <li>You're using proprietary drivers.</li>
+                        <li>You're on Xorg.</li>
+                        <li>You turned display compositing off, either per-game or manually.</li>
+                        <li>Playing a game in fullscreen causes the entire system to immediately slow down so much it's almost like it froze.
+                            <ul>
+                                <li>Pressing Alt+Tab will resume the computer eventually like nothing happened.</li>
+                            </ul>
+                        </li>
+                        <li><code>oom_kill</code> does nothing.</li>
+                        <li>Making the game render in borderless windowed mode doesn't fix the problem.</li>
+                        <li>If you make the game windowed, and then position the window perfectly so the entirety of the monitor is taken up by the game, the system freezes.</li>
+                        <li>Turning on the compositor fixes the freeze but then the program lags.</li>
+                        <li>Steam Remote Play does not stream hardware-accelerated windows, but the program otherwise works fine.</li>
+                        <li>If the fullscreen game is in the background, everything is fine.</li>
+                        <li>Sometimes after updating your driver, X11 will completely crash on boot until you downgrade.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>What's happening?</h4>
+                    <p>Driver bug relating to the "force full composition pipeline" setting. Popped up in version 455 and comes back occasionally as a regression.</p>
+                </section>
+                <section>
+                    <h4>How do I fix it?</h4>
+                    <p>Open <code>nvidia-settings</code> and click "X Server Display Configuration".</p>
+                    <p>Click "Advanced..." to show the full display settings.</p>
+                    <p>For each monitor you have plugged in, switch to it with the dropdown labeled "Selection:" and uncheck the boxes labeled "Force Composition Pipeline" and "Force Full Composition Pipeline".</p>
+                    <div style="text-align:center"><img src="/res/linux/screenshot_2024-02-20_17-39-42.png" alt="Screenshot of the NVidia settings dialogue." /></div>
+                    <p>Click "Apply", and optionally save your <code>xorg.conf</code> with the "Save to X Configuration File" button.</p>
+                    <p>You may experience screen tearing. Don't buy an NVidia card next time.</p>
+                </section>
+            </section>
+            <hr/>
+            <section class="innerbox">
                 <h3 id="missing-video-modes">On an older DVI monitor, some video modes are completely missing</h3>
+                <p class="i">Last edited <time datetime="2023-10-13">October 13, 2023</time>.</p>
                 <section>
                     <h4>Symptoms and relations:</h4>
                     <ul>
@@ -189,8 +388,10 @@
                     <p>Pop open your <code>xorg.conf</code> or <a href="#xorg-conf-doesnt-apply">equivalent</a>.</p>
                     <p>You've probably <a href="https://download.nvidia.com/XFree86/Linux-x86_64/396.51/README/xconfigoptions.html" target="_blank">read in the NVidia docs<img src="/res/external_link.svg" alt="(External)" class="linker" /></a> that you should use options like <code>Option "ModeValidation" "NoEdidModes"</code> or <code>Option "UseEdidFreqs" "false"</code>.</p>
                     <p>These are wrong and the actual option isn't even in this part of the NVidia Docs. In fact, the first option straight up got deprecated without warning and doesn't work anymore. Computers are awesome <span class="small">(sarcasm)</span>.</p>
-                    <p>The actual option you want is this:<br/><code style="margin-left:1ch">Option "ModeValidation" "AllowNonEdidModes"</code></p>
-                    <p>In fact, it's probably not a good idea to enable that for every single monitor or you'd be flooded with possible resolutions. You can enable non-EDID modes for individual outputs like this:<br/><code style="margin-left:1ch">Option "ModeValidation" "DVI-D-0:AllowNonEdidModes"</code></p>
+                    <p>The actual option you want is this:</p>
+                    <code class="block">Option "ModeValidation" "AllowNonEdidModes"</code>
+                    <p>In fact, it's probably not a good idea to enable that for every single monitor or you'd be flooded with possible resolutions. You can enable non-EDID modes for individual outputs like this:</p>
+                    <code class="block">Option "ModeValidation" "DVI-D-0:AllowNonEdidModes"</code>
                     <p>You can get the names of your outputs from <code>xrandr</code>.</p>
                 </section>
             </section>

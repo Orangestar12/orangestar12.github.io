@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Backlog | Orangestar</title>
+    <link rel="icon" type="image/png" href="/starvatar.png">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+
+    <meta property="og:title" content="The Backlog">
+    <meta property="og:description" content="Because we all have games we're sitting on." />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.orangestar.dev/starvatar.png" />
+    <meta property="og:url" content="https://www.orangestar.dev/backlog/index.html" />
+    <meta name="theme-color" content="#FF7700">
+
+    <!-- <link href="main.css" rel="stylesheet" type="text/css"/> -->
+    <link href="./res/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <p class="i">Items with more information have a red border. Tap them to view.</p>
+    <div class="flex">
+        <div class="box" id="pipe">
+            <h2>In the Pipe</h2>
+            <p class="i">Most likely to play next at bottom.</p>
+            <div class="scroller">
+                <div class="game" tabindex="0" style="background-image:url('./res/teardown.jpg')"><p class="header">Teardown</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/sam-and-max-106.jpg')"><p class="header">Sam & Max 105: Reality 2.0</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/sam-and-max-105.jpg')"><p class="header">Sam & Max 106: Bright Side of the Moon</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/homeworld.jpg')"><p class="header">Homeworld: Remastered Collection</p></div>
+                <div class="game info" tabindex="0" style="background-image:url('./res/burnout-paradise.jpg')">
+                    <p class="header">Burnout Paradise: Remastered</p>
+                    <p>If they fix the fucking bugs maybe I can actually play it.</p>
+                </div>
+                <div class="game" tabindex="0" style="background-image:url('./res/ssz.jpg')"><p class="header">Strike Suit Zero</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/strife.jpg')"><p class="header">Strife: Veteran Edition</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/postal-redux.jpg')"><p class="header">Postal Redux</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/halo.jpg')"><p class="header">Halo: Combat Evolved</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/halo-2.jpg')"><p class="header">Halo 2</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/halo-3.jpg')"><p class="header">Halo 3</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/halo-reach.jpg')"><p class="header">Halo: Reach</p></div>
+            </div>
+        </div>
+        <div class="box" id="reliant">
+            <h2>Reliant on Friends</h2>
+            <p class="i">Games in this box are being played with friends, so completing them is reliant on their availability.</p>
+            <div class="scroller">
+                <div class="game" tabindex="0" style="background-image:url('./res/grounded.jpg')"><p class="header">Grounded</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/monaco.jpg')"><p class="header">Moncao</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/serious-sam-the-first-encounter.jpg')"><p class="header">Serious Sam HD: The First Encounter</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/strange-brigade.jpg')"><p class="header">Strange Brigade</p></div>
+            </div>
+        </div>
+    </div>
+    <div><p style="text-align:center;font-size:20pt;">⬇️</p></div>
+    <div class="flex">
+        <div class="box" id="burning">
+            <h2>Burning Through</h2>
+            <p class="i">Most recently played at bottom.</p>
+            <div class="scroller">
+                <div class="game" tabindex="0" style="background-image:url('./res/the-silver-case.jpg')"><p class="header">The Silver Case</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/ZeroRanger.jpg')"><p class="header">ZeroRanger</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/rain-world.jpg')"><p class="header">Rain World</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/outer-wilds.jpg')"><p class="header">Outer Wilds</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/monster-hunter-world-iceborn.jpg')"><p class="header">Monster Hunter: World: Iceborn</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/resident-evil-2-2019.jpg')"><p class="header">Resident Evil 2 (2019)</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/sam-and-max-104.jpg')"><p class="header">Sam & Max 104: Abe Lincoln Must Die!</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/metal-hellsinger.jpg')"><p class="header">Metal: Hellsinger</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/faerie-solitaire-remastered.jpg')"><p class="header">Faerie Solitaire Remastered</p></div>
+            </div>
+        </div>
+        <div style="font-size:20pt">🔁</div>
+        <div class="box" id="backburner">
+            <h2>On the Backburner</h2>
+            <p class="i">Most recently paused at bottom.</p>
+            <div class="scroller">
+                <div class="game" tabindex="0" style="background-image:url('./res/grim-fandango.jpg')"><p class="header">Grim Fandango Remastered</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/ty2.jpg')"><p class="header">Ty the Tasmanian Tiger 2: Bush Rescue</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/planescape-torment.jpg')"><p class="header">Planescape: Torment</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/amid-evil.jpg')"><p class="header">Amid Evil</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/yakuza-0.jpg')"><p class="header">Yakuza 0</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/sonic-frontiers.jpg')"><p class="header">Sonic Frontiers</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/pizza-tower.jpg')"><p class="header">Pizza Tower</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/spyro-reignited.jpg')"><p class="header">Spyro Reignited Trilogy</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/street-fighter-6.jpg')"><p class="header">Street Fighter 6 (World Tour)</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/vlr.jpg')"><p class="header">Virtue's Last Reward</p></div>
+                <div class="game info" tabindex="0" style="background-image:url('./res/dmc5.jpg')">
+                    <p class="header">Devil May Cry V</p>
+                    <p>Beat it once already on PS4, but I have a PC copy now too.</p>
+                </div>
+                <div class="game" tabindex="0" style="background-image:url('./res/distance.jpg')"><p class="header">Distance</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/synthetik.jpg')"><p class="header">SYNTHETIK</p></div>
+                <div class="game info" tabindex="0" style="background-image:url('./res/terminal-velocity.jpg')">
+                    <p class="header">Terminal Velocity</p>
+                    <p>So I was playing this game, right? And then they suddenly out of nowhere released a remastered version, right? And the remastered version COMPLETELY BROKE compatibility with my HOTAS.</p>
+                </div>
+                <div class="game info" tabindex="0" style="background-image:url('./res/sonic-mania.jpg')">
+                    <p class="header">Sonic Mania</p>
+                    <p>LOOK THE FINAL BOSS IS HARD OKAY</p>
+                </div>
+                <div class="game" tabindex="0" style="background-image:url('./res/ultrakill.jpg')"><p class="header">ULTRAKILL</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/puyo-puyo-tetris-2.jpg')"><p class="header">Puyo Puyo Tetris 2</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/fallout-new-vegas.jpg')"><p class="header">Fallout: New Vegas</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/oddworld-abes-oddysee.jpg')"><p class="header">Oddworld: Abe's Oddysee</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/sunset-overdrive.jpg')"><p class="header">Sunset Overdrive</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/edna-and-harvey.jpg')"><p class="header">Edna & Harvey: The Breakout</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/time-gentlemen-please.jpg')"><p class="header">Time Gentlemen, Please!</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/pop-tsot.jpg')"><p class="header">Prince of Persia: The Sands of Time</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/duke-nukem-3d.jpg')"><p class="header">Duke Nukem 3D: Megaton Edition</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/sublevel-zero.jpg')"><p class="header">Sublevel Zero: Redux</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/bloodstained-cotm.jpg')"><p class="header">Bloodstained: Curse of the Moon</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/bunny-must-die.jpg')"><p class="header">Bunny Must Die! Chelsea and the 7 Devils</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/saints-row-2.jpg')"><p class="header">Saints Row 2</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/space-marine.jpg')"><p class="header">Warhammer 40,000: Space Marine</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/remember-me.jpg')"><p class="header">Remember Me</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/sonic-adventure-2.jpg')"><p class="header">Sonic Adventure 2</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/sonic-cd.jpg')"><p class="header">Sonic CD</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/doorkickers.jpg')"><p class="header">Doorkickers</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/shelter-2.jpg')"><p class="header">Shelter 2</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/metronomicon.jpg')"><p class="header">The Metronomicon: Slay the Dance Floor</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/brutal-legend.jpg')"><p class="header">Brütal Legend</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/quake-4.jpg')"><p class="header">Quake 4</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/postal-2-paradise-lost.jpg')"><p class="header">Postal 2: Paradise Lost</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/rott13.jpg')"><p class="header">Rise of the Triad (2013)</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/postal.jpg')"><p class="header">Postal</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/dark-souls.jpg')"><p class="header">Dark Souls: Prepare to Die Edition</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/ihnmaims.jpg')"><p class="header">I Have No Mouth, and I Must Scream</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/command-and-conquer-remastered-collection.jpg')"><p class="header">Command & Conquer: Remastered Collection</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/alice-madness-returns.jpg')"><p class="header">Alice: Madness Returns</p></div>
+            </div>
+        </div>
+    </div>
+    <p style="text-align:center;font-size:20pt;">⬇️</p>
+    <div class="flex">
+        <div class="box" id="cooked">
+            <h2>Cooked</h2>
+            <p class="i">Most recently completed at top.</p>
+            <div class="scroller from-top">
+                <div class="game" tabindex="0" style="background-image:url('./res/bomb-rush-cyberfunk.jpg')"><p class="header">Bomb Rush Cyberfunk</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/darwinia.jpg')"><p class="header">Darwinia</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/ty1.jpg')"><p class="header">Ty the Tasmanian Tiger</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/stanley-ultra-delux.jpg')"><p class="header">The Stanley Parable: Ultra Deluxe</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/the-murder-of-sonic-the-hedgehog.jpg')"><p class="header">The Murder of Sonic the Hedgehog</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/monster-hunter-world.jpg')"><p class="header">Monster Hunter: World</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/hacknet.jpg')"><p class="header">Hacknet</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/999.png')"><p class="header">999: 9 Hours, 9 Persons, 9 Doors</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/puzzle-agent-2.jpg')"><p class="header">Puzzle Agent 2</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/tetris-effect.jpg')"><p class="header">Tetris Effect</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/hypnospace-outlaw.jpg')"><p class="header">Hypnospace Outlaw</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/inscryption.jpg')"><p class="header">Inscryption</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/dnftm.jpg')"><p class="header">Do Not Feed The Monkeys</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/puzzle-agent.jpg')"><p class="header">Puzzle Agent</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/dusk.jpg')"><p class="header">Dusk</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/danganronpa-v3.jpg')"><p class="header">Danganronpa V3: Goodbye Despair</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/obduction.jpg')"><p class="header">Obduction</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/puyo-puyo-tetris.jpg')"><p class="header">Puyo Puyo Tetris</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/a-hat-in-time.jpg')"><p class="header">A Hat In Time</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/the-magic-circle.jpg')"><p class="header">The Magic Circle</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/high-hell.jpg')"><p class="header">High Hell</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/psychonauts.jpg')"><p class="header">Psychonauts</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/jsr.jpg')"><p class="header">Jet Set Radio</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/postal-2.jpg')"><p class="header">Postal 2</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/danganronpa-2.jpg')"><p class="header">Danganronpa 2: Goodbye Despair</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/left-4-dead-2.jpg')"><p class="header">Left 4 Dead 2</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/deponia.jpg')"><p class="header">Deponia</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/danganronpa.jpg')"><p class="header">Danganronpa: Trigger Happy Havoc!</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/borderlands-presequel.jpg')"><p class="header">Borderlands: The Pre-Sequel!</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/ben-there-dan-that.jpg')"><p class="header">Ben There, Dan That!</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/hotline-miami-2.jpg')"><p class="header">Hotline Miami 2: Wrong Number</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/borderlands-2.jpg')"><p class="header">Borderlands 2</p></div>
+                <div class="game info" tabindex="0" style="background-image:url('./res/bubsy.jpg')">
+                    <p class="header">Bubsy Two-Fur</p>
+                    <p><a href="https://steamcommunity.com/id/Orangestar1/recommended/426630/">See the Steam Review</a></p>
+                    <p>I was dared to beat it and I did. Don't test me.</p>
+                </div>
+                <div class="game" tabindex="0" style="background-image:url('./res/spec-ops-the-line.jpg')"><p class="header">Spec Ops: The Line</p></div>
+                <div class="game info" tabindex="0" style="background-image:url('./res/hover.jpg')">
+                    <p class="header">Hover</p>
+                    <p><a href="https://steamcommunity.com/id/Orangestar1/recommended/280180/">See the Steam Review</a></p>
+                </div>
+                <div class="game" tabindex="0" style="background-image:url('./res/eye-divine-cybermancy.jpg')"><p class="header">E.Y.E: Divine Cybermancy</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/pony-island.jpg')"><p class="header">Pony Island</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/jazzpunk.jpg')"><p class="header">Jazzpunk</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/saints-row-4.jpg')"><p class="header">Saints Row 4</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/saints-row-the-third.jpg')"><p class="header">Saints Row: The Third</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/hotline-miami.jpg')"><p class="header">Hotline Miami</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/shelter.jpg')"><p class="header">Shelter</p></div>
+                <div class="game info" tabindex="0" style="background-image:url('./res/vvvvvv.jpg')">
+                    <p class="header">VVVVVV</p>
+                    <p><a href="https://steamcommunity.com/id/Orangestar1/recommended/70300/">See the Steam Review</a></p>
+                </div>
+                <div class="game info" tabindex="0" style="background-image:url('./res/asamu.jpg')">
+                    <p class="header">A Story About My Uncle</p>
+                    <p><a href="https://steamcommunity.com/id/Orangestar1/recommended/278360/">See the Steam Review</a></p>
+                </div>
+                <div class="game" tabindex="0" style="background-image:url('./res/organ-trail.jpg')"><p class="header">Organ Trail</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/undertale.jpg')"><p class="header">Undertale</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/portal-2.jpg')"><p class="header">Portal 2</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/duke-nukem-forever.jpg')"><p class="header">Duke Nukem Forever</p></div>
+                <div class="game info" tabindex="0" style="background-image:url('./res/kairo.jpg')">
+                    <p class="header">Kairo</p>
+                    <p><a href="https://steamcommunity.com/id/Orangestar1/recommended/233230/">See the Steam Review</a></p>
+                </div>
+                <div class="game" tabindex="0" style="background-image:url('./res/left-4-dead.jpg')"><p class="header">Left 4 Dead</p></div>
+                <div class="game" tabindex="0" style="background-image:url('./res/portal.jpg')"><p class="header">Portal</p></div>
+            </div>
+        </div>
+        <div class="box" id="Abandoned">
+            <h2>Abandoned</h2>
+            <p class="i">Most recently abandoned at top.</p>
+            <div class="scroller from-top">
+                <div class="game info" tabindex="0" style="background-image:url('./res/danganronpaudr.jpg')">
+                    <p class="header">Danganronpa Another Episode: Ultra Despair Girls</p>
+                    <p><span class="reason">Abandoned because:</span> If a series known for messing with your relationship to whodunit victims has no whodunit victims, the game sucks. Who knew?!</p>
+                </div>
+                <div class="game info" tabindex="0" style="background-image:url('./res/doom-eternal.jpg')">
+                    <p class="header">DOOM Eternal</p>
+                    <p><a href="https://steamcommunity.com/id/Orangestar1/recommended/782330">See the Steam Review</a></p>
+                    <p><span class="reason">Abandoned because:</span> if I play another fucking shooter with untelegraphed teleporting enemy spawns I'm going to lose it.</p>
+                </div>
+                <div class="game info" tabindex="0" style="background-image:url('./res/re5.jpg')">
+                    <p class="header">Resident Evil 5</p>
+                    <p><span class="reason">Abandoned because:</span> Savegame glitched on the final boss fight with Wesker.</p>
+                </div>
+                <div class="game info" tabindex="0" style="background-image:url('./res/oneshot.jpg')">
+                    <p class="header">OneShot</p>
+                    <p><span class="reason">Abandoned because:</span> Constantly bothered by people to finish it as the plot steadily got worse and worse.</p>
+                </div>
+                <div class="game info" tabindex="0" style="background-image:url('./res/NOT-A-HERO.jpg')">
+                    <p class="header">NOT A HERO</p>
+                    <p><span class="reason">Abandoned because:</span> the game is NOT GOOD LMAO.</p>
+                </div>
+                <div class="game info" tabindex="0" style="background-image:url('./res/super-meat-boy.jpg')">
+                    <p class="header">Super Meat Boy</p>
+                    <p><span class="reason">Abandoned because:</span> so this was the game where I found out I actually don't like uber-hard plotless platformers.</p>
+                </div>
+                <div class="game info" tabindex="0" style="background-image:url('./res/bastion.jpg')">
+                    <p class="header">Bastion</p>
+                    <p><span class="reason">Abandoned because:</span> Dunno! Game didn't really grip me.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="q">
+        <h1>Qs</h1>
+        <h2>Why isn't this on Backloggery/Backloggd?</h2>
+        <p>I have a Backloggery account, but I always forget it exists, so I did this instead.</p>
+    </div>
+</body>
+</html>
