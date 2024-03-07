@@ -3,7 +3,7 @@ header {
     text-shadow: 1px 1px rgba(0,0,0,0.5);
     padding: 1em 1ch 0.25em;
 }
-header a, header a:visited {
+header a, header a:visited, header time {
     color: white;
     text-decoration: none;
     font-style: italic;
@@ -11,6 +11,13 @@ header a, header a:visited {
 header h1 {
     padding: 0;
     margin: 0;
+}
+
+header time {
+    text-align: center;
+    display: block;
+    margin: 0.25em;
+    font-size: 0.85em;
 }
 
 nav {
