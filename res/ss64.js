@@ -67,6 +67,10 @@ const bottomsites = [
         prefix: '*'
     },
     {
+        seed:"authy",
+        displayName:"Authy"
+    },
+    {
         seed:"namecheap",
         displayName:"Namecheap"
     },
