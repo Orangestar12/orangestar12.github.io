@@ -154,7 +154,7 @@ const bottomsites = [
         displayName:"Authy"
     },
     {
-        seed:"sony",
+        seed:"SONY",
         displayName:"Sony"
     },
     {
