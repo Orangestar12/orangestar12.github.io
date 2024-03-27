@@ -278,6 +278,11 @@ const bottomsites = [
         seed:"cerner",
         displayName:"Cerner Careers",
         suffix: '.'
+    },
+    {
+        seed:"mohealthnet",
+        displayName:"MyMOHealthNet",
+        suffix: '*'
     }
 ];
 
