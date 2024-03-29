@@ -79,6 +79,10 @@ const bottomsites = [
         displayName:"Mod.io"
     },
     {
+        seed:"caracal.club",
+        displayName:"caracal.club"
+    },
+    {
         seed:"stripe",
         displayName:"Stripe payments"
     },
