@@ -2,15 +2,15 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Keep On Gaming LLC Review | Orangestar</title>
+    <title>Articles | Orangestar</title>
     <link rel="icon" type="image/png" href="/starvatar.png">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
-    <meta property="og:title" content="Android Flight Icons" />
-    <meta property="og:description" content="Additional icons for the Android theme &quot;Flight&quot;.">
+    <meta property="og:title" content="Articles | Orangestar" />
+    <meta property="og:description" content="Sometimes I write stuff..">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.orangestar.dev/starvatar.png">
-    <meta property="og:url" content="https://www.orangestar.dev/assets/flight">
+    <meta property="og:url" content="https://www.orangestar.dev/articles/index.html">
     <meta name="theme-color" content="#FF7700">
 
     <link href="/res/main.css" rel="stylesheet" type="text/css"/>
@@ -19,63 +19,38 @@
 main {
     max-width: 720px;
 }
-nav {
-    background:none;border:none;outline:none;
-    border-left:2px solid var(--off-black);
-    padding:0 0 0 1ch;
-    margin: auto;
-}
-
-nav .box {
-    border-radius: 24px;
-    background: var(--off-black);
-    padding: 1em;
-    margin-bottom: 1em;
-    min-height: 100px;
-}
-
-.box p { margin:0; }
-
-.box > * { display:block; }
-.box > time {
-    font-size: 0.8em;
-    margin: 0.5em 0 0 1.5ch;
-}
-
-.box img {
-    width: auto;
-    height: 100px;
-    float: right;
-    margin-right: 16px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px 1px black;
-}
-
-nav a, nav a:visited {
-    text-decoration: none;
-    color: var(--foreground);
-}
-nav a:hover .box, nav a:focus .box {
-    background: #484848;
-    color: var(--accent);
-}
-nav a:active .box { color: var(--off-accent); }
     </style>
 </head>
 <body>
     <header>
         <h1>Articles</h1>
-        <p class="small"><a href="/">← Return to Main page</a></p>
+        <p class="small"><a href="..">← Return to Main page</a></p>
     </header>
     <main>
         <p>Sometimes, I write stuff. Click a button to read.</p>
-        <nav>
-            <a href="./2023-09-22-keep-on-gaming.html"><div class="box">
-                <img src=".\9-22-23-keep-on-gaming-assets\PXL_20230909_184833047_thumb.jpg" alt="">
-                <p>On Keep On Gaming LLC</p>
-                <time datetime="2023-09-22">Published September 22, 2024</time>
+        <h2>Living Articles</h2>
+        <p>These articles I originally listed as "Small Pages" on my main page. These are articles I will occasionally come back to so I can keep them modern and up to date.</p>
+        <nav class="modern">
+            <a href="/articles/live/linux.html"><div class="modern-nav-box">
+                <!-- <img src="/res/vr/payday_2.jpg" alt=""> -->
+                <p>Stupid Linux Garbage I Had To Search For And Troubleshoot</p>
+                <time datetime="2024-02-27" tz="America/Chicago">February 27, 2024</time>
             </div></a>
-            <a href="./2022-07-25-vrchat.html"><div class="box">
+            <a href="/articles/live/vr.html"><div class="modern-nav-box">
+                <img src="/res/vr/payday_2.jpg" alt="">
+                <p>Which games work for me on SteamVR for Linux?</p>
+                <time datetime="2023-09-07" tz="America/Chicago">September 7 2023</time>
+            </div></a>
+        </nav>
+        <h2>Published Articles</h2>
+        <p>These articles can be considered "Done". Any updates to these pages after their publishing date are clearly delineated with a bold "<b>Edit</b>" notifier, with the date of the amendation.</p>
+        <nav class="modern">
+            <!-- <a href="./2023-07-25-keep-on-gaming.html"><div class="modern-nav-box">
+                <img src="./9-22-23-keep-on-gaming-assets/PXL_20230909_184833047_thumb.jpg" alt="">
+                <p>About Keep On Gaming LLC</p>
+                <time datetime="2024">Published ??????, 2024</time>
+            </div></a> -->
+            <a href="./2022-07-25-vrchat.html"><div class="modern-nav-box">
                 Archives of my VRChat Steam review
                 <time datetime="2022-07-25">Published July 25, 2022</time>
             </div></a>

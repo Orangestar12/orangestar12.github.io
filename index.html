@@ -32,9 +32,10 @@
         <div class="centered">
             <a class="button" href="#social">Social stuff</a>
             <!-- <a class="button" href="https://orangestar.gumroad.com/">3D Models on Gumroad</a><br /> -->
-            <a class="button" href="./commissions">Commissions</a>
-            <a class="button" href="#small-pages">Small pages</a>
+            <!-- <a class="button" href="./commissions">Commissions</a> -->
+            <a class="button" href="#articles">Articles</a>
         </div>
+        <hr />
         <h2 id="social">Social Stuff</h2>
         <hr />
         <div class="flex">
@@ -89,7 +90,7 @@
         </div>
         <hr />
         <h3><img src="./res/icons/discord.svg" alt="Discord" height="50"></h3>
-        <div class="flex">
+        <div class="flex col wide" style="align-items:center;">
             <div class="card">
                 <div class="flex">
                     <div>
@@ -99,11 +100,10 @@
                         <p class="title">Account name</p>
                         <p style="margin-bottom:0">@Orangestar</p>
                         <p class="small">Previously Orangestar#1432</p>
-                        <p>I don't usually accept random friend requests. Fair warning.</p>
+                        <p>I'm usually wary of random friend requests. Fair warning.</p>
                     </div>
                 </div>
             </div>
-        </div><div class="flex">
             <a href="https://rutdiscord.github.io/"><div class="card">
                 <div class="flex">
                     <div>
@@ -122,25 +122,67 @@
                     </div>
                     <div>
                         <p class="title">Orangestar's Emote Server and Hangout</p>
-                        <p>A generic server I created, originally for emotes. Now it is a general gathering point. <span style="color:var(--accent);text-decoration:underline">Click to join.<img src="/res/external_link.svg" alt="(External)" class="linker" /></span></p>
+                        <p>A generic server I created, originally for emotes. This server is generally unused and usually people only join it to try to convince me to unban them from the aforementioned R/Undertale server, or because they're instigating in a parasocial relationship with me as a result of owning the aforementioned server.</p>
+                        <p>Don't let this deter you if you want to use this to contact me directly without going through E-Mail or praying I accept a random FR.</p>
+                        <p><span style="color:var(--accent);text-decoration:underline">Click to join.<img src="/res/external_link.svg" alt="(External)" class="linker" /></span></p>
                     </div>
                 </div>
             </div></a>
         </div>
         <hr />
-        <h2 id="assets">Assets</h2>
+        <h2 id="articles"><a href="/articles/">Articles</a></h2>
         <hr />
-        <p><a href="./assets/flight">Additional icons for the Android icon theme "Flight".</a></p>
+        <p class="centered">Click the link above for a full list of articles.</p>
+        <h3>Recommended articles:</h3>
+        <nav class="modern">
+            <a href="/articles/live/linux.html"><div class="modern-nav-box">
+                <!-- <img src="/res/vr/payday_2.jpg" alt=""> -->
+                <p>Stupid Linux Garbage I Had To Search For And Troubleshoot</p>
+                <time datetime="2024-02-27" tz="America/Chicago">February 27, 2024</time>
+            </div></a>
+            <a href="/articles/live/vr.html"><div class="modern-nav-box">
+                <img src="/res/vr/payday_2.jpg" alt="">
+                <p>Which games work for me on SteamVR for Linux?</p>
+                <time datetime="2023-09-07" tz="America/Chicago">September 7 2023</time>
+            </div></a>
+        </nav>
         <hr />
-        <h2 id="small-pages">Small Pages</h2>
+        <h2 id="assets">Other Stuff I made</h2>
         <hr />
-        <p><a href="./mofumofu">A Biased and intermediate Mofumofu Sensen tier list.</a></p>
-        <p><a href="./fpsrankthing/">A ranking of FPS games, kinda.</a></p>
-        <p><a href="./vr">Which games work for me on SteamVR for Linux?</a></p>
-        <p><a href="./soundboard/">A very straightforward soundboard.</a></p>
-        <p><a href="./linux.html">Stupid Linux Garbage I Had To Search For And Troubleshoot</a></p>
+        <nav class="modern">
+            <a href="./assets/flight.html"><div class="modern-nav-box">
+                <img src="/res/assets/flight/screen2.jpg" alt="">
+                <p style="font-size: 1.25em">Additional icons for the Android icon theme "Flight".</p>
+            </div></a>
+            <a href="./soundboard/"><div class="modern-nav-box">
+                <img src="/soundboard/images/whocares.png" alt="">
+                <p style="font-size: 1.25em">A fairly straightforward JavaScript soundboard.</p>
+            </div></a>
+            <a href="./mofumofu.html"><div class="modern-nav-box">
+                <img src="/res/mofumofu/zig.png" alt="">
+                <p style="font-size: 1.25em">A Biased and intermediate Mofumofu Sensen tier list.</p>
+            </div></a>
+            <a href="./fpsrankthing/"><div class="modern-nav-box">
+                <img src="/fpsrankthing/boxart/tf2.jpg" alt="">
+                <p style="font-size: 1.25em">A ranking of FPS games, kinda.</p>
+            </div></a>
+        </nav>
+        <hr />
+        <h2 id="assets">Dumb stuff I spent too much time on</h2>
+        <p class="centered">and now I feel empty if I don't share them</p>
+        <hr />
+        <nav class="modern">
+            <a href="/ds.html"><div class="modern-nav-box">
+                <img src="/res/dsstar.png" alt="">
+                <p>My endgame stats from <i>Death Stranding</i>, edited into an accessible-text HTML page.</p>
+                <p class="small">I made this to post on Masto and provide accessible "alt text" for the screengrab. I worked too hard on the page's style.</p>
+            </div></a>
+            <a href="/ranker.html"><div class="modern-nav-box">
+                <p>A page that lets you make a screenshottable list of games that meet your interests. Inspired by a viral template image.</p>
+            </div></a>
+        </nav>
     </main>
     <footer>Unless otherwise stated, please assume all content on this website is licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0.<img src="/res/external_link.svg" alt="(External)" class="linker" /></a></footer>
-    <script async src="./res/quotegen.js"></script>
+    <script async src="/res/quotegen.js"></script>
 </body>
 </html>
