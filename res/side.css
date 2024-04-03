@@ -3,7 +3,7 @@ header {
     text-shadow: 1px 1px rgba(0,0,0,0.5);
     padding: 1em 1ch 0.25em;
 }
-header a, header a:visited {
+header a, header a:visited, header time {
     color: white;
     text-decoration: none;
     font-style: italic;
@@ -11,6 +11,43 @@ header a, header a:visited {
 header h1 {
     padding: 0;
     margin: 0;
+}
+
+header time {
+    text-align: center;
+    display: block;
+    margin: 0.25em;
+    font-size: 0.85em;
+}
+
+nav {
+    margin: 1em 0;
+    background: var(--off-black);
+    padding: 8px;
+    border: 2px solid black;
+    outline: 4px solid var(--off-black);
+}
+nav h2 {
+    margin: 0.25em 0;
+    padding-top:0;
+}
+
+h2, h3 {
+    margin: 0.5em 0;
+}
+h3, h4 {
+    text-align:left;
+}
+h2 {
+    color: var(--main); /* wait this looks awesome i might keep this */
+}
+h3 {
+    color: #F44;
+}
+h4 {
+    font-size: 1.15em;
+    padding-left: 1.15ch;
+    color: var(--accent);
 }
 
 #shots > div {
@@ -34,12 +71,121 @@ header h1 {
     flex: 1 1 0px; /* https://stackoverflow.com/questions/29503227/how-to-make-flexbox-items-the-same-size */
 }
 
+.float {
+    width:35vw;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 0 black;
+}
+
+.left {
+    float: left;
+    margin-right: 2ch;
+}
+.right {
+    float: right;
+    margin-left: 2ch;
+}
+
+strong {
+    color: var(--off-accent)
+}
+
+figure {
+    border-radius: 18px;
+    background: #181818;
+    box-shadow: 0 0 5px 0 black;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction:column;
+    max-width: 640px;
+    width: 75vw;
+    margin: auto;
+}
+figure > img, figure > a > img, figure iframe, figure > video {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.8em;
+    opacity: 0.7;
+    flex-basis: 0;
+    margin: .25em 0 0;
+}
+
+.define {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+.youtube-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 = 9/16 = .5625 */
+    width:100%; /* thanks, flexbox */
+}
+.youtube-wrapper > iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 500ms opacity;
+}
+/* .youtube-wrapper > iframe:hover,
+.youtube-wrapper > iframe:active,
+.youtube-wrapper > iframe:focus,
+.youtube-wrapper > iframe:target {
+    opacity: 1;
+} */
+
+blockquote {
+    border-left: 0.25ch solid var(--foreground);
+    margin-left: 4ch; padding-left: 1ch;
+    outline: 8px solid transparent;
+    font: 14pt sans-serif;
+}
+
 code {
     background: var(--off-black);
     padding: 0 0.5ch;
     border-radius: 4px;
 }
 
-li { margin: 0.25em 0; }
+li { margin: 0.75em 0; }
 
-.i { font-style: italic; }
+.scroller {
+    overflow-y: scroll;
+    background: var(--off-black);
+    box-shadow: 0 0 5px inset var(--black);
+    border-radius: 4px;
+}
+
+.scroller::-webkit-scrollbar {
+  width: 18px;
+}
+.scroller::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  background-color: #BBB;
+  border-radius: 12px;
+  border: 6px solid transparent;
+}
+
+aside, .aside {
+    font-size: 0.8em;
+    padding: 16px;
+    background: var(--off-black);
+    border-radius: 8px;
+    margin: 8px;
+}
+aside {
+    float: right;
+    max-width: 320px;
+}
+aside > *:first-child, .aside > *:first-child {margin-top:0;}
+aside > *:last-child, .aside > *:last-child {margin-bottom:0;}

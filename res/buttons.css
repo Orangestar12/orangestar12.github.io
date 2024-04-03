@@ -1,0 +1,116 @@
+.buttons {
+    display: inline-flex;
+    flex-wrap: nowrap;
+}
+
+/* all notated elements */
+.buttons > span {
+    width: 1.2em;
+    height: 1.2em;
+    padding: 2px;
+    text-align: center;
+    position: relative;
+    flex: 0 0 1.2em;
+}
+
+/* text */
+.buttons > .button > span {
+    transform-origin: left center;
+    display: inline-block;
+    line-height:1;
+}
+
+/* default button styles */
+.buttons > .button {
+    border-radius: 50%;
+    background-color: red;
+    z-index: 90;
+}
+
+/* superscript text */
+
+.buttons .superscript {
+    display: inline-block;
+    transform-origin: center top !important;
+    color: white;
+    text-shadow: 0 1px 1px black, -1px 0 1px black, 1px 0 1px black, 0 -1px 1px black,
+                 0 2px 1px black, -2px 0 1px black, 2px 0 1px black, 0 -2px 1px black;
+    overflow: hidden;
+}
+.buttons .unhooked {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: top center;
+    transform: translate(-50%, -20%) scale(30%, 50%);
+    z-index: 100;
+}
+
+/* button colors */
+
+.buttons > span.blue { background-color: blue; }
+.buttons > span.green { background-color: green; }
+.buttons > span.yellow {
+    background-color: yellow;
+    color: black;
+}
+.buttons > span.purple { background-color: purple; }
+.buttons > span.white {
+    background-color: white;
+    color: black;
+}
+.buttons > span.dust {
+    background-color: goldenrod;
+    color: black;
+}
+
+/* text size exceptions */
+/* sf notation */
+.buttons > .button > span.jab {
+    transform: translate(-1.5px, -2px);
+    font-size: 0.7em;
+}
+.buttons > .button > span.strong {
+    font-size: 0.3em;
+    font-weight: bold;
+    transform: translate(-1px, -6px);
+}
+.buttons > .button > span.fierce,
+.buttons > .button > span.short {
+    font-size:0.35em;
+    transform: translate(-1px, -5px);
+    font-weight: bold;
+}
+.buttons > .button > span.forward {
+    font-size: 0.25em;
+    transform: translate(-1px, -6px);
+    font-weight: bold;
+}
+.buttons > .button > span.roundhouse {
+    font-size: 0.3em;
+    font-weight: bold;
+    transform: translate(0px, -2px);
+}
+/* mk buttons */
+.buttons > .button > span.bl {
+    font-size:0.35em;
+    transform: translate(-0.5px, -5px);
+    font-weight: bold;
+}
+.buttons > .button > span.ru {
+    transform: translate(-1px, -2.5px);
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+/* universal layout */
+.buttons > .button > span.lp,
+.buttons > .button > span.lk,
+.buttons > .button > span.mp,
+.buttons > .button > span.mk,
+.buttons > .button > span.hp,
+.buttons > .button > span.hk,
+.buttons > .button > span.hs {
+    font-size: 0.85em;
+    transform: translate(0, -1px);
+}

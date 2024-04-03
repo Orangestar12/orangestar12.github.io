@@ -8,6 +8,7 @@ html {
     --off-black: #303030;
     --main: #F70;
     --accent: #7FF;
+    --off-accent: rgb(252, 152, 177);
     --foreground: white;
 
     background-color: var(--black);
@@ -69,10 +70,10 @@ a.button:active, button:active {
     color: white;
 }
 
-main, footer {
+main, article, footer {
     max-width: 1280px;
     margin: auto;
-    padding: 15px;
+    padding: 0 2ch;
 }
 
 h1, h2, h3, h4, h5, h6, .centered {
@@ -86,7 +87,12 @@ h1 {
 }
 h2 {
     font-size: 2.25em;
-    margin: 0.5em;
+    /* Dumb hack so clear:both; and margin collapse works right */
+    padding: 0 0.5em;
+    margin-bottom: 0.5em;
+    margin: 0;
+    padding-bottom: 0;
+    clear:both;
 }
 h3 {
     font-size: 1.75em;
@@ -99,6 +105,8 @@ p {
 
 a, a:visited {
     color: var(--accent);
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .flex {
@@ -128,6 +136,14 @@ div.card {
     box-shadow: 6px 6px 3px black;
 }
 
+div.wide {
+    max-width: 640px;
+    margin: auto;
+}
+.wide div.card {
+    max-width: 100%;
+}
+
 div.card img.thumb {
     width: 64px;
     height: auto;
@@ -154,8 +170,9 @@ hr {
     border-radius: 0 !important;
 }
 
-main {
+main, article {
     padding-bottom: 4em;
+    line-height: 1.35
 }
 footer {
     text-align: center;
@@ -176,3 +193,46 @@ img.linker {
     margin-left:0.35ch;
     filter: invert(0.5) sepia(1) saturate(5) hue-rotate(134deg);
 }
+
+
+nav.modern {
+    background:none;border:none;outline:none;
+    /* border-left:2px solid var(--off-black); */
+    /* padding:0 0 0 1ch; */
+    margin: auto;
+}
+
+.modern-nav-box {
+    border-radius: 24px;
+    background: var(--off-black);
+    padding: 1em;
+    margin-bottom: 1em;
+    min-height: 100px;
+}
+
+.modern-nav-box p { margin:0; }
+
+.modern-nav-box > * { display:block; }
+.modern-nav-box > time {
+    font-size: 0.8em;
+    margin: 0.5em 0 0 1.5ch;
+}
+
+.modern-nav-box img {
+    width: auto;
+    height: 100px;
+    float: right;
+    margin-right: 16px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 1px black;
+}
+
+nav.modern a, nav a:visited {
+    text-decoration: none;
+    color: var(--foreground);
+}
+nav.modern a:hover .modern-nav-box, nav.modern a:focus .modern-nav-box {
+    background: #484848;
+    color: var(--accent);
+}
+nav.modern a:active .modern-nav-box { color: var(--off-accent); }

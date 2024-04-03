@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.0"
+   width="128"
+   height="128"
+   id="svg14662"
+   sodipodi:version="0.32"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="youtube.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata87">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/GPL/2.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>STyx</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:source>none</dc:source>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Wikipedia</rdf:li>
+            <rdf:li>favicon</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:date>2007-06-26</dc:date>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>GFDL</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:description>W de Wikipédia</dc:description>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Inkscape</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/GPL/2.0/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/ShareAlike" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/SourceCode" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="1010"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#000000"
+     id="base"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="-26.693281"
+     inkscape:cy="81.847611"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:current-layer="g2036"
+     inkscape:showpageshadow="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:window-maximized="1" />
+  <defs
+     id="defs14664" />
+  <g
+     id="g2036"
+     transform="translate(0.999998,0)">
+    <path
+       id="path182"
+       class="style-scope yt-icon"
+       d="m 62.999249,19.967044 c 0,0 -39.340919,7.6e-5 -49.147884,2.630449 -5.4160469,1.449815 -9.6724157,5.70614 -11.1222303,11.122227 -2.63037431,9.806924 -2.63044986,30.280274 -2.63044986,30.280274 0,0 7.555e-5,20.473272 2.63044986,30.280279 1.4498146,5.416047 5.7061834,9.672677 11.1222303,11.122227 9.806965,2.63053 49.147884,2.63045 49.147884,2.63045 0,0 39.342821,8e-5 49.149401,-2.63045 5.41604,-1.44955 9.67265,-5.70618 11.12222,-11.122227 2.63052,-9.807007 2.63045,-30.280279 2.63045,-30.280279 0,0 -0.0106,-20.47335 -2.63045,-30.280274 -1.44957,-5.416087 -5.70618,-9.672412 -11.12222,-11.122227 -9.80658,-2.630373 -49.149401,-2.630449 -49.149401,-2.630449 z m -12.59245,25.16685 32.683494,18.86761 -32.683494,18.869113 z"
+       style="fill:#ffffff;stroke-width:4.4033" />
+  </g>
+</svg>
