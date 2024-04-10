@@ -170,6 +170,11 @@ const bottomsites = [
         displayName:"Rolla Municipal Utilities"
     },
     {
+        seed:"paylocity",
+        displayName:"Paylocity",
+        suffix:"*"
+    },
+    {
         seed:"regal",
         displayName:"Regal Cinemas",
         suffix: '.'
