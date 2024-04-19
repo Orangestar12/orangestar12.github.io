@@ -292,6 +292,10 @@ const bottomsites = [
         seed:"mohealthnet",
         displayName:"MyMOHealthNet",
         suffix: '*'
+    },
+    {
+        seed:"workgmail",
+        displayName:"Work GMail"
     }
 ];
 
