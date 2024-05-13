@@ -154,8 +154,8 @@ const bottomsites = [
         suffix: '.'
     },
     {
-        seed:"authy",
-        displayName:"Authy"
+        seed:"archlinux",
+        displayName:"Arch Linux Forums"
     },
     {
         seed:"SONY",
