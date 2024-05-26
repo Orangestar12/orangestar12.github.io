@@ -79,6 +79,7 @@ main, article, footer {
 h1, h2, h3, h4, h5, h6, .centered {
     text-align: center;
     font-size: 1em;
+    margin: 1em 0;
 }
 
 h1 {
@@ -89,14 +90,11 @@ h2 {
     font-size: 2.25em;
     /* Dumb hack so clear:both; and margin collapse works right */
     padding: 0 0.5em;
-    margin-bottom: 0.5em;
-    margin: 0;
     padding-bottom: 0;
     clear:both;
 }
 h3 {
     font-size: 1.75em;
-    margin: 0.25em 0;
 }
 
 p {
@@ -236,3 +234,7 @@ nav.modern a:hover .modern-nav-box, nav.modern a:focus .modern-nav-box {
     color: var(--accent);
 }
 nav.modern a:active .modern-nav-box { color: var(--off-accent); }
+
+.wsub {
+    margin-bottom: 0;
+}

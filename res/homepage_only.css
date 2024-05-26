@@ -45,3 +45,7 @@ header svg {
 img.tiny {
     height: 1em;
 }
+
+.limited {
+    max-width: 640px;
+} 
