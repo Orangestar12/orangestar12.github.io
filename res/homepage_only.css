@@ -41,3 +41,7 @@ header svg {
     width:105%;
     transform:translateX(-2.5%)
 }
+
+img.tiny {
+    height: 1em;
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 2400 2800"
+   style="enable-background:new 0 0 2400 2800;"
+   xml:space="preserve"
+   sodipodi:docname="twitch.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"><defs
+   id="defs22" /><sodipodi:namedview
+   id="namedview20"
+   pagecolor="#505050"
+   bordercolor="#ffffff"
+   borderopacity="1"
+   inkscape:showpageshadow="0"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="1"
+   inkscape:deskcolor="#505050"
+   showgrid="false"
+   inkscape:zoom="0.29607143"
+   inkscape:cx="700.84439"
+   inkscape:cy="1403.3776"
+   inkscape:window-width="1920"
+   inkscape:window-height="1010"
+   inkscape:window-x="-6"
+   inkscape:window-y="-6"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="layer1" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill:#FFFFFF;}
+</style>
+<title
+   id="title4">Asset 3</title>
+<g
+   inkscape:groupmode="layer"
+   id="layer1"
+   inkscape:label="Layer 1"><path
+     d="M 500,0 0,500 v 1800 h 600 v 500 l 500,-500 h 400 l 900,-900 V 0 Z m 1700,1300 -400,400 h -400 l -350,350 V 1700 H 600 V 200 h 1600 z"
+     id="path8"
+     style="enable-background:new 0 0 2400 2800;fill:#ffffff" /><rect
+     x="1700"
+     y="550"
+     width="200"
+     height="600"
+     id="rect10"
+     style="enable-background:new 0 0 2400 2800;fill:#ffffff" /><rect
+     x="1150"
+     y="550"
+     width="200"
+     height="600"
+     id="rect12"
+     style="enable-background:new 0 0 2400 2800;fill:#ffffff" /></g>
+<metadata
+   id="metadata24"><rdf:RDF><cc:Work
+       rdf:about=""><dc:title>Asset 3</dc:title></cc:Work></rdf:RDF></metadata></svg>
