@@ -210,6 +210,15 @@ const bottomsites = [
         displayName:"Android Studio"
     },
     {
+        seed:"lees",
+        displayName:"Lee's Chicken"
+    },
+    {
+        seed:"pizzahut",
+        displayName:"Pizza Hut",
+        suffix:"*"
+    },
+    {
         seed:"capcom",
         displayName:"Capcom"
     },
