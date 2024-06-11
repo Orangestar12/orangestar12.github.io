@@ -278,6 +278,10 @@ const bottomsites = [
         suffix: '/'
     },
     {
+        seed:"bally",
+        displayName:"Bally Sports"
+    },
+    {
         seed:"sterling",
         displayName:"Sterling Background Check",
         limit: 15,
