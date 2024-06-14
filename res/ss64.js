@@ -227,6 +227,11 @@ const bottomsites = [
         displayName:"Quantic Foundry"
     },
     {
+        seed:"tracktion",
+        displayName:"Tracktion Waveform",
+        suffix:"*"
+    },
+    {
         seed:"snapchat",
         displayName:"Snapchat"
     },
