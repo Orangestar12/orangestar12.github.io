@@ -184,6 +184,10 @@ const bottomsites = [
         displayName:"Starbreeze"
     },
     {
+        seed:"miraheeze",
+        displayName:"Miraheeze Wikis"
+    },
+    {
         seed:"kohls",
         displayName:"Kohls"
     },
