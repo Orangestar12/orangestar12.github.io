@@ -36,6 +36,11 @@ const topsites = [
         seed:"amazon",
         url:"https://www.amazon.com/",
         displayName:"Amazon"
+    },
+    {
+        seed:"wikipedia",
+        url:"https://en.wikipedia.org/",
+        displayName:"Wikipedia"
     }
    //    ,{seed:"apple", url:"https://www.apple.com/", displayName:"Apple"}
    //    ,{seed:"box", url:"https://app.box.com/login/", displayName:"Box"}
@@ -45,7 +50,6 @@ const topsites = [
    //    ,{seed:"reddit", url:"https://old.reddit.com/", displayName:"Reddit"}
    //    ,{seed:"tiktok", url:"https://www.tiktok.com/", displayName:"TikTok"}
    //    ,{seed:"tumblr", url:"https://www.tumblr.com/", displayName:"Tumblr"}
-   //    ,{seed:"wikipedia", url:"https://en.wikipedia.org/", displayName:"Wikipedia"}
 ];
 
 const bottomsites = [
