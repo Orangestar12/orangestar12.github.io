@@ -13,7 +13,7 @@ html {
 
     background-color: var(--black);
     color: var(--foreground);
-    font-size: 18pt;
+    font-size: 14pt;
     font-family: sans-serif;
 }
 
@@ -80,6 +80,7 @@ h1, h2, h3, h4, h5, h6, .centered {
     text-align: center;
     font-size: 1em;
     margin: 1em 0;
+    line-height: 1;
 }
 
 h1 {
