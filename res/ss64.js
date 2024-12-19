@@ -76,7 +76,8 @@ const bottomsites = [
     },
     {
         seed:"namecheap",
-        displayName:"Namecheap"
+        displayName:"Namecheap",
+        suffix: "."
     },
     {
         seed:"modio",
