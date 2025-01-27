@@ -14,28 +14,12 @@
     <meta property="og:image" content="https://www.orangestar.dev/starvatar.png">
     <meta property="og:description" content="Archived here so you don't have to.">
     <meta property="article:author" content="https://orangestar.dev/">
-    <meta property="article:modified_time" content="2024-02-27T17:00-06:00">
+    <meta property="article:modified_time" content="2025-01-27T12:00-06:00">
     <meta property="article:section" content="Gaming">
 
     <link href="/res/main.css" rel="stylesheet" type="text/css"/>
     <link href="/res/side.css" rel="stylesheet" type="text/css"/>
     <style>
-nav {
-    background: var(--off-black);
-    padding: 8px;
-    border: 2px solid black;
-    outline: 4px solid var(--off-black);
-}
-
-h2, h3, .fakeh3 {
-    margin-top:0;
-}
-h3, h4, .fakeh3 {
-    text-align:left;
-}
-h2 {
-    color: var(--main); /* wait this looks awesome i might keep this */
-}
 h3, .fakeh3 {
     color: #F44;
 }
@@ -44,12 +28,6 @@ h3, .fakeh3 {
     margin: 0.25em 0;
     font-weight: bold;
 }
-h4 {
-    font-size: 1.15em;
-    padding-left: 1.15ch;
-    color: var(--accent);
-}
-
 code.block {
     display: block;
     padding: 8px;
@@ -60,10 +38,6 @@ code.block {
 
 section.innerbox h3 {
     margin-top: 1.5em;
-}
-
-img {
-    max-width: 100%;
 }
     </style>
 </head>
@@ -87,22 +61,23 @@ img {
         </section>
         <section>
             <h3>Changelog</h3>
-            <p class="small i">Last updated <time datetime="2024-02-27">February 27, 2024</time></p>
+            <p class="small i">Last updated <time datetime="2025-01-27">January 27, 2025</time></p>
             <ul>
                 <li style="font-size:1.1em;font-weight:bold;margin-bottom:1em;">
                     <p>New solutions:</p>
                     <ol>
-                        <li><a href="#proton-ignores-wineprefix">Proton does not respect the WINEPREFIX environment variable</a>.</li>
-                        <li><a href="#steam-cant-launch-proton-on-ntfs">Windows games on Steam fail to launch with no errors if they're on an NTFS or FAT filesystem</a></li>
+                        <li><a href="#low-disk-space">I'm out of disk space. What can I do to easily clean my system?</a></li>
                     </ol>
                 </li>
-                <li>Issues now have a last-changed date, so you can scrutinize particularly old solutions.</li>
-                <li>I put more horizontal rules up because it was starting to get hard to see deliniation while scrolling.</li>
             </ul>
         </section>
         <hr/>
         <nav>
             <h2>Table of Contents</h2>
+            <h3><a href="#System">System - General</a></h3>
+            <ul>
+                <li><a href="#low-disk-space">I'm out of disk space. What can I do to easily clean my system?</a></li>
+            </ul>
             <h3><a href="#Browsers">Browsers</a></h3>
             <ul>
                 <li><a href="#resizing-divs">HTML Elements on various websites randomly resize or reflow when you focus them</a></li>
@@ -154,6 +129,73 @@ img {
         </section>
         <hr/>
         <section>
+          <h2 id="System">System - General</h2>
+          <hr/>
+          <section>
+            <h3 id="low-disk-space">I'm out of disk space. What can I do  to easily clean my system?</h3>
+            <p class="i">Last edited <time datetime="2025-01-27">January 27, 2025</time>.</p>
+            <section>
+                <h4>Symptoms and relations:</h4>
+                <ul>
+                    <li>You're out of disk space, and even though you've checked your Steam game installs and whatnot, your system still seems to be using a lot of space in concentrated folders.</li>
+                </ul>
+            </section>
+            <section>
+                <h4>What's happening?</h4>
+                <p>This one's more of a rambling shot-in-the-dark. Linux distros love caching packages on your system for downgrading and reinstallation reasons, but that can eat a lot of space on your drive if you're expecting the machine to "just clean it up."</p>
+            </section>
+            <section>
+                <h4>How do I fix it?</h4>
+                <section>
+                  <h5>Empty Caches</h5>
+                  <p>You probably are already under the assumption you've cleaned all your caches but, just as a sanity check, let's double check together.</p>
+                  <ul>
+                    <li>
+                      <p>Your home directory often has a folder named <code>.cache</code>, which can be safely deleted.</p>
+                      <code class="block">rm -r ~/.cache</code>
+                    </li>
+                    <li>
+                      <p>If you desperately need a little bit of space right now or you just did something memory intensive, you can safely run</p>
+                      <code class="block">sudo rm -r /tmp/*</code>
+                      <p>to clean the <code>/tmp/</code> folder. Ignore all errors.</p>
+                    </li>
+                    <li>
+                      <p><code>apt</code> users can clean their package cache with</p>
+                      <code class="block">apt clean</code>
+                      <p>Meanwhile, <code>pacman</code> users should use </p>
+                      <code class="block">pacman -Scc</code>
+                      <p class="small">(<code>yay</code> has an identical command for cleaning its AUR cache as well.)</p>
+                    </li>
+                  </ul>
+                  <p>Individual apps may have their own cache folders. Dig around with <code>baobab</code> or Filelight.</p>
+                </section>
+                <section>
+                  <h5>Delete old packages.</h5>
+                  <p>This one might seem like a no-brainer, but I'm not about to tell you to just uninstall old apps you're not using.</p>
+                  <ul>
+                    <li>
+                      <p>Flatpak doesn't uninstall necessary dependencies immediately when you uninstall all applications that use those dependencies. I assume this is so it doesn't need to re-download them if you download a new app that uses that same dependency but like, come on. Everyone is using different revisions of each dependency. You can safely clean them.</p>
+                      <code class="block">sudo flatpak uninstall --unused<br/>
+                      sudo flatpak repair</code>
+                      <p>I highly recommend using <code>sudo</code> here even if you primarily use Flatpak in userspace because sometimes they install to the system anyway, and the Flatpak cache can be tempermental to <code>repair</code> if you're not doing it as an admin.</p>
+                    </li>
+                    <li>
+                      <p><code>apt</code> users can get away with just</p>
+                      <code class="block">apt autoremove</code>
+                    </li>
+                    <li>
+                      <p><code>pacman</code> should automatically handle your unused dependencies, but they can occur. Follow <a href="https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans)">the Arch Wiki's information on removing unused packages <img src="/res/external_link.svg" class="linker" alt="External link"/></a>.</p>
+                      <code class="block">pacman -Qdtq | pacman -Rns -</code>
+                      <p>In the future, you can uninstall packages with <code>-Rs</code> instead of <code>-R</code> to aggressively uninstall dependencies. You can also use <code>--asdeps</code> during installation to flag a package to be uninstalled when it's no longer required, or <code>--asexplicit</code> to do the opposite and never automatically uninstall a package, even with the above command.</p>
+                      <p class="small">If the package is already installed, <code>pacman -D --asdeps [package]</code> will modify the package's metadata in the database without reinstalling the app.</p>
+                    </li>
+                  </ul>
+                </section>
+            </section>
+          </section>
+        </section>
+        <hr/>
+        <section>
             <h2 id="Games">Games</h2>
             <hr/>
             <section>
@@ -173,7 +215,9 @@ img {
                     <ol>
                         <li>
                             <p>Steam itself manages the WINEPREFIXes used by Proton when you launch a game through it. The Prefix will be stored in the same <code>/steamapps/</code> folder that your game is installed under, inside a folder named <code>/compatdata/</code>.</p>
-                            <img src="/res/linux/Screenshot_20240227_013224.png" alt="A screenshot of the steamapps folder, showing the compatdata folder highlighted and some example internals.">
+                            <figure>
+                              <img src="/res/linux/Screenshot_20240227_013224.png" alt="A screenshot of the steamapps folder, showing the compatdata folder highlighted and some example internals.">
+                            </figure>
                             <p>The folders in here are all organized relative to the game's Steam App ID.</p>
                             <ul>
                                 <li>Non-Steam games will use an automatically generated App ID.</li>
@@ -361,7 +405,9 @@ img {
                     <p>Open <code>nvidia-settings</code> and click "X Server Display Configuration".</p>
                     <p>Click "Advanced..." to show the full display settings.</p>
                     <p>For each monitor you have plugged in, switch to it with the dropdown labeled "Selection:" and uncheck the boxes labeled "Force Composition Pipeline" and "Force Full Composition Pipeline".</p>
-                    <div style="text-align:center"><img src="/res/linux/screenshot_2024-02-20_17-39-42.png" alt="Screenshot of the NVidia settings dialogue." /></div>
+                    <figure>
+                      <img src="/res/linux/screenshot_2024-02-20_17-39-42.png" alt="Screenshot of the NVidia settings dialogue." />
+                    </figure>
                     <p>Click "Apply", and optionally save your <code>xorg.conf</code> with the "Save to X Configuration File" button.</p>
                     <p>You may experience screen tearing. Don't buy an NVidia card next time.</p>
                 </section>
@@ -389,6 +435,9 @@ img {
                 </section>
                 <section>
                     <h4>How do I fix it?</h4>
+                    <aside style="max-width: 200px">
+                    <p class="big b">Wayland users should visit <a href="https://davejansen.com/add-custom-resolution-and-refresh-rate-when-using-wayland-gnome/">Dave Jansen's page on overriding the EDID as a kernel variable.</a></p>
+                    </aside>
                     <p>Pop open your <code>xorg.conf</code> or <a href="#xorg-conf-doesnt-apply">equivalent</a>.</p>
                     <p>You've probably <a href="https://download.nvidia.com/XFree86/Linux-x86_64/396.51/README/xconfigoptions.html" target="_blank">read in the NVidia docs<img src="/res/external_link.svg" alt="(External)" class="linker" /></a> that you should use options like <code>Option "ModeValidation" "NoEdidModes"</code> or <code>Option "UseEdidFreqs" "false"</code>.</p>
                     <p>These are wrong and the actual option isn't even in this part of the NVidia Docs. In fact, the first option straight up got deprecated without warning and doesn't work anymore. Computers are awesome <span class="small">(sarcasm)</span>.</p>
