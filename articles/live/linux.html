@@ -61,12 +61,13 @@ section.innerbox h3 {
         </section>
         <section>
             <h3>Changelog</h3>
-            <p class="small i">Last updated <time datetime="2025-01-27">January 27, 2025</time></p>
+            <p class="small i">Last updated <time datetime="2025-02-06">February 6, 2025</time></p>
             <ul>
                 <li style="font-size:1.1em;font-weight:bold;margin-bottom:1em;">
                     <p>New solutions:</p>
                     <ol>
-                        <li><a href="#low-disk-space">I'm out of disk space. What can I do to easily clean my system?</a></li>
+                      <li><a href="#kde-root-password-bug">KDE suddenly asking for root password instead of user password when performing admin actions</a></li>
+                      <li><a href="#low-disk-space">I'm out of disk space. What can I do to easily clean my system?</a> <span class="small">Posted January 27, 2025</span></li>
                     </ol>
                 </li>
             </ul>
@@ -101,6 +102,10 @@ section.innerbox h3 {
                 <li><p style="margin-bottom:0.1em;"><a href="#fullscreen-games-freeze-xorg">On Xorg, Putting a game in fullscreen makes the whole system slow to a near-freeze until you Alt+Tab out</a></p>
                 <p class="small" style="margin-top:0.1em;">and also <a href="#fullscreen-games-freeze-xorg">Steam Remote Play fails to pick up hardware-accelerated games on Xorg</a></p></li>
                 <li><a href="#missing-video-modes">On an older DVI monitor, some video modes are completely missing</a></li>
+            </ul>
+            <h3><a href="#KDE">KDE</a></h3>
+            <ul>
+              <li><a href="#kde-root-password-bug">KDE suddenly asking for root password instead of user password when performing admin actions</a></li>
             </ul>
         </nav>
         <hr/>
@@ -448,6 +453,36 @@ section.innerbox h3 {
                     <p>You can get the names of your outputs from <code>xrandr</code>.</p>
                 </section>
             </section>
+        </section>
+        <hr/>
+        <section>
+          <h2 id="KDE">KDE</h2>
+          <section>
+            <h3 id="kde-root-password-bug">KDE suddenly asking for root password instead of user password when performing admin actions</h3>
+            <p class="i">Last edited <time datetime="2025-02-06">February 6, 2025</time>.</p>
+            <section>
+                <h4>Symptoms and relations:</h4>
+                <ul>
+                    <li>You're on KDE.</li>
+                    <li>You recently changed a Polkit rule, or you performed an upgrade that changed your Polkit rules.</li>
+                    <li>Whenever you perform any action that requires admin approval, the pop-up dialog says "Authenticating as root" instead of "Authenticating as [you] ([Your username])".</li>
+                    <li>Admin approval dialogs require the root password instead of your user password, unlike <code>sudo</code>.</li>
+                    <li><code>sudo</code> is still working just fine.</li>
+                </ul>
+            </section>
+            <section>
+                <h4>What's happening?</h4>
+                <p>I'm hesitant to call this a "bug", but sometimes KDE forgets that your user is an administrator if Polkit rules change. Maybe something gets overwritten by Polkit? I don't actually know.</p>
+            </section>
+            <section>
+                <h4>How do I fix it?</h4>
+                <p>Head to KDE's system settings and select "Users". Then, change your account type from "Standard" to "Administrator".</p>
+                <figure>
+                  <img src="/res/linux/Screenshot_2025-02-06_11.19.20_AM.png"/>
+                </figure>
+                <p>If you're the only user on the system, the dropdown will lock preventing you from changing it, since KDE requires at least one user to be the administrator (but won't bug out if this requirement isn't fulfilled thankfully.)</p>
+            </section>
+          </section>
         </section>
     </main>
 </body>
