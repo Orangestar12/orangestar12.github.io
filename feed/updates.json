@@ -4,7 +4,7 @@
     "title":"[Updated] [Live] Stupid Linux Garbage",
     "link": "/articles/live/linux.html#kde-root-password-bug",
     "description":"Today, I learned that sometimes KDE will forget your user is an \"Administrator\" if you change Polkit rules.",
-    "pubdate":"2025-01-17T12:00-06:00"
+    "pubdate":"2025-02-06T12:00-06:00"
   },
   {
     "id" : "2025-01-27-linux",

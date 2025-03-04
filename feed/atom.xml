@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://orangestar.dev/</id>
   <title>Articles by Orangestar</title>
-  <updated>2025-03-04T17:08:44.455630+00:00</updated>
+  <updated>2025-03-04T23:42:40.775550+00:00</updated>
   <author>
     <name>Orangestar</name>
     <email>orangestar@cats4gold.net</email>
@@ -40,9 +40,9 @@
   <entry>
     <id>https://orangestar.dev/articles/2025-02-06-linux</id>
     <title>[Updated] [Live] Stupid Linux Garbage</title>
-    <updated>2025-01-17T12:00:00-06:00</updated>
+    <updated>2025-02-06T12:00:00-06:00</updated>
     <link href="https://orangestar.dev/articles//articles/live/linux.html#kde-root-password-bug"/>
     <summary>Today, I learned that sometimes KDE will forget your user is an "Administrator" if you change Polkit rules.</summary>
-    <published>2025-01-17T12:00:00-06:00</published>
+    <published>2025-02-06T12:00:00-06:00</published>
   </entry>
 </feed>
