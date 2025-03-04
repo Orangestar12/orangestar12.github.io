@@ -25,25 +25,6 @@ header h1 {
     margin: 0.5em;
 }
 
-.quote {
-    transition: opacity 1s;
-    font-size: 1.5em;
-
-    padding-top: 0.5ch;
-}
-
-.popup{
-    position: fixed;
-    background: var(--off-black);
-    border: 1px solid var(--black);
-    right: 8px;
-    bottom: 8px;
-    font-size: 28px;
-    max-width: 70%;
-    padding: 8px;
-    text-align: right;
-}
-
 a.button, a.button:visited, button {
     display: inline-block;
     background-color: var(--main);
@@ -79,7 +60,7 @@ main, article, footer {
 h1, h2, h3, h4, h5, h6, .centered {
     text-align: center;
     font-size: 1em;
-    margin: 1em 0;
+    margin: 0.5em 0;
     line-height: 1;
 }
 
@@ -93,9 +74,14 @@ h2 {
     padding: 0 0.5em;
     padding-bottom: 0;
     clear:both;
+    color: var(--main);
 }
 h3 {
     font-size: 1.75em;
+    color: var(--accent);
+}
+h3, h4 {
+    text-align:left;
 }
 
 p {
@@ -170,13 +156,15 @@ hr {
 }
 
 main, article {
-    padding-bottom: 4em;
+    padding-bottom: 2em;
     line-height: 1.35
 }
+
 footer {
     text-align: center;
     font-size: 0.8em;
     padding-bottom: 2em;
+    margin: 2em auto 10vh auto;
 }
 
 .small {
@@ -193,49 +181,49 @@ img.linker {
     filter: invert(0.5) sepia(1) saturate(5) hue-rotate(134deg);
 }
 
+/* big modern navs */
 
 nav.modern {
-    background:none;border:none;outline:none;
-    /* border-left:2px solid var(--off-black); */
-    /* padding:0 0 0 1ch; */
-    margin: auto;
+    margin: 0;
+    background: transparent;
+    padding: 0;
 }
 
-.modern-nav-box {
+nav.modern a, nav.modern a:visited {
+    color: var(--foreground);
+    text-decoration: none;
+}
+
+nav.modern > a, nav.modern > a:visited, nav.modern > div {
     border-radius: 24px;
     background: var(--off-black);
-    padding: 1em;
-    margin-bottom: 1em;
-    min-height: 100px;
+    padding: 0.75em;
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: row;
+}
+nav.modern a:hover, nav.modern a:focus {
+    background: #484848;
+    color: var(--accent);
+}
+nav.modern a:active { color: var(--off-accent); }
+
+nav.modern > a > div, nav.modern > div > div {
+    flex-grow: 2;
+    padding-right: 8px;
 }
 
-.modern-nav-box p { margin:0; }
+nav.modern p { margin:0; }
 
-.modern-nav-box > * { display:block; }
-.modern-nav-box > time {
+nav.modern time {
     font-size: 0.8em;
     margin: 0.5em 0 0 1.5ch;
 }
 
-.modern-nav-box img {
+nav.modern img {
     width: auto;
     height: 100px;
-    float: right;
     margin-right: 16px;
     border-radius: 8px;
     box-shadow: 2px 2px 4px 1px black;
-}
-
-nav.modern a, nav a:visited {
-    text-decoration: none;
-    color: var(--foreground);
-}
-nav.modern a:hover .modern-nav-box, nav.modern a:focus .modern-nav-box {
-    background: #484848;
-    color: var(--accent);
-}
-nav.modern a:active .modern-nav-box { color: var(--off-accent); }
-
-.wsub {
-    margin-bottom: 0;
 }

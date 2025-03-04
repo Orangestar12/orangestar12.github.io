@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://orangestar.dev/</id>
+  <title>Articles by Orangestar</title>
+  <updated>2025-03-04T17:08:44.455630+00:00</updated>
+  <author>
+    <name>Orangestar</name>
+    <email>orangestar@cats4gold.net</email>
+  </author>
+  <link href="https://orangestar.dev/" rel="alternate"/>
+  <link href="https://orangestar.dev/feed/atom.xml" rel="self"/>
+  <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
+  <logo>https://orangestar.dev/starvatar.png</logo>
+  <rights>All text licensed CC BY-SA 4.0</rights>
+  <subtitle>Sometimes I write stuff.</subtitle>
+  <entry>
+    <id>https://orangestar.dev/articles/2024-09-10-albums-ive-been-about</id>
+    <title>Albums I've Been About</title>
+    <updated>2024-09-10T05:00:00-06:00</updated>
+    <link href="https://orangestar.dev/articles//articles/2024-09-10-albums-ive-been-about.html"/>
+    <summary>Wanna write something short. Been listening to music at a new job. Here's what's been on repeat for me.</summary>
+    <published>2024-09-10T05:00:00-06:00</published>
+  </entry>
+  <entry>
+    <id>https://orangestar.dev/articles/2025-01-17-things-google-gemini-cant-do</id>
+    <title>[New] [Live] Things Google Gemini Can't Do</title>
+    <updated>2025-01-17T12:00:00-06:00</updated>
+    <link href="https://orangestar.dev/articles//articles/live/things-google-gemini-cant-do.html"/>
+    <summary>Google claims it wants to replace its existing, mature, and very well designed Google Assistant with the LLM Google Gemini. I wanted to see if the transition would be simple and smooth. Here's where it flopped.</summary>
+    <published>2025-01-17T12:00:00-06:00</published>
+  </entry>
+  <entry>
+    <id>https://orangestar.dev/articles/2025-01-27-linux</id>
+    <title>[Updated] [Live] Stupid Linux Garbage</title>
+    <updated>2025-01-27T12:00:00-06:00</updated>
+    <link href="https://orangestar.dev/articles//articles/live/linux.html#low-disk-space"/>
+    <summary>Sometimes I forget all the places I should check for cache files when cleaning up my computer, so I wrote 'em all down.</summary>
+    <published>2025-01-27T12:00:00-06:00</published>
+  </entry>
+  <entry>
+    <id>https://orangestar.dev/articles/2025-02-06-linux</id>
+    <title>[Updated] [Live] Stupid Linux Garbage</title>
+    <updated>2025-01-17T12:00:00-06:00</updated>
+    <link href="https://orangestar.dev/articles//articles/live/linux.html#kde-root-password-bug"/>
+    <summary>Today, I learned that sometimes KDE will forget your user is an "Administrator" if you change Polkit rules.</summary>
+    <published>2025-01-17T12:00:00-06:00</published>
+  </entry>
+</feed>
