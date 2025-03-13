@@ -34,6 +34,9 @@ article {
   background: #302500;
   border-radius: 8px;
 }
+.g {
+  color:#FF6666;
+}
 figure {
   max-width: 3.7in;
 }
@@ -53,11 +56,11 @@ figure {
 </style>
 </head>
 <body>
-<header>
+<header><div class="wrapper">
     <h1>Things Google Gemini Can't Do</h1>
     <p class="small"><a href="../">← Return to Main page</a></p>
     <time datetime="2025-01-17">Last updated January 17th, 2025</time>
-</header>
+</div></header>
 <article>
   <section>
     <p>I’m not necessarily an early adopter, but I’m eager to try new technology if it's low-commitment.</p>
@@ -81,17 +84,20 @@ figure {
       <li><a href="#navigate-for-you">Navigate for you</a></li>
       <li><a href="#play music">Play music</a></li>
       <li><a href="#add-tasks-to-your-google-calendar">Add tasks to your Google Calendar</a></li>
+      <li><a href="#search-google-images">Search Google Images</a></li>
     </ul>
   </nav>
   <section>
     <h2 id="keep-lists">Keep lists</h2>
+    <h3>Assistant</h3>
     <div class="imgbox">
       <p>Google Assistant has really good integration with Google Keep. Since Google removed its basic shopping list function, transitioning to Keep was simple and improved its functionality and ease of use—now not only can you say “Add razor blades to my shopping list”, you can make lists with arbitrary names and arbitrary text.</p>
       <figure>
         <img src="./2025-01-17-things-google-gemini-cant-do/ResizedImage_2024-09-07_16-40-50_1686.png" alt="Image transcription: User: Create a list called Addresses and add this address to it. Assistant: Alright, I made a list called Addresses and added that address."/>
       </figure>
     </div>
-    <hr/>
+    
+    <h3 class="g">Gemini</h3>
     <div class="imgbox">
       <p>In Gemini, if you ask it to save text, access a list, or create one, it just flatly refuses you.</p>
     <figure>
@@ -101,6 +107,7 @@ figure {
   </section>
   <section>
     <h2 id="navigate-for-you">Navigate for you</h2>
+    <h3>Assistant</h3>
     <div class="imgbox">
       <p>One of my most-used features with Assistant is to navigate handsfree. You can ask it anything from a basic location (“Take me home,” “Take me to Staples,” “Take me to the hospital,”) to specific addresses (“Take me to 187 Brindledrake St.”) It will instantly open Google Maps and begin navigation.</p>
       <figure>
@@ -108,7 +115,8 @@ figure {
         <img src="./2025-01-17-things-google-gemini-cant-do/Screenshot_20240907-170421.png" alt="A screenshot of Google Maps navigation."/>
       </figure>
     </div>
-    <hr/>
+    
+    <h3 class="g">Gemini</h3>
     <div class="imgbox">
       <p>Gemini, surprisingly, has a special “Maps” mode if you ask it for directions. Supposedly, the Gemini LLM prompt includes things like your age and location, but if you ask it to navigate for you it instead drops you a list of possible locations localized to the entire United States. Most critically, it gives you this list as a series of clickable links, which removes the “handsfree” part of the equation.</p>
       <figure>
@@ -119,6 +127,7 @@ figure {
   </section>
   <section>
     <h2 id="play-music">Play music</h2>
+    <h3>Assistant</h3>
     <div class="imgbox">
       <div>
         <p>Assistant has wonderful music integration. You'd think this would be a huge upsell for YouTube Music, but Google Assistant allows you to choose your favorite music player and ask anything. Assistant will send queries to your app of choice and can play individual songs, shuffle songs by artist, play playlists, and so on. You can even specify the app to play specific stuff - Google Assistant proudly displays "You can ask your Assistant to use any music app on your phone or tablet" with regards to music services it doesn't know about.</p>
@@ -131,7 +140,8 @@ figure {
         <figcaption>She get a little more sunshine... She keep a little less haze around me...</figcaption>
       </figure>
     </div>
-    <hr />
+    
+    <h3 class="g">Gemini</h3>
     <div class="imgbox">
       <p>Ask Gemini to play music, on the other hand, and it will tell you it can't, suggesting you just press the buttons yourself and open YouTube Music. What are you, lazy?</p>
       <figure>
@@ -153,21 +163,43 @@ figure {
   </section>
   <section>
     <h2 id="add-tasks-to-your-google-calendar">Add tasks to your Google Calendar</h2>
+    <h3>Assistant</h3>
     <div class="imgbox">
       <div>
         <p>Tasks are really cool. Originally they were an Assistant-only feature presented as a to-do list with a specified reminder time. Eventually, they got <a href="https://blog.google/products/workspace/tasks-reminders/">integrated with Google Calendar <img src="/res/external_link.svg" alt="(External)" class="linker" /></a> where they are abstracted into Calendar events you could "check off" as completed, and the implementation is really smooth. You don't need your phone with you anymore. If you're sitting down at your computer and you finished up an E-Mail you could hop on over to Calendar and mark the task as done.</p>
         <p>Since then, Assistant has supported normal Google Calendar tasks, and you can create events or use "Routines" to schedule reminders for yourself just by talking to the phone.</p>
       </div>
       <figure>
-        <img src="./2025-01-17-things-google-gemini-cant-do/Screenshot_20250117-114136.png" alt="User: Set a task for next Thursday. Gemini, showing a dialog: New task. What's the title?"/><br />
-        <img src="./2025-01-17-things-google-gemini-cant-do/Screenshot_20250117-114203~2.png" alt="User: What's on my agenda for today? Gemini: No matching events found on your Google Calendar."/>
+        <img src="./2025-01-17-things-google-gemini-cant-do/Screenshot_20250117-114136.png" alt="User: Set a task for next Thursday. Assistant, showing a dialog: New task. What's the title?"/><br />
+        <img src="./2025-01-17-things-google-gemini-cant-do/Screenshot_20250117-114203~2.png" alt="User: What's on my agenda for today? Assistant: No matching events found on your Google Calendar."/>
       </figure>
     </div>
-    <hr />
+    
+    <h3 class="g">Gemini</h3>
     <div class="imgbox">
       <p>Ask Gemini to make a task for you and It just tells you to type it in on your computer.</p>
       <figure>
         <img src="./2025-01-17-things-google-gemini-cant-do/screenshot-2024-10-01_08-43-52.png" alt="User: Add a task for tomorrow. Gemini: Sorry, I can't help with that. You can set or change reminders using your smartphone or other digital assistant devices."/>
+      </figure>
+    </div>
+  </section>
+  <section>
+    <h2 id="search-google-images">Search Google Images</h2>
+    <h3>Assistant</h3>
+    <div class="imgbox">
+      <div>
+        <p>It's obvious to most people that you can use Google Assistant to do basic web searches, but fewer know you can tell Assistant to "Show me pictures of" something to get a Google image search. It's much faster than opening the Google app and pressing the buttons to navigate there yourself.</p>
+      </div>
+      <figure>
+        <img src="./2025-01-17-things-google-gemini-cant-do/Screenshot_20250306-171430.png" alt="User: Show me a picture of the Star Trek novel &quot;Demons&quot;. Assistant is showing a grid of relevant images."/>
+      </figure>
+    </div>
+    
+    <h3 class="g">Gemini</h3>
+    <div class="imgbox">
+      <p>Ask Gemini to look up an image for you, and it instead tells you how to do it yourself. How helpful!</p>
+      <figure>
+        <img src="./2025-01-17-things-google-gemini-cant-do/Screenshot_20250313-140122.png" alt="User:  me a picture of the Star Trek novel &quot;Demons&quot;. Gemini: When you're looking for imagery related to the Star Trek novel &quot;Demons&quot; by J.M. Dillard, you'll primarily find book covers. Here's what I can tell you: [Gemini goes on to explain the plot of the book, and describes objects that may or may not be on the front cover of the book.]"/>
       </figure>
     </div>
   </section>
