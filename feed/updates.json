@@ -2,35 +2,35 @@
   {
     "id" : "2024-09-10-albums-ive-been-about",
     "title":"Albums I've Been About",
-    "link": "/articles/2024-09-10-albums-ive-been-about.html",
+    "link": "2024-09-10-albums-ive-been-about.html",
     "description":"Wanna write something short. Been listening to music at a new job. Here's what's been on repeat for me.",
     "pubdate":"2024-09-10T05:00-06:00"
   },
   {
     "id" : "2025-01-17-things-google-gemini-cant-do",
     "title":"[New] [Live] Things Google Gemini Can't Do",
-    "link": "/articles/live/things-google-gemini-cant-do.html",
+    "link": "live/things-google-gemini-cant-do.html",
     "description":"Google claims it wants to replace its existing, mature, and very well designed Google Assistant with the LLM Google Gemini. I wanted to see if the transition would be simple and smooth. Here's where it flopped.",
     "pubdate":"2025-01-17T12:00-06:00"
   },
   {
     "id" : "2025-01-27-linux",
     "title":"[Updated] [Live] Stupid Linux Garbage",
-    "link": "/articles/live/linux.html#low-disk-space",
+    "link": "live/linux.html#low-disk-space",
     "description":"Sometimes I forget all the places I should check for cache files when cleaning up my computer, so I wrote 'em all down.",
     "pubdate":"2025-01-27T12:00-06:00"
   },
   {
     "id" : "2025-02-06-linux",
     "title":"[Updated] [Live] Stupid Linux Garbage",
-    "link": "/articles/live/linux.html#kde-root-password-bug",
+    "link": "live/linux.html#kde-root-password-bug",
     "description":"Today, I learned that sometimes KDE will forget your user is an \"Administrator\" if you change Polkit rules.",
     "pubdate":"2025-02-06T12:00-06:00"
   },
   {
     "id" : "2025-03-13-things-google-gemini-cant-do",
     "title":"[Updated] [Live] Things Google Gemini Can't Do",
-    "link": "/articles/live/things-google-gemini-cant-do.html#search-google-images",
+    "link": "live/things-google-gemini-cant-do.html#search-google-images",
     "description":"Newly discovered: Google Gemini can't search images like Assistant can.",
     "pubdate":"2025-03-13T02:20-06:00"
   }
