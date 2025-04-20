@@ -33,5 +33,12 @@
     "link": "live/things-google-gemini-cant-do.html#search-google-images",
     "description":"Newly discovered: Google Gemini can't search images like Assistant can.",
     "pubdate":"2025-03-13T02:20-06:00"
+  },
+  {
+    "id" : "2025-04-20-linux",
+    "title":"[Updated] [Live] Stupid Linux Garbage",
+    "link": "live/linux.html#steam-r2modman-command-line",
+    "description":"Note to self: send an upstream patch to r2modman for Linux specifically.",
+    "pubdate":"2025-04-20T3:45-06:00"
   }
 ]

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://orangestar.dev/</id>
   <title>Articles by Orangestar</title>
-  <updated>2025-03-13T19:46:03.690116+00:00</updated>
+  <updated>2025-04-20T20:49:30.612565+00:00</updated>
   <author>
     <name>Orangestar</name>
     <email>orangestar@cats4gold.net</email>
@@ -13,6 +13,14 @@
   <logo>https://orangestar.dev/starvatar.png</logo>
   <rights>All text licensed CC BY-SA 4.0</rights>
   <subtitle>Sometimes I write stuff.</subtitle>
+  <entry>
+    <id>https://orangestar.dev/articles/2025-04-20-linux</id>
+    <title>[Updated] [Live] Stupid Linux Garbage</title>
+    <updated>2025-04-20T03:45:00-06:00</updated>
+    <link href="https://orangestar.dev/articles/live/linux.html#steam-r2modman-command-line"/>
+    <summary>Note to self: send an upstream patch to r2modman for Linux specifically.</summary>
+    <published>2025-04-20T03:45:00-06:00</published>
+  </entry>
   <entry>
     <id>https://orangestar.dev/articles/2025-03-13-things-google-gemini-cant-do</id>
     <title>[Updated] [Live] Things Google Gemini Can't Do</title>

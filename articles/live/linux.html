@@ -61,13 +61,12 @@ section.innerbox h3 {
         </section>
         <section>
             <h3>Changelog</h3>
-            <p class="small i">Last updated <time datetime="2025-02-06">February 6, 2025</time></p>
+            <p class="small i">Last updated <time datetime="2025-04-20">April 20, 2025</time></p>
             <ul>
                 <li style="font-size:1.1em;font-weight:bold;margin-bottom:1em;">
                     <p>New solutions:</p>
                     <ol>
-                      <li><a href="#kde-root-password-bug">KDE suddenly asking for root password instead of user password when performing admin actions</a></li>
-                      <li><a href="#low-disk-space">I'm out of disk space. What can I do to easily clean my system?</a> <span class="small">Posted January 27, 2025</span></li>
+                      <li><a href="#steam-r2modman-command-line">r2modman command line arguments don't work</a></li>
                     </ol>
                 </li>
             </ul>
@@ -86,6 +85,7 @@ section.innerbox h3 {
             <h3><a href="#Games">Games</a></h3>
             <ul>
                 <li><a href="#proton-ignores-wineprefix">Proton does not respect the WINEPREFIX environment variable</a></li>
+                <li><a href="#steam-r2modman-command-line">r2modman command line arguments don't work</a></li>
                 <li><a href="#steam-cant-launch-proton-on-ntfs">Windows games on Steam fail to launch with no errors if they're on an NTFS or FAT filesystem</a></li>
             </ul>
             <h3><a href="#rEFInd">rEFInd</a></h3>
@@ -246,8 +246,54 @@ section.innerbox h3 {
             </section>
             <hr/>
             <section>
+                <h3 id="steam-r2modman-command-line">r2modman Command Line Arguments Don't Work</a></li></h3>
+                <section>
+                    <h4>Symptoms and relations:</h4>
+                    <ul>
+                        <li>You're using <a href="https://thunderstore.io/package/ebkr/r2modman/">r2modman</a>.</li>
+                        <li>You want to launch your game modded from inside a storefront like Steam.</li>
+                        <li>You followed the instructions in r2modman under <span style="background-color:var(--off-black);padding:0 0.5ch;">Help &gt; Launching the game from outside the mod manager.</span><br/><br/>
+                            <figure>
+                                <img src="/res/linux/Screenshot_20250420_150805.png" alt="r2modman instructions on launching a game from outside the mod manager."/>
+                            </figure></li>
+                        <li>Launching the game through the storefront launcher launches the game unmodded (vanilla.)</li>                            
+                    </ul>
+                </section>
+                <section>
+                    <h4>What's happening?</h4>
+                    <p>Wine (and thus Proton) provides their own versions of known Windows system DLLs. These are called the "Built-in" libraries. These are used by Wine because sometimes the Windows versions have bugs or don't play nicely with Wine's ability to translate Win32API calls.</p>
+                    <p>However, in this instance, we're not trying to run the Microsoft-delivered system DLLs. The popular Unity hook BepInEx hooks into a dummy copy of <code>winhttp.dll</code>. Ergo, when you try to run a modded game...</p>
+                    <ul>
+                        <li>Unity tries to load <code>winhttp.dll</code></li>
+                        <li>Normally, Windows would first look for <code>winhttp.dll</code> in the current app directory, and then try to use the system version.</li>
+                        <li>Since we have BepInEx as a replacement for the normal <code>winhttp.dll</code>, it would load BepInEx.</li>
+                        <li>But Wine ignores <em>both</em> of these in favor of it's own version of <code>winhttp.dll</code>, under the assumption that MS provided versions would contain bugs.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>How do I fix it?</h4>
+                    <p>Thankfully you can tell Wine to prefer "Native" versions of DLLs as opposed to "Builtin" ones. Normally, you would do this by editing the WINEPREFIX, but if you're using Steam we can do it through an environment variable so we don't need to configure everything.</p>
+                    <p>Assuming the command line arguments r2modman has provided for you are this...</p>
+                    <code class="block">--doorstop-enable true --doorstop-target "Z:/home/[USERNAME]/.config/r2modmanPlus-local/[YOURGAMEHERE]/profiles/Default/BepInEx/core/BepInEx.Preloader.dll" --r2profile "Default"</code>
+                    <p>You simply need to precede this with <code>WINEDLLOVERRIDES="winhttp=n,b" %command%</code> to get this:</p>
+                    <code class="block">WINEDLLOVERRIDES="winhttp=n,b" %command% --doorstop-enable true --doorstop-target "Z:/home/[USERNAME]/.config/r2modmanPlus-local/[YOURGAMEHERE]/profiles/Default/BepInEx/core/BepInEx.Preloader.dll" --r2profile "Default"</code>
+                    <p>The first part means "Override the settings for the DLL <code>winhttp</code> to prefer the <b>N</b>ative version first, and then try the <b>B</b>uilt-in version if that fails.</p>
+                    <p>The second part, <code>%command%</code>, is a special string for Steam that represents the command Steam will try to run.</p>
+                    <hr/>
+                    <p>If you're not using Steam, you'll need to check the settings for whatever launcher you're using to let you change the environment variables.</p>
+                    <p>Lutris has an option to change environment variables inside a game's "System Options"...</p>
+                    <figure><img src="/res/linux/lutris.png" alt="A screenshot of Lutris's System Options dialog."></figure>
+                    <p>...but, even better, the "Runner Options" includes a list of DLL overrides on its own.</p>
+                    <figure><img src="/res/linux/lutris_runner_options.png" alt="A screenshot of Lutris's Runner Options dialog."></figure>
+                    <p>Users of Epic Games's storefront should consider using the command line launcher Legendary or it's GUI equivalent Heroic, since <a href="https://github.com/derrod/legendary?tab=readme-ov-file#config-file">Legendary's config file lets you set environment variables on a per-app basis<img class="linker" alt="External link" src="/res/external_link.svg"/></a>.</p>
+                </section>
+            </section>
+            </section>
+            <hr/>
+            <section>
                 <h3 id="steam-cant-launch-proton-on-ntfs">Windows games on Steam fail to launch with no errors if they're on an NTFS or FAT filesystem</h3>
                 <p class="i">Last edited <time datetime="2024-02-27">February 27, 2024</time>.</p>
+                <p class="i">Last verified as a fix <time datetime="2025-04-20">April 20, 2025</time>.</p>
                 <section>
                     <h4>Symptoms and relations:</h4>
                     <ul>
