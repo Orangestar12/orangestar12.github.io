@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://orangestar.dev/</id>
   <title>Articles by Orangestar</title>
-  <updated>2025-04-20T20:49:30.612565+00:00</updated>
+  <updated>2026-01-07T17:46:51.112666+00:00</updated>
   <author>
     <name>Orangestar</name>
     <email>orangestar@cats4gold.net</email>
@@ -60,5 +60,13 @@
     <link href="https://orangestar.dev/articles/2024-09-10-albums-ive-been-about.html"/>
     <summary>Wanna write something short. Been listening to music at a new job. Here's what's been on repeat for me.</summary>
     <published>2024-09-10T05:00:00-06:00</published>
+  </entry>
+  <entry>
+    <id>https://orangestar.dev/articles/2026-01-07-the-mahjong-scene-from-killer7-lives-rent-free-in-my-head-about</id>
+    <title>The Mahjong Scene From Killer7 Lives Rent Free In My Head</title>
+    <updated>2026-01-07T12:00:00-06:00</updated>
+    <link href="https://orangestar.dev/articles/2026-01-07-the-mahjong-scene-from-killer7-lives-rent-free-in-my-head.html"/>
+    <summary>Everyone at this fucking table is cheating.</summary>
+    <published>2026-01-07T12:00:00-06:00</published>
   </entry>
 </feed>
