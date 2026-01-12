@@ -37,7 +37,7 @@
 }
 
 .ds4.white .touchpad.pressed {
-    background: url('https://gamepadviewer.com/ps4-assets/touchpad.svgz');
+    background: url('https://gamepadviewer.com/ps4-assets/touchpad.svg');
     filter: brightness(0.1) sepia() contrast(1.3) brightness(25);
 }
 
