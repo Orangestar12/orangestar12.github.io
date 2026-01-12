@@ -1,0 +1,73 @@
+.controller.fight-stick {
+    background: transparent;
+}
+
+.fight-stick .button, .fight-stick .bumper, .fight-stick .trigger-button {
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 0 2px #0f0f0f, 0 4px 0 10px black;
+}
+.fight-stick .button.pressed, .fight-stick .bumper.pressed, .fight-stick .trigger-button.pressed {
+    box-shadow: 0 0px 0 10px black;
+}
+
+.fight-stick .button {
+    background-image: url('https://gamepadviewer.com/ps4-assets/face.svgz');
+    background-size: 580px;
+}
+.fight-stick .button.a {
+    background-position: -9px -10px;
+}
+.fight-stick .button.b {
+    background-position: -156px -10px;
+}
+.fight-stick .button.x {
+    background-position: -301px -10px;
+}
+.fight-stick .button.y {
+    background-position: -448px -10px;
+}
+.fight-stick .bumper::after, .fight-stick .trigger-button::after {
+    display: block;
+    content: 'L1';
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    width: 100%;
+    margin-top: 9px;
+}
+.fight-stick .bumper.right::after {
+    content: 'R1';
+}
+.fight-stick .trigger-button.right::after {
+    content: 'R2';
+}
+.fight-stick .trigger-button.left::after {
+    content: 'L2';
+}
+
+.fight-stick .quadrant {
+    color: transparent;
+    background: linear-gradient(#4646e8, #6b6bda 30%, #2727c3);
+    border-radius: 50px 50px 100% 100%;
+    padding: 10px;
+    left: 184px;
+    top: 90px;
+    box-shadow: 0 0 0 3px black;
+}
+
+.fight-stick::after {
+    display: block;
+    content: '';
+    width: 125px;
+    height: 125px;
+    background: black;
+    border-radius: 50%;
+    left: 240px;
+    top: 247px;
+    position: absolute;
+    z-index: -1;
+}
+
+.fight-stick .arrows {
+    display: none;
+}
