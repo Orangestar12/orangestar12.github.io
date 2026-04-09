@@ -16,7 +16,16 @@ html {
     font-size: 14pt;
     font-family: sans-serif;
 }
-
+@media (prefers-color-scheme: light) {
+    html {
+        --black: #FFFFFF;
+        --off-black: #EFEFEF;
+        --main: #F70;
+        --accent: rgb(62, 168, 168);
+        --off-accent: rgb(255, 115, 176);
+        --foreground: black;
+    }
+}
 html, body {
     margin: 0;
 }
@@ -203,8 +212,8 @@ nav.modern > a, nav.modern > a:visited, nav.modern > div {
     flex-direction: row;
 }
 nav.modern a:hover, nav.modern a:focus {
-    background: #484848;
-    color: var(--accent);
+    background: var(--accent);
+    color: var(--black);
 }
 nav.modern a:active { color: var(--off-accent); }
 

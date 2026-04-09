@@ -1,7 +1,12 @@
+html {
+    --disclaimer: #302500;
+}
+
 header {
     background: var(--main);
     text-shadow: 1px 1px rgba(0,0,0,0.5);
     padding: 1em 1ch 0.25em;
+    color: white;
 }
 header > .wrapper {
     margin: auto;
@@ -49,22 +54,10 @@ h4 {
     max-width: 100%;
 }
 
-.icons > div > a > img {
-    width: 128px;
-    height: auto;
-    background: var(--off-black);
-    border: 2px solid rgb(196, 196, 196);
-    border-radius: 15%;
-}
-.icons div {
-    padding: 5px;
-    flex: 1 1 0px; /* https://stackoverflow.com/questions/29503227/how-to-make-flexbox-items-the-same-size */
-}
-
 .float {
     width:35vw;
     border-radius: 8px;
-    box-shadow: 0 0 5px 0 black;
+    box-shadow: 0 0 5px 0 var(--off-black);
 }
 
 .left {
@@ -82,7 +75,7 @@ strong {
 
 figure {
     border-radius: 18px;
-    background: #181818;
+    background: var(--off-black);
     box-shadow: 0 0 5px 0 black;
     padding: 18px;
     display: flex;
@@ -185,4 +178,16 @@ aside > *:last-child, .aside > *:last-child {margin-bottom:0;}
 }
 .b {
   font-weight: bold;
+}
+
+.subtitle {
+    font-weight: bold;
+    font-style: italic;
+    color: var(--accent);
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        --disclaimer: #f8f3e3;
+    }
 }
