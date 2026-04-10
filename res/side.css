@@ -186,6 +186,10 @@ aside > *:last-child, .aside > *:last-child {margin-bottom:0;}
     color: var(--accent);
 }
 
+li:target {
+    background: var(--disclaimer);
+}
+
 @media (prefers-color-scheme: light) {
     html {
         --disclaimer: #f8f3e3;
