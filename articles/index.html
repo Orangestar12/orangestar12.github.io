@@ -19,6 +19,11 @@
 main {
     max-width: 720px;
 }
+nav.modern p.sub {
+    font-style: italic;
+    margin: 0.25em 2ch 0.25em 2ch;
+    font-size:0.75em;
+}
     </style>
 </head>
 <body>
@@ -32,7 +37,7 @@ main {
         
         <h3 style="text-align:center">
             <a href="/feed/atom.xml">
-                <img src="/res/rss.svg" alt="" class="linker" style="zmargin:0 0.2ch 0 0;height:0.8em"/>Atom Feed
+                <img src="/res/rss.svg" alt="" class="linker" style="margin:0 0.2ch 0 0;height:0.8em"/>Atom Feed
             </a>
         </h3>
         <p>If you would like to keep up with the articles I publish, <a href="/feed/atom.xml">add this Atom feed to your favorite feed reader!</a></p>
@@ -50,24 +55,9 @@ main {
             <a href="/articles/live/linux.html">
                 <div>
                     <p>Stupid Linux Garbage I Had To Search For And Troubleshoot</p>
+                    <p class="sub">Linux is cool.</p>
                     <time datetime="2025-04-20" tz="America/Chicago">April 20, 2025</time>
                 </div>
-            </a>
-
-            <a href="/articles/live/things-google-gemini-cant-do.html">
-                <div>
-                    <p>Things Google Gemini Can't&nbsp;Do</p>
-                    <time datetime="2025-01-17" tz="America/Chicago">January 17, 2025</time>
-                </div>
-                <img src="./live/2025-01-17-things-google-gemini-cant-do/ResizedImage_2024-09-07_16-56-21_8719.png" alt=""/>
-            </a>
-            
-            <a href="/articles/live/vr.html">
-                <div>
-                    <p>Which games work for me on SteamVR for Linux?</p>
-                    <time datetime="2023-09-07" tz="America/Chicago">September 7 2023</time>
-                </div>
-                <img src="/res/vr/payday_2.jpg" alt="">
             </a>
         
         </nav>
@@ -80,10 +70,20 @@ main {
         
         <nav class="modern">
 
+            <a href="./2026-04-09-thoughts-on-friendos-demo.html">
+                <div>
+                    <p>Thoughts on FriendOS Demo</p>
+                    <p class="sub">Is an action RPG without the RPG an &quot;action&quot;?</p>
+                    <time datetime="2026-04-10">Published April 10, 2026</time>
+                </div>
+                <img src="/articles/2026-04-09-thoughts-on-friendos-demo-assets/gameplay.webp" alt=""/>
+            </a>
+
             <a href="./2026-01-07-the-mahjong-scene-from-killer7-lives-rent-free-in-my-head.html">
                 <div>
                     <p>The Mahjong Scene From Killer7 Lives Rent Free In My Head</p>
-                    <time datetime="2022-07-25">Published January 7, 2026</time>
+                    <p class="sub">Everyone at this fucking table is cheating.</p>
+                    <time datetime="2026-01-07">Published January 7, 2026</time>
                 </div>
                 <img src="/articles/2026-01-07-the-mahjong-scene-from-killer7-lives-rent-free-in-my-head-assets/snapshot.jpg" alt=""/>
             </a>
@@ -91,7 +91,8 @@ main {
             <a href="./2024-09-10-albums-ive-been-about.html">
                 <div>
                     <p>Albums I've Been About</p>
-                    <time datetime="2022-07-25">Published September 10, 2024</time>
+                    <p class="sub">Paradise is in a state of mind.</p>
+                    <time datetime="2024-09-10">Published September 10, 2024</time>
                 </div>
                 <img src="/articles/2024-09-10-albums-ive-been-about-assets/cracker_island.png" alt=""/>
             </a>
@@ -103,6 +104,32 @@ main {
                 </div>
             </a>
             
+        </nav>
+
+        <h2>Dead Articles</h2>
+        <p>Sometimes a living article outlives its usefulness. This is the graveyard..</p>
+        
+        <br/>
+        
+        <nav class="modern">
+
+            <a href="/articles/live/things-google-gemini-cant-do.html">
+                <div>
+                    <p>Things Google Gemini Can't&nbsp;Do</p>
+                    <p class="sub"><b>Archived because:</b> After this article was published, Google "integrated" the Assistant features into Gemini's tools system. It's not as good as Assistant, but it at least does a lot of the stuff I complained about now. I don't wanna just rewrite the whole article.</p>
+                    <time datetime="2025-01-17" tz="America/Chicago">January 17, 2025</time>
+                </div>
+                <img src="./live/2025-01-17-things-google-gemini-cant-do/ResizedImage_2024-09-07_16-56-21_8719.png" alt=""/>
+            </a>
+
+            <a href="/articles/live/vr.html">
+                <div>
+                    <p>Which games work for me on SteamVR for Linux?</p>
+                    <p class="sub"><b>Archived because:</b> I don't own the hardware specified in the article and I stopped using SteamVR entirely because I moved somewhere where I do not have the space.</p>
+                    <time datetime="2023-09-07" tz="America/Chicago">September 7 2023</time>
+                </div>
+                <img src="/res/vr/payday_2.jpg" alt="">
+            </a>
         </nav>
         
     </main>
