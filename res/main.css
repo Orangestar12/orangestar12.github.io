@@ -3,6 +3,8 @@
     box-sizing: border-box;
 } */
 
+:root { color-scheme: light dark; }
+
 html {
     --black: #101010;
     --off-black: #303030;
