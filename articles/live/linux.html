@@ -40,6 +40,10 @@ code.block {
 section.innerbox h3 {
     margin-top: 1.5em;
 }
+
+h1,h2,h3,h4 {
+    margin-top: 1em;
+}
     </style>
 </head>
 <body>
@@ -72,8 +76,7 @@ section.innerbox h3 {
                 </li>
             </ul>
         </section>
-        <hr/>
-        <nav>
+        <nav class="toc">
             <h2>Table of Contents</h2>
             <h3><a href="#System">System - General</a></h3>
             <ul>
@@ -109,11 +112,9 @@ section.innerbox h3 {
               <li><a href="#kde-root-password-bug">KDE suddenly asking for root password instead of user password when performing admin actions</a></li>
             </ul>
         </nav>
-        <hr/>
         <section>
             <h2 id="Browsers">Browsers, Websites, and Extensions</h2>
             <p>This isn't Linux-specific, but it's worth documenting.</p>
-            <hr/>
             <section>
                 <h3 id="resizing-divs">HTML Elements on various websites randomly resize or reflow when you focus them</h3>
                 <p class="i">Last edited <time datetime="2023-10-15">October 15, 2023</time>.</p>
@@ -133,10 +134,8 @@ section.innerbox h3 {
                 </section>
             </section>
         </section>
-        <hr/>
         <section>
           <h2 id="System">System - General</h2>
-          <hr/>
           <section>
             <h3 id="low-disk-space">I'm out of disk space. What can I do to easily clean my system?</h3>
             <p class="i">Last edited <time datetime="2025-01-27">January 27, 2025</time>.</p>
@@ -200,10 +199,8 @@ section.innerbox h3 {
             </section>
           </section>
         </section>
-        <hr/>
         <section>
             <h2 id="Games">Games</h2>
-            <hr/>
             <section>
                 <h3 id="proton-ignores-wineprefix">Proton does not respect the WINEPREFIX environment variable</h3>
                 <p class="i">Last edited <time datetime="2024-02-27">February 27, 2024</time>.</p>
@@ -245,7 +242,7 @@ section.innerbox h3 {
                     <code class="block">STEAM_COMPAT_DATA_PATH="/your/compatdata/path/here" %command%</code>
                 </section>
             </section>
-            <hr/>
+            
             <section>
                 <h3 id="steam-r2modman-command-line">r2modman Command Line Arguments Don't Work</h3>
                 <section>
@@ -280,7 +277,7 @@ section.innerbox h3 {
                     <code class="block">WINEDLLOVERRIDES="winhttp=n,b" %command% --doorstop-enable true --doorstop-target "Z:/home/[USERNAME]/.config/r2modmanPlus-local/[YOURGAMEHERE]/profiles/Default/BepInEx/core/BepInEx.Preloader.dll" --r2profile "Default"</code>
                     <p>The first part means "Override the settings for the DLL <code>winhttp</code> to prefer the <b>N</b>ative version first, and then try the <b>B</b>uilt-in version if that fails.</p>
                     <p>The second part, <code>%command%</code>, is a special string for Steam that represents the command Steam will try to run.</p>
-                    <hr/>
+                    
                     <p>If you're not using Steam, you'll need to check the settings for whatever launcher you're using to let you change the environment variables.</p>
                     <p>Lutris has an option to change environment variables inside a game's "System Options"...</p>
                     <figure><img src="/res/linux/lutris.png" alt="A screenshot of Lutris's System Options dialog."></figure>
@@ -289,7 +286,7 @@ section.innerbox h3 {
                     <p>Users of Epic Games's storefront should consider using the command line launcher Legendary or it's GUI equivalent Heroic, since <a href="https://github.com/derrod/legendary?tab=readme-ov-file#config-file">Legendary's config file lets you set environment variables on a per-app basis<img class="linker" alt="External link" src="/res/external_link.svg"/></a>.</p>
                 </section>
             </section>
-            <hr/>
+            
             <section>
                 <h3 id="steam-cant-launch-proton-on-ntfs">Windows games on Steam fail to launch with no errors if they're on an NTFS or FAT filesystem</h3>
                 <p class="i">Last edited <time datetime="2024-02-27">February 27, 2024</time>.</p>
@@ -323,10 +320,10 @@ section.innerbox h3 {
                 </section>
             </section>
         </section>
-        <hr/>
+        
         <section>
             <h2 id="rEFInd">rEFInd</h2>
-            <hr/>
+            
             <section>
                 <h3 id="refind-wrong-initramfs">rEFInd boots the wrong initramfs file for your kernel flavor</h3>
                 <p class="i">Last edited <time datetime="2023-10-13">October 13, 2023</time>.</p>
@@ -359,10 +356,10 @@ section.innerbox h3 {
                 </section>
             </section>
         </section>
-        <hr/>
+        
         <section>
             <h2 id="Vulkan">Vulkan</h2>
-            <hr/>
+            
             <section>
                 <h3 id="steam-games-dont-work">After a fresh install, random Steam games fail to launch with cryptic, unsearchable error messages</h3>
                 <p class="i">Last edited <time datetime="2024-02-27">February 20, 2024</time>.</p>
@@ -394,10 +391,10 @@ section.innerbox h3 {
                 </section>
             </section>
         </section>
-        <hr/>
+        
         <section>
             <h2 id="Xorg">Xorg/X11</h2>
-            <hr/>
+            
             <section>
                 <h3 id="xorg-conf-doesnt-apply">Edits to <code>xorg.conf</code> fail to apply, even though the file saves correctly and errors still make X11 exit</h3>
                 <p class="i">Last edited <time datetime="2023-10-13">October 13, 2023</time>.</p>
@@ -420,7 +417,7 @@ section.innerbox h3 {
                     <p>Edit the files in <code>/etc/X11/mhwd.d/</code> instead, or at least go to the linked folder from there and make your own <code>conf</code> to activate with <code>mhwd</code>.</p>
                 </section>
             </section>
-            <hr/>
+            
             <section class="innerbox">
                 <h3 id="fullscreen-games-freeze-xorg">On Xorg, Putting a game in fullscreen makes the whole system slow to a near-freeze until you Alt+Tab out</h3>
                 <div class="small" style="text-align:center;">And also:</div>
@@ -463,7 +460,7 @@ section.innerbox h3 {
                     <p>You may experience screen tearing. Don't buy an NVidia card next time.</p>
                 </section>
             </section>
-            <hr/>
+            
             <section class="innerbox">
                 <h3 id="missing-video-modes">On an older DVI monitor, some video modes are completely missing</h3>
                 <p class="i">Last edited <time datetime="2023-10-13">October 13, 2023</time>.</p>
@@ -500,7 +497,7 @@ section.innerbox h3 {
                 </section>
             </section>
         </section>
-        <hr/>
+        
         <section>
           <h2 id="KDE">KDE</h2>
           <section>

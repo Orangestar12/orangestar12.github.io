@@ -62,7 +62,7 @@ a.button:active, button:active {
     color: white;
 }
 
-main, article, footer {
+main, footer {
     max-width: 1280px;
     margin: auto;
     padding: 0 2ch;
@@ -83,8 +83,6 @@ h2 {
     font-size: 2.25em;
     /* Dumb hack so clear:both; and margin collapse works right */
     padding: 0 0.5em;
-    padding-bottom: 0;
-    clear:both;
     color: var(--main);
 }
 h3 {

@@ -45,6 +45,18 @@ h4 {
     color: var(--accent);
 }
 
+nav.toc {
+    float: left;
+    max-width: 25%;
+    min-width: 240px;
+    font-size: 0.75em;
+    margin-right: 2ch;
+    margin-bottom: 1em;
+}
+nav.toc ul {
+    padding-left: 2ch;
+}
+
 #shots > div {
     max-width: 30%;
     padding: 5px;
@@ -188,6 +200,25 @@ aside > *:last-child, .aside > *:last-child {margin-bottom:0;}
 
 li:target {
     background: var(--disclaimer);
+}
+
+article {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+@media (max-width: 600px) {
+    nav.toc {
+        float: none;
+        max-width: none;
+        min-width: none;
+        font-size: 0.75em;
+        margin: 1em 2ch;
+    }
+    nav.toc ul {
+        padding-left: 2ch;
+    }
 }
 
 @media (prefers-color-scheme: light) {
