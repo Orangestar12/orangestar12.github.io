@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://orangestar.dev/</id>
   <title>Articles by Orangestar</title>
-  <updated>2026-04-10T23:45:28.165768+00:00</updated>
+  <updated>2026-05-08T22:21:13.075742+00:00</updated>
   <author>
     <name>Orangestar</name>
     <email>orangestar@cats4gold.net</email>
@@ -76,5 +76,13 @@
     <link href="https://orangestar.dev/articles/2026-04-09-thoughts-on-friendos-demo.html"/>
     <summary>Is an action RPG without the RPG an &amp;quot;action&amp;quot;?</summary>
     <published>2026-04-10T07:00:00-06:00</published>
+  </entry>
+  <entry>
+    <id>https://orangestar.dev/articles/2026-04-09-thoughts-on-aeromachina-test-flight</id>
+    <title>Thoughts on AEROMACHINA: Test Flight</title>
+    <updated>2026-05-08T17:00:00-06:00</updated>
+    <link href="https://orangestar.dev/articles/2026-04-09-thoughts-on-aeromachina-test-flight.html"/>
+    <summary>&amp;quot;Plane Furry&amp;quot; is an inherently funny phrase.</summary>
+    <published>2026-05-08T17:00:00-06:00</published>
   </entry>
 </feed>

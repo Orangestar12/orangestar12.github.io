@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="256"
+   height="256"
+   viewBox="0 0 67.733332 67.733333"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="y.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2"
+     inkscape:cx="83.500001"
+     inkscape:cy="115.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="992"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true">
+    <sodipodi:guide
+       position="33.866666,21.034375"
+       orientation="-1,0"
+       id="guide3"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="16.933333,41.142708"
+       orientation="-1,0"
+       id="guide4"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="50.799999,36.5125"
+       orientation="-1,0"
+       id="guide5"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="78.58125,50.799999"
+       orientation="0,1"
+       id="guide6"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="94.191666,33.866666"
+       orientation="0,1"
+       id="guide7"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="93.662499,16.933333"
+       orientation="0,1"
+       id="guide8"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,2.7230901,0,1 @ F,0,0,1,0,1.2654117,0,1 @ F,0,1,1,0,1.1118647,0,1 @ F,0,0,1,0,1.1118647,0,1 @ F,0,0,1,0,2.1316393,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#cccccc;stroke:#333333;stroke-width:5.12803;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.7;paint-order:markers stroke fill"
+       id="path1"
+       cx="55.575344"
+       cy="33.866669"
+       r="9.5939713" />
+    <circle
+       style="fill:#cccccc;stroke:#333333;stroke-width:5.12803;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.7;paint-order:markers stroke fill"
+       id="circle1"
+       cx="12.157987"
+       cy="34.13269"
+       r="9.5939713" />
+    <circle
+       style="fill:#d35f5f;stroke:#333333;stroke-width:5.12803;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.7;paint-order:markers stroke fill"
+       id="circle2"
+       cx="33.866665"
+       cy="12.157989"
+       r="9.5939713" />
+    <circle
+       style="fill:#cccccc;stroke:#333333;stroke-width:5.12803;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.7;paint-order:markers stroke fill"
+       id="circle3"
+       cx="33.866665"
+       cy="55.575344"
+       r="9.5939713" />
+  </g>
+</svg>

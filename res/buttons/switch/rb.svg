@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="256"
+   height="132"
+   viewBox="0 0 67.733332 34.925"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="rb.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="71.064232"
+     inkscape:cy="82.731494"
+     inkscape:window-width="1920"
+     inkscape:window-height="992"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,2.7230901,0,1 @ F,0,0,1,0,1.2654117,0,1 @ F,0,1,1,0,1.1118647,0,1 @ F,0,0,1,0,1.1118647,0,1 @ F,0,0,1,0,2.1316393,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <linearGradient
+       id="linearGradient3"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0"
+         id="stop3" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3"
+       id="linearGradient4"
+       x1="62.284481"
+       y1="3.2995031"
+       x2="51.557842"
+       y2="14.233648"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.74821687,3.7511551)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect1"
+       style="fill:#666666;stroke:#4d4d4d;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.7;paint-order:markers stroke fill"
+       d="M 2.8998987,5.0513872 2.9000814,32.3665 H 15.989722 51.736377 64.826017 V 19.270142 18.708936 18.147729 c 0,-7.255298 -5.655531,-13.0963601 -13.095841,-13.0963577 z"
+       sodipodi:nodetypes="cccccccssc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:23.4014px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';text-align:center;letter-spacing:1.31633px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:16.5837;stroke-miterlimit:3.7;paint-order:markers stroke fill"
+       x="33.363903"
+       y="25.655273"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:16.5837"
+         x="34.022068"
+         y="25.655273">R</tspan></text>
+    <path
+       style="fill:url(#linearGradient4);fill-opacity:1;stroke:none;stroke-width:4;stroke-miterlimit:3.7;paint-order:markers stroke fill"
+       d="m 35.733799,5.6065638 c 0.857168,0 9.243668,0.00298 10.009337,0.010566 7.786086,0.077186 11.04915,0.6315978 14.017119,3.3874192 3.259832,3.026823 4.18438,5.76667 4.18438,8.647107 0,2.880436 -0.27902,9.537337 -0.27902,13.928369 L 38.447304,30.962549 Z"
+       id="path3"
+       sodipodi:nodetypes="csszccc" />
+  </g>
+</svg>

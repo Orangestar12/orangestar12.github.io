@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="256"
+   height="132"
+   viewBox="0 0 67.733332 34.925"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="lb.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2"
+     inkscape:cx="126.5"
+     inkscape:cy="131"
+     inkscape:window-width="1920"
+     inkscape:window-height="992"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,2.7230901,0,1 @ F,0,0,1,0,1.2654117,0,1 @ F,0,1,1,0,1.1118647,0,1 @ F,0,0,1,0,1.1118647,0,1 @ F,0,0,1,0,2.1316393,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <linearGradient
+       id="linearGradient3"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0"
+         id="stop3" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3"
+       id="linearGradient4"
+       x1="58.16853"
+       y1="-4.1840439"
+       x2="46.412903"
+       y2="12.54985"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.74821687,3.7511553)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect3"
+       style="fill:#666666;stroke:#4d4d4d;stroke-width:4;stroke-miterlimit:3.7;paint-order:markers stroke fill"
+       transform="matrix(-1,0,0,1,0.03196153,-13.711344)"
+       d="m -58.741278,21.254465 c 13.097255,-3.508054 26.68931,-5.234826 40.825242,-5.003639 0.698773,0.01143 1.754122,0.3124 2.343502,0.687902 5.192335,3.308114 8.7468568,7.360688 11.8385166,11.623654 0.3604849,0.497058 0.6761329,1.40125 0.6859143,2.015201 0.084138,5.281124 -1.2741941,9.98526 -3.0805006,14.510206 -0.2276361,0.570247 -0.9172992,1.029568 -1.5313651,1.029568 H -62.413954 c -1.177272,0 -2.178119,-0.953457 -2.199092,-2.130505 -0.118011,-6.623181 0.632254,-13.10165 2.43889,-19.404057 0.414385,-1.445572 1.980185,-2.939231 3.432878,-3.32833 z"
+       sodipodi:nodetypes="cccccc"
+       inkscape:path-effect="#path-effect1"
+       inkscape:original-d="m -61.365086,21.982918 c 14.291931,-4.108148 29.175082,-6.087908 44.714194,-5.706204 6.16877,3.647738 10.1125491,8.306835 13.5639283,13.189751 0.3319288,6.144554 -1.3202581,11.495462 -3.4611404,16.650892 H -64.545593 c -0.375535,-8.284097 0.563635,-16.349076 3.180507,-24.134439 z" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:23.4014px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';text-align:center;letter-spacing:1.31633px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:16.5837;stroke-miterlimit:3.7;paint-order:markers stroke fill"
+       x="33.363903"
+       y="25.655273"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:16.5837"
+         x="34.022068"
+         y="25.655273">LB</tspan></text>
+    <path
+       style="fill:url(#linearGradient4);fill-opacity:1;stroke:none;stroke-width:4;stroke-miterlimit:3.7;paint-order:markers stroke fill"
+       d="m 25.724555,3.2546593 c 9.822155,0.187088 24.976336,2.691465 30.121274,4.09463 5.144939,1.403165 5.112841,3.3241467 5.861196,5.8498437 0.748355,2.525697 1.870886,10.57407 1.964431,16.18673 z"
+       id="path3"
+       sodipodi:nodetypes="czzcc" />
+  </g>
+</svg>

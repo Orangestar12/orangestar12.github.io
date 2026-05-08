@@ -208,6 +208,10 @@ article {
     padding: 0 5%;
 }
 
+video {
+    max-width: 100%;
+}
+
 @media (max-width: 600px) {
     nav.toc {
         float: none;
