@@ -1,31 +1,33 @@
 'use strict';
 
-let select;
+let selectElement;
 
 function changeButtons() {
     for(let e of document.querySelectorAll('.controller-button')) {
         if (e.firstElementChild && e.firstElementChild.nodeName == 'IMG') {
-            e.firstElementChild.src = `/res/buttons/${select.value}/${e.firstElementChild.alt.toLowerCase()}.svg`;
+            e.firstElementChild.src = `/res/buttons/${selectElement.value}/${e.firstElementChild.alt.toLowerCase()}.svg`;
         } else {
             let text = e.textContent;
 
             e.textContent = '';
 
             let svg = document.createElement('img');
-            svg.src = `/res/buttons/${select.value}/${text.toLowerCase()}.svg`;
+            svg.src = `/res/buttons/${selectElement.value}/${text.toLowerCase()}.svg`;
             svg.alt = text;
 
             e.appendChild(svg);
         }
     }
     
-    localStorage.setItem('articles.buttons', select.value);
+    localStorage.setItem('articles.buttons', selectElement.value);
 }
 
 function main() {
+    if (selectElement) { return; }
+
     console.log('initialized');
 
-    select = document.createElement('select');
+    selectElement = document.createElement('select');
 
     for(let e of ['360','xbone','playstation','switch','universal']) {
         let option = document.createElement('option');
@@ -47,20 +49,40 @@ function main() {
                 option.textContent = 'Universal (Might be small!)';
                 break;
         }
-        select.appendChild(option);
+        selectElement.appendChild(option);
     }
 
-    select.addEventListener('change', changeButtons);
+    selectElement.addEventListener('change', changeButtons);
 
     let selectbox = document.createElement('div');
     selectbox.textContent = 'Change controller glyphs: ';
     selectbox.className = 'button-selector';
-    selectbox.appendChild(select);
+    selectbox.appendChild(selectElement);
 
-    select.value = localStorage.getItem('articles.buttons') ? localStorage.getItem('articles.buttons') : 'universal';
+    selectElement.value = localStorage.getItem('articles.buttons') ? localStorage.getItem('articles.buttons') : 'universal';
 
     document.body.appendChild(selectbox);
+    changeButtons();
 }
 
 document.addEventListener('DOMContentLoaded', main);
-document.addEventListener('DOMContentLoaded', changeButtons);
+
+// sometimes DOMContentLoaded doesn't fire
+// and i don't know why
+// so I wrote a kludgy hack
+
+let attempts = 20;
+
+function failSafe() {
+    if (selectElement) { return; }
+    if (attempts == 0) {
+        console.log('Firing DOMContentLoaded manually.')
+        main();
+    } else {
+        console.log(`DOMContentLoaded hasn\'t fired. Trying again ${attempts} more times...`)
+        attempts--;
+    }
+    setTimeout(failSafe, 1000);
+}
+
+setTimeout(failSafe, 1000);
