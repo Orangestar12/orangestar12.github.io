@@ -50,8 +50,9 @@ nav.toc {
     max-width: 25%;
     min-width: 240px;
     font-size: 0.75em;
-    margin-right: 2ch;
+    margin-right: 16px;
     margin-bottom: 1em;
+    box-sizing: border-box;
 }
 nav.toc ul {
     padding-left: 2ch;
@@ -99,11 +100,30 @@ figure {
     width: 75vw;
     margin: auto;
 }
-figure > img, figure > a > img, figure iframe, figure > video {
-    display: inline-block;
-    width: 100%;
-    height: auto;
+
+figure.flexible {
+    width:auto; max-width: 100%;
+}
+
+figure.flexible > figcaption {
+    width: 0; min-width: 100%;
+    /* this is the dumbest thing I've ever seen. CSS sucks LMAO */
+}
+figure > img,
+figure > a > img,
+figure iframe,
+figure > video {
+    max-width: 100%;
+    width: auto;
     border-radius: 8px;
+}
+
+figure.flexible > img,
+figure.flexible > a > img,
+figure.flexible iframe,
+figure.flexible > video {
+    height: 60vh;
+    /* min-height:320px; */ /* not necessary? */
 }
 
 figcaption {
@@ -150,6 +170,14 @@ code {
     background: var(--off-black);
     padding: 0 0.5ch;
     border-radius: 4px;
+}
+
+code.block {
+    clear: both;
+    display: block;
+    overflow-y: auto;
+    padding: 24px;
+    font-size: 16px;
 }
 
 li { margin: 0.75em 0; }
