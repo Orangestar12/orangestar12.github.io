@@ -134,6 +134,10 @@ figcaption {
     margin: .25em 0 0;
 }
 
+figcaption p {
+    margin: 0.25em 0;
+}
+
 .define {
     text-decoration: underline;
     text-decoration-style: dotted;
