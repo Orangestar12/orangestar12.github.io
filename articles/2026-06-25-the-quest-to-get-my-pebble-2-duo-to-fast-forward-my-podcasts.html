@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Quest to Get My Pebble 2 Duo to Fast Forward My Podcasts | Orangestar</title>
+    <link rel="icon" type="image/png" href="/starvatar.png">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+    <!-- thanks to https://webcode.tools/open-graph-generator/article -->
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Quest to Get My Pebble 2 Duo to Fast Forward My Podcasts">
+    <meta property="og:description" content="Not as proud of this one.">
+    <meta property="article:author" content="https://orangestar.dev/">
+    <meta property="article:section" content="Tech Writing">
+    <meta property="article:tag" content="technology">
+    <meta property="article:tag" content="smartwatch">
+    <meta property="article:tag" content="pebble">
+    <meta name="theme-color" content="#FF7700">
+
+    <meta property="og:url"
+        content="https://orangestar.dev/articles/2026-06-25-the-quest-to-get-my-pebble-2-duo-to-fast-forward-my-podcasts.html">
+    <meta property="og:image"
+        content="https://orangestar.dev/articles/2026-06-25-the-quest-to-get-my-pebble-2-duo-to-fast-forward-my-podcasts/opengraph.webp">
+    <meta property="article:published_time" content="2026-06-25T20:00-06:00">
+
+    <link href="/res/main.css" rel="stylesheet" type="text/css" />
+    <link href="/res/side.css" rel="stylesheet" type="text/css" />
+    <link href="/res/code-highlighting.css" rel="stylesheet" type="text/css" />
+
+    <style>
+nav.toc {
+    max-width: 240px;
+    width: 240px;
+    /* YOU'RE TOO LATE, BATMAN! YOU CAN'T STOP ME FROM FUCKING UP MY OWN LAYOUT! */
+}
+
+@media (max-width: 600px) {
+  nav.toc {
+    width: auto;
+    max-width: none;
+    min-width: none;
+  }
+}
+
+.disclaimer {
+  padding: 16px;
+  background: var(--disclaimer);
+
+  /* matching with the TOC */
+  border-radius: 8px; float:right;
+  width: calc(100% - 272px); /* 240px min width for TOC, plus 16px margin on both elements */
+  font-size: 0.75em;
+  margin: 1em;
+  margin-left: 2ch;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+.disclaimer > h3 {
+    margin-top: 0.25em;
+}
+@media (max-width: 600px) {
+    .disclaimer {
+        width: auto;
+        float: none;
+        margin: 2.5em 0 16px 0;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>The Quest to Get My Pebble 2 Duo to Fast Forward My Podcasts</h1>
+            <p class="small"><a href="./">← Return to Main page</a></p>
+            <time datetime="2026-06-25">Originally published June 25th, 2026</time>
+        </div>
+    </header>
+    <article style="margin-top:2em;">
+        
+        <nav class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#preface">Preface</a></li>
+                <li><a href="#whats-going-on-here">What's Going On Here?</a></li>
+                <li><a href="#lets-crack-it-open">Let's Crack It Open</a></li>
+                <li><a href="#opening-the-black-box">Opening The Black Box</a></li>
+                <li><a href="#ok-now-whats-going-on">Ok, NOW What's Going On?!?!</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+                <hr />
+                <li><a href="#footnotes">Footnotes</a></li>
+            </ul>
+        </nav>
+
+        <div class="disclaimer">
+            <h3>Heads up!</h3>
+            <p>I started writing this like half a year ago and then fogor completely about it until the Pebble Time 2 showed up at my doorstep. So uh, if some language sounds like I'm dredging up really old shit, I am! Whoops.</p>
+        </div>
+
+        <section id="preface">
+            <p style="clear:right;">I was lucky enough to be one of the people who got the chance to purchase the Pebble 2 Duo, a hardware refresh of the original Pebble 2 devices. I'm a newcomer to Pebble, having missed out on smart watches almost entirely during their nascency on account of the awful real life debuff known as "being in high school and not having a source of income."</p>
+            <p>Prior to owning the 2 Duo I had been a long time user of the Fitbit Versa 1 which has not only served me dutifully but still works well even today - I was really only in the market for a new watch because my Versa's face is all scuffed up! I was used to using my Versa for three things primarily: Checking notifications, setting alarms, and controlling music. If the Pebble 2 Duo could accomplish all that, I'd be happy.</p>
+
+            <div class="flex" style="clear:both;">
+                <figure class="flexible">
+                    <img src="./2026-06-25-the-quest-to-get-my-pebble-2-duo-to-fast-forward-my-podcasts-assets/PXL_20251119_021304281.MP.jpg" alt="A photo showing a side by side of the Fitbit Versa and the Pebble Core 2 Duo">
+                <figcaption>You'll have to excuse my hairy arms here. They won't feature in the rest of the article.</figcaption>
+                </figure>
+            </div>
+
+            <p>I was especially used to using the backwards/forwards buttons on the Versa to fast forward and rewind podcasts. In music apps, these buttons are coded to skip tracks, while in podcasts they skip ahead or back a few seconds, usually based on user preference. So, without thinking, I was listening to a podcast when I missed a line. I dutifully pressed the backwards button on my new Pebble 2 Duo... And the podcast episode restarted from the beginning.</p>
+
+            <!-- putting this in a flex is a hack that makes the container shrink to fit the video -->
+            <div class="flex">
+                <figure class="flexible">
+                    <video loading="lazy" preload="auto" muted autoplay loop playsinline controlslist="noremoteplayback" disablepictureinpicture disableremoteplayback style="max-height:1920px;">
+                        <source src="./2026-06-25-the-quest-to-get-my-pebble-2-duo-to-fast-forward-my-podcasts-assets/Pxl 20251124 153409355_sml.mp4" type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+            
+            <p>Uh oh.</p>
+        </section>
+
+        <section id="whats-going-on-here">
+            <h2 data-heading="What's Going On Here?">What's Going On Here?</h2>
+            <p>A quick search of the web will elucidate how media controls work on Android devices - keycodes. Just like those fancy media keys on your keyboard for pausing, playing, skipping, and changing volume, Android listens to these keycodes to control the currently playing media on your phone.</p>
+            <p>Android is open source, so we can simply <a data-tooltip-position="top" aria-label="https://android.googlesource.com/platform/frameworks/native/+/master/include/android/keycodes.h" rel="noopener nofollow" class="external-link" href="https://android.googlesource.com/platform/frameworks/native/+/master/include/android/keycodes.h" target="_blank">pop open a list of these keycodes</a> and look at them. In fact, we can <a data-tooltip-position="top" aria-label="https://android.googlesource.com/platform/frameworks/native/+/master/include/android/keycodes.h#248" rel="noopener nofollow" class="external-link" href="https://android.googlesource.com/platform/frameworks/native/+/master/include/android/keycodes.h#248" target="_blank">hop down to line 248</a> and see all the media keys in order.</p>
+            <pre class="language-c"><code class="language-c is-loaded block"><span class="token comment">/** Play/Pause media key. */</span>
+AKEYCODE_MEDIA_PLAY_PAUSE<span class="token operator">=</span> <span class="token number">85</span><span class="token punctuation">,</span>
+<span class="token comment">/** Stop media key. */</span>
+AKEYCODE_MEDIA_STOP <span class="token operator">=</span> <span class="token number">86</span><span class="token punctuation">,</span>
+<span class="token comment">/** Play Next media key. */</span>
+AKEYCODE_MEDIA_NEXT <span class="token operator">=</span> <span class="token number">87</span><span class="token punctuation">,</span>
+<span class="token comment">/** Play Previous media key. */</span>
+AKEYCODE_MEDIA_PREVIOUS <span class="token operator">=</span> <span class="token number">88</span><span class="token punctuation">,</span>
+<span class="token comment">/** Rewind media key. */</span>
+AKEYCODE_MEDIA_REWIND <span class="token operator">=</span> <span class="token number">89</span><span class="token punctuation">,</span>
+<span class="token comment">/** Fast Forward media key. */</span>
+AKEYCODE_MEDIA_FAST_FORWARD <span class="token operator">=</span> <span class="token number">90</span><span class="token punctuation">,</span></code></pre>
+            <p>Looking at this we can easily infer how the system works. The Fitbit Versa's media controls actually communicate directly to the phone via what it calls "Bluetooth Classic" (versus the "Bluetooth Low Energy" standard). Therefore, the Versa is actually connected twice to your phone: once through the LE connection to sync notifications, phone app data, and so on, and once through the "Classic" connection to do the remote. In fact, in the Bluetooth interface on my Pixel phone, you can see that while the LE Versa connection has a generic Bluetooth icon, the "Classic" interface has a little controller icon.</p>
+            <div class="flex">
+                <figure>
+                    <img
+                        src="./2026-06-25-the-quest-to-get-my-pebble-2-duo-to-fast-forward-my-podcasts-assets/Screenshot_20251124-134540.png"
+                        alt=""/>
+                </figure>
+            </div>
+            <p>This icon is usually used for remote controls, presentation devices, game controllers, and - yes - even keyboards and mice.</p>
+            <p>We can kind of figure out what's going on here, now. To add media control support to the device, the Fitbit Versa is masquerading as a keyboard, and when you press a button in the control interface, it sends a media key press event to the Android. So which keys are being pressed on the Versa compared to the Pebble 2 Duo?</p>
+            <p>Apparently this is also a problem specific to my podcast app of choice, the open source Podcini. Most podcast apps allow you to control what happens when you press fast forward, rewind, or skip, since skipping an entire podcast is a very uncommon choice. Popping open Podcini's settings reveals a section where I can determine what the fast forward button does, and how many seconds it fast forwards or rewinds.</p>
+            <div class="flex">
+                <figure>
+                    <img alt="Screenshot_20251124-111614.png" src="./2026-06-25-the-quest-to-get-my-pebble-2-duo-to-fast-forward-my-podcasts-assets/Screenshot_20251124-111614.png" />
+                </figure>
+            </div>
+            <p>Aha, but note that it specifies "Fast forward"! Taking a look at that table of keycodes again shows that "Next" and "Previous" are options in addition to "Fast Forward" and "Rewind". Since I'm not experiencing this issue on my Versa, we can assume that the versa is sending <code>AKEYCODE_MEDIA_FAST_FORWARD</code> while the Pebble 2 Duo is likely sending <code>AKEYCODE_MEDIA_NEXT</code>, the next track key.</p>
+        </section>
+        <section id="lets-crack-it-open">
+            <h2 data-heading="Let's Crack It Open">Let's Crack It Open</h2>
+            <p>Part of the selling point of the Pebble devices for me was their "hackability", as I was told. There's something enticing about being able to look into how a device works and potentially fix any issues myself rather than waiting for an upstream fix.</p>
+            <p>In the leadup to the eventual hardware rerelease, Core Devices secured a deal with then-owners of the Pebble codebase and license, Google, to open source the firmware running on the devices. Core Devices now hosts <a rel="noopener nofollow" href="https://github.com/coredevices/PebbleOS" target="_blank">their own fork<img src="/res/external_link.svg" alt="(External)" class="linker" /></a> of the Pebble firmware, in addition to a further promise to open source <a rel="noopener nofollow" href="https://github.com/coredevices" target="_blank">other parts of the Pebble ecosystem<img src="/res/external_link.svg" alt="(External)" class="linker" /></a> in order to allow open source projects to pick up the slack should the business running the show ever go under again.</p>
+            <p>If your first instinct was to check <code>/src/apps</code> for the source to the music app, you'd be mistaken for being wrong - This folder actually includes sample source code for Pebble apps to show off cool functions of the hardware and software. Pebble's native music controls function is built right into the firmware rather than being a separate app like the Calendar function. Therefore, we need to dig deeper into <code>/src/fw/apps/system_apps/</code>. There, you'll find <code>music_app.c</code> and <code>music_app.h</code>.</p>
+            <p>A quick CTRL+F for <code>next</code> will find this function:</p>
+<pre class="language-c"><code class="language-c is-loaded block"><span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">prv_skip_click_handler</span><span class="token punctuation">(</span><span class="token class">ClickRecognizerRef</span> recognizer<span class="token punctuation">,</span> <span class="token keyword">void</span> <span class="token operator">*</span>context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// no animations on tintin</span>
+  <span class="token class">Animation</span> <span class="token operator">*</span>animation <span class="token operator">=</span> <span class="token function">prv_create_cassette_animation</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">animation_schedule</span><span class="token punctuation">(</span>animation<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">click_recognizer_get_button_id</span><span class="token punctuation">(</span>recognizer<span class="token punctuation">)</span> <span class="token operator">==</span> BUTTON_BACKWARD<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">music_command_send</span><span class="token punctuation">(</span>MusicCommandPreviousTrack<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">music_command_send</span><span class="token punctuation">(</span>MusicCommandNextTrack<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+            <p>All in one neat little method! We can easily glean even with very little C knowledge that this function must be called when either of the two skip buttons is pressed, and then decides in the moment which one is forwards and which is backwards, before sending the proper music command to the phone. And if I were a betting man, I'd say those variables being passed into <code>music_command_send</code> look an awfully lot like enums.</p>
+            <p>Using any IDE (or Github itself) lets us hunt down the source for these symbols. Sure enough, <code>/src/fw/services/normal/music.h</code> has a list of all possible commands to get sent to the watch.</p>
+<pre class="language-c"><code class="language-c is-loaded block"><span class="token keyword">typedef</span> <span class="token keyword">enum</span> <span class="token punctuation">{</span>
+  MusicCommandPlay<span class="token punctuation">,</span>
+  MusicCommandPause<span class="token punctuation">,</span>
+  MusicCommandTogglePlayPause<span class="token punctuation">,</span>
+  MusicCommandNextTrack<span class="token punctuation">,</span>
+  MusicCommandPreviousTrack<span class="token punctuation">,</span>
+  MusicCommandVolumeUp<span class="token punctuation">,</span>
+  MusicCommandVolumeDown<span class="token punctuation">,</span>
+  MusicCommandAdvanceRepeatMode<span class="token punctuation">,</span>
+  MusicCommandAdvanceShuffleMode<span class="token punctuation">,</span>
+  MusicCommandSkipForward<span class="token punctuation">,</span>
+  MusicCommandSkipBackward<span class="token punctuation">,</span>
+  MusicCommandLike<span class="token punctuation">,</span>
+  MusicCommandDislike<span class="token punctuation">,</span>
+  MusicCommandBookmark<span class="token punctuation">,</span>
+
+  NumMusicCommand<span class="token punctuation">,</span>
+<span class="token punctuation">}</span> MusicCommand<span class="token punctuation">;</span>
+</code></pre>
+            <p>There we go! <code>MusicCommandSkipForward</code> and <code>MusicCommandSkipBackward</code> sounds just like what we're looking for. Our next steps should be straightforward then: follow <a rel="noopener nofollow" href="https://pebbleos-core.readthedocs.io/en/latest/getting_started.html" target="_blank">the docs<img src="/res/external_link.svg" alt="(External)" class="linker" /></a> to download the source code, swap out the <code>Track</code> commands with the equivalent <code>Skip</code> commands, and build.</p>
+            <p>The docs strangely only provide information for flashing to a watch directly using a firmware dev kit which is... scary. And expensive.</p>
+            <figure>
+                <img src="./2026-06-25-the-quest-to-get-my-pebble-2-duo-to-fast-forward-my-podcasts-assets/Pasted image 20251208161426.png" alt="A screenshot of a browser showing Pebble watch documentation. A picture of a bare firmware dev kit board is visible above warnings that the user should not accidentally brick their device with it. ">
+            </figure>
+            <p>You do not have to do that.</p>
+            <p>Open the Pebble app, go to the settings, and tick the box for "Show debug options". A "Firmware Update Debug" option will appear in the Devices menu under your watch, where you can load your custom build. Official FW builds come through the Core Devices Github, so it's trivial to sideload your way back to stock.</p>
+            <p>After creating your custom firmware and loading it onto the watch, it's only natural that you'd want to fire up your podcast of choice or play some music on your favorite app, and press the fast forward key to see what happens. You will immediately find out that the buttons are now completely nonfunctional.</p>
+            <p>Uh oh.</p>
+        </section>
+
+        <section id="opening-the-black-box">
+            <h2 data-heading="Opening the Black Box">Opening the Black Box</h2>
+            <p>Before we continue this journey I want to give a huge shout-out to both the members of the Rebble Discord <em>and</em> the guys over at Core devices. They were going through a little bit of a spat but they're both people who are passionate about their hardware and they want what's best for each other - and I think with continued discussion things are going to work out in the end for both of them.<sup data-footnote-id="fnref-1-2473ff92b57a5821" class="footnote-ref" id="fnref-1-2473ff92b57a5821"><a data-footref="1" href="#fn-1-2473ff92b57a5821" class="footnote-link">[1]</a></sup> Both sides were absolutely wonderful to talk to and work with and extremely open and friendly with owners of Pebble devices both new and old.</p>
+            <p>I hopped in to originally ask for questions on how to find that firmware update button (my silly ass thought it wouldn't be hidden behind a "if you tick this you have a chance to brick your device" box) but it was also helpful to ask questions about how the actual Pebble OS communicates with the phone.</p>
+            <p>If you've been following along, you might have been asking the nagging question "But if the Versa needs to use normal Bluetooth to skip music tracks by posing as a keyboard on Android, how does the Pebble 2/2 Duo get away with using only Bluetooth LE for all commands?" Well, on iOS you can just do that because Apple's whole business is having contingencies and APIs for everything. On <em>Android</em> meanwhile, you need to get a little sneaky with it: Music commands aren't sent to the phone directly on the Pebble 2/2 Duo, they're sent to the <em>Pebble App</em>, which then submits them on your behalf.</p>
+            <p>If we follow the symbol trail for the function <code>music_command_send</code> rather than the enum <code>MusicCommand</code>, you'll eventually end up in <code>/src/fw/services/normal/music_internal.h</code> and <code>/src/fw/comm/ble/kernel_le_client/ams/ams.c</code> with some pretty elucidating code and comments.</p>
+<pre class="language-c"><code class="language-c is-loaded block"><span class="token comment">////////////////////////////////////////////////////////////////////////////////////////////////////</span>
+<span class="token comment">// Interface to music metadata server (Pebble Protocol, AMS, ...)</span>
+
+<span class="token comment">//! Bits in the bitset of optional features of a server</span>
+<span class="token keyword">typedef</span> <span class="token keyword">enum</span> <span class="token punctuation">{</span>
+  MusicServerCapabilityNone <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  MusicServerCapabilityPlaybackStateReporting <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  MusicServerCapabilityProgressReporting <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  MusicServerCapabilityVolumeReporting <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span> MusicServerCapability<span class="token punctuation">;</span>
+
+<span class="token comment">//! Pointers to server-specific implementations of the music backend server</span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>debug_name<span class="token punctuation">;</span>
+  <span class="token function">bool</span> <span class="token punctuation">(</span><span class="token operator">*</span>is_command_supported<span class="token punctuation">)</span><span class="token punctuation">(</span>MusicCommand command<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token operator">*</span>command_send<span class="token punctuation">)</span><span class="token punctuation">(</span>MusicCommand command<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">bool</span> <span class="token punctuation">(</span><span class="token operator">*</span>needs_user_to_start_playback_on_phone<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">MusicServerCapability</span> <span class="token punctuation">(</span><span class="token operator">*</span>get_capability_bitset<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token operator">*</span>request_reduced_latency<span class="token punctuation">)</span><span class="token punctuation">(</span>bool reduced_latency<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token operator">*</span>request_low_latency_for_period<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token class-name">uint32_t</span> period_ms<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> MusicServerImplementation<span class="token punctuation">;</span>
+</code></pre>
+            <p>AMS is technically the name of the company that develops the blood oxygen meter lights on the bottom of fitness trackers and smart watches like on the Pebble 2 Duo and the Fitbit Versa, but in this instance it's more likely it stands for <strong>A</strong>ndroid <strong>M</strong>edia <strong>S</strong>erver.</p>
+            <p>So problem solved. The Pebble app probably just doesn't have the "Fast Forward" and "Rewind" keycodes hooked up properly because they were never used as a feature. In order to add this feature, then, you'd need to use an app that supports the Pebble app protocol like <a data-tooltip-position="top" aria-label="https://github.com/matejdro/microPebble" rel="noopener nofollow" class="external-link" href="https://github.com/matejdro/microPebble" target="_blank">Micropebble<img src="/res/external_link.svg" alt="(External)" class="linker" /></a> and add the keycode support yourself.</p>
+            <p>Or you could just submit a pull request <a data-tooltip-position="top" aria-label="https://github.com/coredevices/mobileapp" rel="noopener nofollow" class="external-link" href="https://github.com/coredevices/mobileapp" target="_blank">right to the Pebble app Github<img src="/res/external_link.svg" alt="(External)" class="linker" /> page-</a> wait, what the hell?</p>
+            <p>Yep! Turns out <em>as I was talking to Rebble Alliance members</em> about how this problem could be solved <em>an employee at Core Devices/Pebble</em> showed up to let us know that, as a part of their olive branching towards the Rebble community, they were open sourcing their mobile app to further reduce reliance on central servers for updates and support.</p>
+            <p>This would, of course, require me to learn Kotlin, the language the Pebble app is developed in, but that would be a project for the near future. Instead, I realized I'd been going about the issue the wrong way: "I should be checking out the app I'd been using, not the hardware!" In the interest of feature parity, I figured I should submit a pull request or issue to the developers of Podcini. Surely they'd like to know the average use case for "Skip track" button behavior on Bluetooth connected devices, and provide equivalent capabilities for all its users across all hardware.</p>
+            <p>Hop into the Apps section of your Android settings app, pick Podcini, scroll down to where it says "Installed from F-Droid", tap it, and find that F-Droid dumps you to a 404 page because your podcast app is fucking gone.</p>
+            <p>Uh oh.</p>
+        </section>
+
+        <section id="ok-now-whats-going-on">
+            <h2 data-heading="Ok, NOW What's Going On?!?!">Ok, NOW What's Going On?!?!</h2>
+            <p>So turns out, my version of Podcini was also a full year out of date.</p>
+            <p>What had been bugging me while asking for help on the Rebble Discord was that I was not only the first person to have this problem, but the <em>only</em> person to have this problem. Apparently people had been fast forwarding and rewinding through their Podcasts with no issue on their Pebbles - even on the original Pebble 2s. Why was I so special?</p>
+            <p>I was on Podcini version 5.5.2, while the most recent version was 9.1.0, released... twenty two minutes after I started this quest? What the hell? What happened?</p>
+            <p>Between Podcini 5.5.2 and 6.0 there was a major rewrite to be planned to replace Podcini on F-Droid. For some reason, however, this had to be published on F-Droid under the new name Podcini.R, which likely was due to some change in the app's UUID or something idk I'm not an Android developer.</p>
+            <p>So that means anyone who saw the update post on F-Droid that said "Hey, just so you know, Version 6.0 is a big ol' rewrite, so be aware that while the prerelease versions are up, if you want the stable that'll be dropped in on top at a later date" and decided to wait for the inevitable stable version (like me) never got the update. Instead the updates just stopped coming and the original Podcini was quietly delisted from F-Droid. Since your ideal podcast is a very simple, stable protocol of RSS feeds delivering audio files, I was none the wiser that I was using a super duper out of date client - especially with how polished Podcini was already!</p>
+            <p>But then, things get even WEIRDER. Podcini.R, later succeeded by Podcini.X is... bad! it's probably the worst podcast app I've ever used.</p>
+            <p>Everything is way too cluttered together, gross thick borders are all over everything, and tap targets are either too close or too small. Hell, the pause button isn't even aligned with the other icons anymore! There's no dedicated interface for viewing all your downloads at once anymore, importing my old subscriptions broke the entire interface until I deleted all of them - which then crashed the entire app because it tried to iterate through an empty list. I had to start over all my podcast subscriptions from scratch. Filters get randomly applied as you go through the app, synthetic podcasts (subscriptions generated from a folder of episodes) now have a very cringeworthy author title of "Yours Truly" that you can't change, and I couldn't figure out how to actually add episodes to the synthetic podcast.</p>
+            <p>And what's worse, the borders thing is definitely an intentional design and not a bug, because you can see in screenshots on the Podcini.X README.MD that they are proudly displaying a modal box with an outline that DOESN'T EVEN MATCH THE ROUNDED CORNERS OF THE MODAL</p>
+            <div class="flex">
+                <figure class="flexible">
+                    <img alt="5_podcast_setting.jpg" src="./2026-06-25-the-quest-to-get-my-pebble-2-duo-to-fast-forward-my-podcasts-assets/5_podcast_setting.jpg">
+                </figure>
+            </div>
+            <p>I'm never using this app again. This sucks.</p>
+            <p>I only grabbed Podcini because I had assumed Antennapod - the application it was based on - wasn't getting updates. After all, Podcini showed up in the featured section of F-Droid so it must be better right?</p>
+            <p>But, uh, Antennapod sure is still getting updates, and is far more polished than Podcini! Turns out that Podcini only exists because Antennapod was slow on feature updates - which isn't really a problem for a casual user.</p>
+            <p>Whoops!</p>
+            <p>Switched back to Antennapod and didn't look back.</p>
+        </section>
+
+        <section id="conclusion">
+            <h2 data-heading="Conclusion">Conclusion</h2>
+            <p>"Does that mean none of this was worth it?" you may ask. "Did Antennapod also have this issue since Podcini was based on it, or was this all just a waste of time?"</p>
+            <p>Yeah, Antennapod correctly jumps podcasts forward and backward using the skip buttons on the Pebble 2 Duo.</p>
+            <div class="flex">
+                <figure class="flexible">
+                    <video loading="lazy" preload="auto" muted autoplay loop playsinline controlslist="noremoteplayback" disablepictureinpicture disableremoteplayback style="max-height:1920px">
+                        <source src="./2026-06-25-the-quest-to-get-my-pebble-2-duo-to-fast-forward-my-podcasts-assets/Pxl 20251124 205450983_sml.mp4" type="video/mp4"/>
+                        <!-- <source src="./2026-06-25-the-quest-to-get-my-pebble-2-duo-to-fast-forward-my-podcasts-assets/Pxl 20251124 205450983_sml.webm" type="video/webm"/> --> 
+                    </video>
+                </figure>
+            </div>
+            <p><strong><em>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARGH.</em></strong></p>
+        </section>
+
+        <hr />
+        
+        <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+            <ol>
+                <li data-footnote-id="fn-1-2473ff92b57a5821" id="fn-1-2473ff92b57a5821"><p>This was written closer to January of this year (2026), so I'm happy to say it absolutely worked out! The Pebble app has a robust repository system now similar to Linux distros, and both Pebble and Rebble are still seeing apps submitted by developers. Truly a win for open source technology!<a href="#fnref-1-2473ff92b57a5821" class="footnote-backref footnote-link">↩︎</a></p></li>
+            </ol>
+        </section>
+    </article>
+    <footer>Unless otherwise stated, please assume all content on this website is licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0.<img src="/res/external_link.svg" alt="(External)" class="linker" /></a></footer> 
+</body>
+</html>

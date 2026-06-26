@@ -1,0 +1,34 @@
+code.block {
+    background: #252525;
+    color: white;
+}
+
+code.block.language-c {
+    .token.keyword {
+        color: rgb(106, 255, 106);
+    }
+
+    .token.class {
+        color: rgb(149, 255, 0);
+    }
+
+    .token.function {
+        color: rgb(230, 172, 255);
+    }
+
+    .token.comment {
+        color:#AAA;
+    }
+
+    .token.operator {
+        color: rgb(246, 199, 110);
+    }
+    
+    .token.punctuation {
+        color: rgb(246, 110, 110);
+    }
+    .token.number {
+        color: rgb(126, 197, 255);
+    }
+    
+}
