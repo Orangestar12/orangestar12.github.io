@@ -8,6 +8,7 @@ th {
     background:#1c1855;
     font-weight:bold;
     font-size:12px;
+    color: white;
 }
 
 td, th {
@@ -16,6 +17,7 @@ td, th {
 }
 td:first-child {
     background-color: #1c1d3a;
+    color: white;
 }
 
 figcaption p {
